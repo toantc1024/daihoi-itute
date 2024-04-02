@@ -76,12 +76,6 @@ const Navbar = () => {
               >
                 Work
               </a>
-              <a
-                className="font-medium text-gray-500 hover:text-gray-400 px-6 sm:py-6 sm:px-0 dark:text-gray-400 dark:hover:text-gray-500"
-                href="#"
-              >
-                Blog
-              </a>
               <div className="hs-dropdown [--strategy:static] sm:[--strategy:fixed] [--adaptive:none] sm:[--trigger:hover] sm:py-4">
                 <button
                   type="button"
