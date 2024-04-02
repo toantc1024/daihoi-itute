@@ -76,7 +76,6 @@ const Navbar = () => {
               >
                 Work
               </a>
-
               <div className="hs-dropdown [--strategy:static] sm:[--strategy:fixed] [--adaptive:none] sm:[--trigger:hover] sm:py-4">
                 <button
                   type="button"
