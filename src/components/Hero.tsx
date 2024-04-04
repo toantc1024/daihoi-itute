@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 const Hero = () => {
   return (
@@ -9,7 +9,7 @@ const Hero = () => {
           {/* Announcement Banner */}
           <div className="flex justify-center">
             <a
-              className="inline-flex items-center gap-x-2 bg-white border border-gray-200 text-sm text-gray-800 p-1 ps-3 rounded-full transition hover:border-gray-300 dark:bg-gray-800 dark:border-gray-700 dark:hover:border-gray-600 dark:text-gray-200 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+              className="inline-flex items-center gap-x-2  bg-white border border-gray-200 text-[.8rem] text-gray-800 p-1 ps-3 rounded-full transition hover:border-gray-300 dark:bg-gray-800 dark:border-gray-700 dark:hover:border-gray-600 dark:text-gray-200 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
               href="#"
             >
               Xem văn kiện Đại hội
@@ -34,13 +34,11 @@ const Hero = () => {
           {/* End Announcement Banner */}
           {/* Title */}
           <div className="mt-5 max-w-2xl text-center mx-auto">
-            <h1 className="block font-bold text-gray-800 text-4xl md:text-5xl lg:text-6xl dark:text-gray-200">
+            <h1 className="block font-bold text-gray-800 text-sm md:text-4xl lg:text-6xl dark:text-gray-200">
               <span>
                 Đại hội Đại biểu
                 <br />
-                Đoàn TNCS
-                <br />
-                Hồ Chí Minh
+                Đoàn TNCS Hồ Chí Minh
               </span>
               <br />
               <span className="bg-clip-text bg-gradient-to-tl from-blue-600 to-violet-600 text-transparent">
@@ -52,7 +50,7 @@ const Hero = () => {
           </div>
           {/* End Title */}
           <div className="mt-5 max-w-3xl text-center mx-auto">
-            <p className="text-lg text-gray-600 dark:text-gray-400">
+            <p className="text-[.8rem] text-gray-600 dark:text-gray-400">
               Nhiệm kỳ 2024 - 2027
             </p>
           </div>
@@ -63,50 +61,6 @@ const Hero = () => {
               href="#"
             >
               Điểm danh
-              <svg
-                className="flex-shrink-0 size-4"
-                width={16}
-                height={16}
-                viewBox="0 0 16 16"
-                fill="none"
-              >
-                <path
-                  d="M5.27921 2L10.9257 7.64645C11.1209 7.84171 11.1209 8.15829 10.9257 8.35355L5.27921 14"
-                  stroke="currentColor"
-                  strokeWidth={2}
-                  strokeLinecap="round"
-                />
-              </svg>
-            </a>
-          </div>
-          {/* End Buttons */}
-          <div className="mt-5 flex justify-center items-center gap-x-1 sm:gap-x-3">
-            <span className="text-sm text-gray-600 dark:text-gray-400">
-              FITUTE
-            </span>
-            <span className="text-sm font-bold text-gray-900 dark:text-white">
-              npm
-            </span>
-            <svg
-              className="size-5 text-gray-300 dark:text-gray-600"
-              width={16}
-              height={16}
-              viewBox="0 0 16 16"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              aria-hidden="true"
-            >
-              <path
-                d="M6 13L10 3"
-                stroke="currentColor"
-                strokeLinecap="round"
-              />
-            </svg>
-            <a
-              className="inline-flex items-center gap-x-1.5 text-sm text-blue-600 decoration-2 hover:underline font-medium"
-              href="#"
-            >
-              Installation Guide
               <svg
                 className="flex-shrink-0 size-4"
                 width={16}
