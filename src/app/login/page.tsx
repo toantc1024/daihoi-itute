@@ -4,17 +4,41 @@ import { getSchoolEmail } from "../utils/email_template";
 import useAuthStore from "@/store/authStore";
 import { UserData } from "@/types/store/authStore.types";
 import { AuthCredential } from "firebase/auth";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+import { initScriptLoader } from "next/script";
 
 export default function Login() {
-  const { login, isLogging } = useAuthStore((state) => state);
+  const login = useAuthStore((state) => state.login);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const router = useRouter();
+  const currentUser = useAuthStore((state) => state.currentUser);
+
+  useEffect(() => {
+    if (currentUser) {
+      router.push("/");
+    }
+  }, [currentUser]);
 
   return (
     <main className="flex items-center justify-center h-screen w-full max-w-md mx-auto p-6">
-      <div className="mt-7 bg-white border border-gray-200 rounded-xl shadow-sm dark:bg-gray-800 dark:border-gray-700">
-        {isLogging && <div className="h-screen bg-red-400">Is loading</div>}
+      <div className="mt-7 bg-white border border-gray-200 rounded-xl shadow-sm dark:bg-gray-800 dark:border-gray-700 relative">
+        {isLoading && (
+          <>
+            <div className="absolute top-0 start-0 size-full bg-white/[.5] rounded-lg dark:bg-gray-800/[.4]"></div>
+
+            <div className="z-[999] absolute top-1/2 start-1/2 transform -translate-x-1/2 -translate-y-1/2">
+              <div
+                className="z-[999] animate-spin inline-block size-6 border-[3px] border-current border-t-transparent text-blue-600 rounded-full dark:text-blue-500"
+                role="status"
+                aria-label="loading"
+              >
+                <span className="sr-only">Loading...</span>
+              </div>
+            </div>
+          </>
+        )}
 
         <div className="p-4 sm:p-7">
           <div className="text-center">
@@ -34,11 +58,13 @@ export default function Login() {
                     email: getSchoolEmail(formData.get("studentId") as string),
                     password: formData.get("password") as string,
                   };
-
+                  setIsLoading(true);
                   await login(data);
+                  setIsLoading(false);
                   router.push("/");
-                } catch (error) {
-                  console.error(error);
+                } catch (error: any) {
+                  setError("MSSV hoặc mật khẩu chưa đúng!");
+                  setIsLoading(false);
                 }
               }}
             >
@@ -51,6 +77,7 @@ export default function Login() {
                   ></label>
                   <div className="relative">
                     <input
+                      onChange={() => setError(null)}
                       placeholder="MSSV"
                       id="studentId"
                       name="studentId"
@@ -76,6 +103,7 @@ export default function Login() {
                   <div className="flex justify-between items-center"></div>
                   <div className="relative">
                     <input
+                      onChange={() => setError(null)}
                       placeholder="Mật khẩu"
                       type="password"
                       id="password"
@@ -96,12 +124,9 @@ export default function Login() {
                       </svg>
                     </div>
                   </div>
-                  <p
-                    className="hidden text-xs text-red-600 mt-2"
-                    id="password-error"
-                  >
-                    8+ characters required
-                  </p>
+                  {error && (
+                    <p className=" text-xs text-red-600 mt-2">{error}</p>
+                  )}{" "}
                 </div>
                 {/* End Form Group */}
                 {/* Checkbox */}

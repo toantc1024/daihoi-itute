@@ -3,6 +3,7 @@ import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 
 import {
+  onAuthStateChanged,
   getAuth,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
@@ -25,6 +26,8 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
+
+const auth = getAuth();
 
 const createPresentator = (
   password: string,
@@ -51,19 +54,20 @@ const getUserProfileByID = async (uid: string): Promise<any> => {
   return userProfile.data();
 };
 
-const signIn = ({
+const signIn = async ({
   email,
   password,
 }: {
   email: string;
   password: string;
-}): Promise<UserCredential> => {
-  return new Promise((resolve, reject) => {
+}) => {
+  try {
     const auth = getAuth();
-    signInWithEmailAndPassword(auth, email, password)
-      .then((user) => resolve(user))
-      .catch((err) => reject(err));
-  });
+    const user = await signInWithEmailAndPassword(auth, email, password);
+    return user;
+  } catch (error) {
+    throw error;
+  }
 };
 
-export { getAuth, createPresentator, getUserProfileByID, signIn, db };
+export { getAuth, createPresentator, getUserProfileByID, signIn, db, auth };
