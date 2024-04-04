@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 const Hero = () => {
   return (
@@ -9,8 +9,8 @@ const Hero = () => {
           {/* Announcement Banner */}
           <div className="flex justify-center">
             <a
-              className="inline-flex items-center gap-x-2 bg-white border border-gray-200 text-sm text-gray-800 p-1 ps-3 rounded-full transition hover:border-gray-300 dark:bg-gray-800 dark:border-gray-700 dark:hover:border-gray-600 dark:text-gray-200 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-              href="#"
+              className="inline-flex items-center gap-x-2  bg-white border border-gray-200 text-sm text-gray-800 p-1 ps-3 rounded-full transition hover:border-gray-300 dark:bg-gray-800 dark:border-gray-700 dark:hover:border-gray-600 dark:text-gray-200 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+              href="#"  
             >
               Xem văn kiện Đại hội
               <span className="py-1.5 px-2.5 inline-flex justify-center items-center gap-x-2 rounded-full bg-gray-200 font-semibold text-sm text-gray-600 dark:bg-gray-700 dark:text-gray-400">
@@ -34,7 +34,7 @@ const Hero = () => {
           {/* End Announcement Banner */}
           {/* Title */}
           <div className="mt-5 max-w-2xl text-center mx-auto">
-            <h1 className="block font-bold text-gray-800 text-4xl md:text-5xl lg:text-6xl dark:text-gray-200">
+            <h1 className="block font-bold text-gray-800 text-2xl md:text-4xl lg:text-6xl dark:text-gray-200">
               <span>
                 Đại hội Đại biểu
                 <br />
