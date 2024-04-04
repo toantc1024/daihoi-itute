@@ -13,7 +13,7 @@ type AuthStore = {
   logout: any;
 };
 
-const useAuthStore = create<AuthStore>((set) => ({
+const AuthStore = create<AuthStore>((set) => ({
   currentUser: null,
   currentUserProfile: null,
   setCurrentUser: (user: any, profile: any) => {
@@ -34,4 +34,4 @@ const useAuthStore = create<AuthStore>((set) => ({
     set({ currentUser: null });
   },
 }));
-export default useAuthStore;
+export default AuthStore;

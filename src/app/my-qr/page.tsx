@@ -1,11 +1,11 @@
 "use client";
-import useAuthStore from "@/store/authStore";
+import AuthStore from "@/store/authStore";
 import { User } from "@/types/user/userProfile.type";
 import React from "react";
 import QRCode from "react-qr-code";
 
 const page = () => {
-  const currentUserProfile: User | null = useAuthStore(
+  const currentUserProfile: User | null = AuthStore(
     (state) => state.currentUserProfile
   );
 

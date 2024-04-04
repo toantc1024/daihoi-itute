@@ -1,7 +1,7 @@
 "use client";
 import { db, getUserProfileByID, signIn } from "@/config/firebase";
 import { getSchoolEmail } from "../utils/email_template";
-import useAuthStore from "@/store/authStore";
+import AuthStore from "@/store/authStore";
 import { UserData } from "@/types/store/authStore.types";
 import { AuthCredential } from "firebase/auth";
 import { useEffect, useState } from "react";
@@ -9,11 +9,11 @@ import { useRouter } from "next/navigation";
 import { initScriptLoader } from "next/script";
 
 export default function Login() {
-  const login = useAuthStore((state) => state.login);
+  const login = AuthStore((state) => state.login);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const router = useRouter();
-  const currentUser = useAuthStore((state) => state.currentUser);
+  const currentUser = AuthStore((state) => state.currentUser);
 
   useEffect(() => {
     if (currentUser) {

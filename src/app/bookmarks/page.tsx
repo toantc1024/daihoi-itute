@@ -1,6 +1,6 @@
 "use client";
 import { auth, getUserProfileByID } from "@/config/firebase";
-import useAuthStore from "@/store/authStore";
+import AuthStore from "@/store/authStore";
 import { signOut } from "firebase/auth";
 import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
@@ -9,9 +9,9 @@ import { HiQrCode } from "react-icons/hi2";
 import QRCode from "react-qr-code";
 
 const Bookmark = () => {
-  const logout = useAuthStore((state) => state.logout);
-  const currentUser = useAuthStore((state) => state.currentUser);
-  const userProfile = useAuthStore((state) => state.currentUserProfile);
+  const logout = AuthStore((state) => state.logout);
+  const currentUser = AuthStore((state) => state.currentUser);
+  const userProfile = AuthStore((state) => state.currentUserProfile);
   const router = useRouter();
 
   useEffect(() => {

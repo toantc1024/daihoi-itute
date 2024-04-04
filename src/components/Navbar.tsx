@@ -1,16 +1,16 @@
 "use client";
 import { auth, getUserProfileByID } from "@/config/firebase";
-import useAuthStore from "@/store/authStore";
+import AuthStore from "@/store/authStore";
 import { useRouter } from "next/navigation";
 
 import React, { useEffect } from "react";
 import { HiMenu } from "react-icons/hi";
 
 const Navbar = () => {
-  const logout = useAuthStore((state) => state.logout);
-  const setCurrentUser = useAuthStore((state) => state.setCurrentUser);
+  const logout = AuthStore((state) => state.logout);
+  const setCurrentUser = AuthStore((state) => state.setCurrentUser);
   const router = useRouter();
-  const currentUser = useAuthStore((state) => state.currentUser);
+  const currentUser = AuthStore((state) => state.currentUser);
   useEffect(() => {
     const subscriber = auth.onAuthStateChanged(async (user) => {
       if (user) {
