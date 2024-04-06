@@ -1,5 +1,5 @@
 "use client";
-import { auth, getUserProfileByID } from "@/config/firebase";
+import { auth, getUserProfileByID } from "@/hook/firebase";
 import AuthStore from "@/store/authStore";
 import { signOut } from "firebase/auth";
 import { useRouter } from "next/navigation";

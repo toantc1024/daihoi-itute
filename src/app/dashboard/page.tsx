@@ -1,5 +1,5 @@
 "use client";
-import { db } from "@/config/firebase";
+import { db } from "@/hook/firebase";
 import {
   collection,
   doc,

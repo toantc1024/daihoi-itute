@@ -88,6 +88,7 @@ const signIn = async ({
 
 export {
   getAuth,
+  app,
   createPresentator,
   getUserProfileByID,
   signIn,

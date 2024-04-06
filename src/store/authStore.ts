@@ -1,9 +1,6 @@
-import { auth, getUserProfileByID, signIn } from "@/config/firebase";
+import { auth, getUserProfileByID, signIn } from "@/hook/firebase";
 import { User } from "@/types/user/userProfile.type";
-import { AuthCredential, signOut } from "firebase/auth";
-import { decl } from "postcss";
 import { create } from "zustand";
-import { createJSONStorage, persist } from "zustand/middleware";
 
 type AuthStore = {
   currentUserProfile: User | null;
@@ -17,13 +14,17 @@ const AuthStore = create<AuthStore>((set) => ({
   currentUser: null,
   currentUserProfile: null,
   setCurrentUser: (user: any, profile: any) => {
+    console.log(user);
     set({ currentUser: user, currentUserProfile: profile });
   },
   login: async (data: { email: string; password: string }) => {
     try {
       const userCredential = await signIn(data);
       const userProfile = await getUserProfileByID(userCredential.user.uid);
-      set({ currentUser: userCredential, currentUserProfile: userProfile });
+      set({
+        currentUser: userCredential.user,
+        currentUserProfile: userProfile,
+      });
     } catch (error: any) {
       throw error;
     }

@@ -1,27 +1,26 @@
 "use client";
-import { db } from "@/config/firebase";
+import { app, db } from "@/hook/firebase";
 import AuthStore from "@/store/authStore";
 import { User } from "@/types/user/userProfile.type";
-import { doc, onSnapshot } from "firebase/firestore";
+import { doc, getFirestore, onSnapshot } from "firebase/firestore";
 import React, { useEffect, useState } from "react";
 import { QRCode } from "react-qrcode-logo";
 
 const MyQR = () => {
-  const currentUser: any | null = AuthStore(
-    (state) => (state as any).currentUser
-  );
-  // listen to currenUserProfile update
-  const [isAttended, setIsAttended] = useState<boolean>(false);
+  const currentUser = AuthStore((state) => state.currentUser);
+
+  const [isAttended, setIsAttended] = useState(false);
+
   useEffect(() => {
-    // Listen to the user's attendance status
     if (currentUser) {
-      const unsub = onSnapshot(
-        doc(db, "attendances", currentUser.uid),
-        (doc) => {
-          alert(doc.exists());
-          setIsAttended(doc.exists());
+      const q = doc(db, "attendances", currentUser.uid);
+      const unsubscribe = onSnapshot(q, (doc) => {
+        if (doc.exists()) {
+          setIsAttended(true);
+        } else {
+          setIsAttended(false);
         }
-      );
+      });
     }
   }, [currentUser]);
 

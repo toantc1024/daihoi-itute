@@ -4,8 +4,7 @@ import "./QR.css";
 import QrFrame from "./frame.svg";
 import QrScanner from "qr-scanner";
 import { doc, getDoc, setDoc } from "firebase/firestore";
-import { ref } from "firebase/database";
-import { db, getUserProfileByID } from "@/config/firebase";
+import { db, getUserProfileByID } from "@/hook/firebase";
 import { Loader } from "@/components/Loader";
 
 const QRScanner = () => {
@@ -18,25 +17,43 @@ const QRScanner = () => {
 
   const [qrData, setQrData] = useState<string | null>(null);
 
-  const checkAttendance = async (representID: string) => {
-    try {
-      setIsLoading(true);
+  const [currentAttendance, setCurrentAttendance] = useState<any>(null);
 
-      // Business
-      let profile = await getUserProfileByID(representID);
-      //  add dataa to attendance collection
-      //  add data to attendance collection
-      await setDoc(doc(db, "attendances", representID), {
-        attendedAt: new Date().toISOString(),
-      });
-      setIsLoading(false);
-    } catch (error) {
-      setIsLoading(false);
-    }
-  };
+  useEffect(() => {
+    const checkAttendance = async () => {
+      try {
+        if (qrData) {
+          setIsLoading(true);
+          const user = await getUserProfileByID(qrData);
+          if (user) {
+            const docRef = doc(db, "attendances", qrData);
+            const docSnap = await getDoc(docRef);
+
+            if (docSnap.exists()) {
+              setCurrentAttendance({ name: "Đã điểm danh" });
+            } else {
+              let attendee = {
+                uid: qrData,
+                name: user.fullName,
+                timestamp: new Date().toISOString(),
+              };
+              await setDoc(docRef, attendee);
+              setCurrentAttendance(attendee);
+            }
+          } else {
+            alert(user.uid);
+            setCurrentAttendance({ name: "Không tìm thấy đại biểu" });
+          }
+          setIsLoading(false);
+        }
+      } catch (error) {}
+    };
+    checkAttendance();
+  }, [qrData]);
 
   const onScanSuccess = async (result: QrScanner.ScanResult) => {
-    await checkAttendance(result.data);
+    if (qrData === result.data) return;
+    setQrData(result.data);
     // 🖨 Print the "result" to browser console.
   };
 
@@ -78,17 +95,42 @@ const QRScanner = () => {
     };
   }, []);
 
+  useEffect(() => {
+    // Set time out and clear
+    const timer = setTimeout(() => {
+      setCurrentAttendance(null);
+    }, 1000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [currentAttendance]);
+
   return (
     <div>
-      <div className="qr-reader p-4 relative">
+      <div className="qr-reader relative">
+        {currentAttendance && (
+          <div className="z-[999]  absolute w-full h-full">
+            <div className="h-full flex flex-col bg-[rgba(255,255,255,.2)] border shadow-sm  dark:bg-gray-800 dark:border-gray-700 dark:shadow-slate-700/[.7]">
+              <div className="flex flex-auto flex-col justify-end items-center p-4 md:p-5 ">
+                <span className="bg-white py-2 px-2 flex rounded-xl  w-full items-center justify-center font-bold text-blue-700">
+                  {currentAttendance?.name || "Đang chờ quét QR"}
+                </span>
+              </div>
+            </div>
+          </div>
+        )}
+
         {/* QR */}
         {isLoading && (
           <div className="z-[999] absolute w-full h-full">
             <Loader />
           </div>
         )}
-
-        <video ref={videoEl}></video>
+        <video
+          className=" shadow-md rounded-2xl relative"
+          ref={videoEl}
+        ></video>
         <div ref={qrBoxEl} className="qr-box z-[0]">
           <img
             src={QrFrame.src}
@@ -102,9 +144,6 @@ const QRScanner = () => {
       <button
         onClick={() => {
           let result = prompt("Nhập MSSV");
-          if (result) {
-            checkAttendance(result);
-          }
         }}
         type="button"
         className="button"

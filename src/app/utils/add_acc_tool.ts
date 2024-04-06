@@ -1,7 +1,7 @@
 // to do
 /// load data fro csv => add to database!!
 
-import { createPresentator } from "@/config/firebase";
+import { createPresentator } from "@/hook/firebase";
 import { DEFAULT_PASSWORD } from "@/constants";
 import { getSchoolEmail } from "./email_template";
 

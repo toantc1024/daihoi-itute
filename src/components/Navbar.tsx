@@ -1,5 +1,5 @@
 "use client";
-import { auth, getUserProfileByID } from "@/config/firebase";
+import { auth, getUserProfileByID } from "@/hook/firebase";
 import AuthStore from "@/store/authStore";
 import { useRouter } from "next/navigation";
 
@@ -15,6 +15,7 @@ const Navbar = () => {
     const subscriber = auth.onAuthStateChanged(async (user) => {
       if (user) {
         let profile = await getUserProfileByID(user.uid);
+        console.log(user);
         setCurrentUser(user, profile);
       } else {
         console.log("User is signed out");
