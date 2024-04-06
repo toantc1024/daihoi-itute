@@ -45,8 +45,11 @@ const QRScanner = () => {
             setCurrentAttendance({ name: "Không tìm thấy đại biểu" });
           }
           setIsLoading(false);
+          setQrData(null);
         }
-      } catch (error) {}
+      } catch (error) {
+        setQrData(null);
+      }
     };
     checkAttendance();
   }, [qrData]);
@@ -112,7 +115,7 @@ const QRScanner = () => {
         {currentAttendance && (
           <div className="z-[999]  absolute w-full h-full">
             <div className="h-full flex flex-col bg-[rgba(255,255,255,.2)] border shadow-sm  dark:bg-gray-800 dark:border-gray-700 dark:shadow-slate-700/[.7]">
-              <div className="flex flex-auto flex-col justify-end items-center p-4 md:p-5 ">
+              <div className="flex flex-auto flex-col justify-start items-center p-4 md:p-5 ">
                 <span className="bg-white py-2 px-2 flex rounded-xl  w-full items-center justify-center font-bold text-blue-700">
                   {currentAttendance?.name || "Đang chờ quét QR"}
                 </span>
