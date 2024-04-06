@@ -1,5 +1,5 @@
 "use client";
-import { db, getUserProfileByID, signIn } from "@/config/firebase";
+import { db, getUserProfileByID, signIn } from "@/hook/firebase";
 import { getSchoolEmail } from "../utils/email_template";
 import AuthStore from "@/store/authStore";
 import { UserData } from "@/types/store/authStore.types";

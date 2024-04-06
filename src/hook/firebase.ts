@@ -9,8 +9,15 @@ import {
   signInWithEmailAndPassword,
   UserCredential,
 } from "firebase/auth";
-import { doc, getDoc, getFirestore, setDoc } from "firebase/firestore";
+import {
+  doc,
+  getDoc,
+  getFirestore,
+  setDoc,
+  updateDoc,
+} from "firebase/firestore";
 import { User } from "@/types/user/userProfile.type";
+import AuthStore from "@/store/authStore";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 const firebaseConfig = {
@@ -54,6 +61,15 @@ const getUserProfileByID = async (uid: string): Promise<any> => {
   return userProfile.data();
 };
 
+const updateUserAttendance = async (uid: string): Promise<any> => {
+  // update attendance => and listen to this event!!!
+  const userProfile = AuthStore((state) => state.currentUserProfile);
+  await updateDoc(doc(db, "users/" + uid), {
+    ...userProfile,
+    attendance: true,
+  });
+};
+
 const signIn = async ({
   email,
   password,
@@ -70,4 +86,13 @@ const signIn = async ({
   }
 };
 
-export { getAuth, createPresentator, getUserProfileByID, signIn, db, auth };
+export {
+  getAuth,
+  app,
+  createPresentator,
+  getUserProfileByID,
+  signIn,
+  db,
+  auth,
+  updateUserAttendance,
+};
