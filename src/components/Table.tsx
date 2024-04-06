@@ -1,11 +1,7 @@
 "use client";
-import React, { useEffect } from "react";
+import React from "react";
 
 const Table = ({ data }: { data: any }) => {
-  useEffect(() => {
-    console.log(data);
-  }, []);
-
   return (
     data && (
       <div className="flex flex-col">
@@ -47,25 +43,29 @@ const Table = ({ data }: { data: any }) => {
                     <tr>
                       {data &&
                         data[0] &&
-                        Object.keys(data[0]).map((key) => {
+                        Object.keys(data[0]).map((val, i) => {
                           return (
                             <th
+                              key={i}
                               scope="col"
                               className="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase"
                             >
-                              {key}
+                              {val}
                             </th>
                           );
                         })}
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-gray-200 dark:divide-gray-700">
-                    {Object.entries(data).map(([key, value]) => {
+                    {Object.entries(data).map(([key, value], i) => {
                       return (
-                        <tr>
-                          {Object.values(value as any).map((val) => {
+                        <tr key={i}>
+                          {Object.values(value as any).map((val, i) => {
                             return (
-                              <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 dark:text-gray-200">
+                              <td
+                                key={i}
+                                className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 dark:text-gray-200"
+                              >
                                 <span>{JSON.stringify(val)}</span>
                               </td>
                             );
