@@ -14,7 +14,6 @@ const AuthStore = create<AuthStore>((set) => ({
   currentUser: null,
   currentUserProfile: null,
   setCurrentUser: (user: any, profile: any) => {
-    console.log(user);
     set({ currentUser: user, currentUserProfile: profile });
   },
   login: async (data: { email: string; password: string }) => {

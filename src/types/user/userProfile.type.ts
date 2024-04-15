@@ -1,4 +1,4 @@
-type role = "student" | "admin" | "teacher" | "staff" | "guest";
+type role = "student" | "Admin" | "teacher" | "staff" | "guest";
 
 type User = {
   fullName: string;

@@ -1,0 +1,18 @@
+{
+    "0": {
+        "representativeID": "0",
+        "role": "Admin",
+        "fullName": "Đoàn hội khoa Công nghệ thông tin",
+        "studentID": "fit",
+        "communistUnionID": "",
+        "sex": "Nam"
+    },
+    "1": {
+        "representativeID": "1",
+        "role": "BÍ THƯ ĐOÀN KHOA",
+        "fullName": "Lê Vũ Xuân An",
+        "studentID": "21110364",
+        "communistUnionID": "211101ST1",
+        "sex": "Nam"
+    }
+}

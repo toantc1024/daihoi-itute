@@ -1,7 +1,11 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 
 const Table = ({ data }: { data: any }) => {
+  useEffect(() => {
+    console.log(data);
+  }, []);
+
   return (
     data && (
       <div className="flex flex-col">
@@ -43,27 +47,27 @@ const Table = ({ data }: { data: any }) => {
                     <tr>
                       {data &&
                         data[0] &&
-                        Object.keys(data[0]).map((val, i) => {
+                        Object.keys(data[0]).map((key) => {
                           return (
                             <th
-                              key={i}
+                              key={key}
                               scope="col"
                               className="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase"
                             >
-                              {val}
+                              {key}
                             </th>
                           );
                         })}
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-gray-200 dark:divide-gray-700">
-                    {Object.entries(data).map(([key, value], i) => {
+                    {Object.entries(data).map(([key, value]) => {
                       return (
-                        <tr key={i}>
-                          {Object.values(value as any).map((val, i) => {
+                        <tr key={key}>
+                          {Object.values(value as any).map((val, index) => {
                             return (
                               <td
-                                key={i}
+                                key={index}
                                 className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 dark:text-gray-200"
                               >
                                 <span>{JSON.stringify(val)}</span>

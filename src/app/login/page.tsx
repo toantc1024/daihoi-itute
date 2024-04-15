@@ -1,12 +1,10 @@
 "use client";
-import { db, getUserProfileByID, signIn } from "@/hook/firebase";
 import { getSchoolEmail } from "../utils/email_template";
 import AuthStore from "@/store/authStore";
-import { UserData } from "@/types/store/authStore.types";
-import { AuthCredential } from "firebase/auth";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import { initScriptLoader } from "next/script";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "@/hook/firebase";
 
 export default function Login() {
   const login = AuthStore((state) => state.login);
@@ -15,31 +13,9 @@ export default function Login() {
   const router = useRouter();
   const currentUser = AuthStore((state) => state.currentUser);
 
-  useEffect(() => {
-    if (currentUser) {
-      router.push("/");
-    }
-  }, [currentUser]);
-
   return (
     <main className="flex items-center justify-center h-screen w-full max-w-md mx-auto p-6">
       <div className="mt-7 bg-white border border-gray-200 rounded-xl shadow-sm dark:bg-gray-800 dark:border-gray-700 relative">
-        {isLoading && (
-          <>
-            <div className="absolute top-0 start-0 size-full bg-white/[.5] rounded-lg dark:bg-gray-800/[.4]"></div>
-
-            <div className="z-[999] absolute top-1/2 start-1/2 transform -translate-x-1/2 -translate-y-1/2">
-              <div
-                className="z-[999] animate-spin inline-block size-6 border-[3px] border-current border-t-transparent text-blue-600 rounded-full dark:text-blue-500"
-                role="status"
-                aria-label="loading"
-              >
-                <span className="sr-only">Loading...</span>
-              </div>
-            </div>
-          </>
-        )}
-
         <div className="p-4 sm:p-7">
           <div className="text-center">
             <h1 className="block text-2xl font-bold text-gray-800 dark:text-white">
@@ -59,7 +35,11 @@ export default function Login() {
                     password: formData.get("password") as string,
                   };
                   setIsLoading(true);
-                  await login(data);
+                  await signInWithEmailAndPassword(
+                    auth,
+                    data.email,
+                    data.password
+                  );
                   setIsLoading(false);
                   router.push("/");
                 } catch (error: any) {

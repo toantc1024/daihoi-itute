@@ -18,6 +18,7 @@ import {
 } from "firebase/firestore";
 import { User } from "@/types/user/userProfile.type";
 import AuthStore from "@/store/authStore";
+import { profile } from "console";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 const firebaseConfig = {
@@ -34,7 +35,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-const auth = getAuth();
+const auth = getAuth(app);
 
 const createPresentator = (
   password: string,
@@ -46,7 +47,7 @@ const createPresentator = (
     const user = createUserWithEmailAndPassword(auth, profile.email, password)
       .then((user) => {
         // add user to firestore
-        const userRef = doc(db, "users", user.user.uid);
+        const userRef = doc(db, "users", profile.representativeID as string);
         setDoc(userRef, profile)
           .then(() => resolve(user))
           .catch((err) => reject(err));
@@ -55,8 +56,10 @@ const createPresentator = (
   });
 };
 
-const getUserProfileByID = async (uid: string): Promise<any> => {
-  const userRef = doc(db, "users", uid);
+// Delete all user in the firebase service
+
+const getUserProfileByID = async (id: string): Promise<any> => {
+  const userRef = doc(db, "users", id);
   const userProfile = await getDoc(userRef);
   return userProfile.data();
 };

@@ -6,6 +6,8 @@ import { doc, getFirestore, onSnapshot } from "firebase/firestore";
 import React, { useEffect, useState } from "react";
 import { QRCode } from "react-qrcode-logo";
 
+import QR_DH from "@/assets/background/qr_DH.jpg";
+
 const MyQR = () => {
   const currentUser = AuthStore((state) => state.currentUser);
 
@@ -40,11 +42,10 @@ const MyQR = () => {
         {currentUser != null && (
           <QRCode
             size={256}
-            logoWidth={64}
-            logoHeight={64}
+            logoWidth={80}
+            logoHeight={80}
             style={{ height: "auto", maxWidth: "100%", width: "100%" }}
             value={currentUser?.uid as string | ""}
-            logoImage="https://inuvdp.com/wp-content/uploads/2022/05/logo-doan-thanh-nien-03.jpg"
           />
         )}
       </div>

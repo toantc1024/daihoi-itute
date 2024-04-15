@@ -1,11 +1,9 @@
 "use client";
-import { auth, getUserProfileByID } from "@/hook/firebase";
 import AuthStore from "@/store/authStore";
-import { signOut } from "firebase/auth";
 import { useRouter } from "next/navigation";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { HiDocument, HiLogout, HiUser } from "react-icons/hi";
-import { HiQrCode } from "react-icons/hi2";
+import { HiHandRaised, HiQrCode } from "react-icons/hi2";
 
 const Bookmark = () => {
   const logout = AuthStore((state) => state.logout);
@@ -23,9 +21,11 @@ const Bookmark = () => {
     <div className="h-screen relative max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
       {userProfile && (
         <div className="grid sm:grid-cols-2  gap-3 sm:gap-6">
-          <a
-            className="group flex flex-col bg-white border shadow-sm rounded-xl hover:shadow-md transition dark:bg-slate-900 dark:border-gray-800"
-            href="#"
+          <div
+            className="cursor-pointer group relative flex flex-col bg-white border shadow-sm rounded-xl hover:shadow-md transition dark:bg-slate-900 dark:border-gray-800"
+            onClick={() => {
+              router.push("/profile");
+            }}
           >
             <div className="p-4 md:p-5">
               <div className="flex justify-between items-center">
@@ -33,18 +33,18 @@ const Bookmark = () => {
                   <h3 className="group-hover:text-blue-600 font-semibold text-gray-800 dark:group-hover:text-gray-400 dark:text-gray-200">
                     {userProfile.fullName}
                   </h3>
-                  <p className="text-sm text-gray-500">Thông tin cá nhân</p>
+                  <p className="text-sm text-gray-500 ">Thông tin cá nhân</p>
                 </div>
-                <div className="ps-3">
-                  <HiUser />
+                <div className="ps-3 ] ">
+                  <HiUser className="" />
                 </div>
               </div>
             </div>
-          </a>
-          {userProfile?.role === "admin" && (
+          </div>
+          {userProfile?.role === "Admin" && (
             <>
               <div
-                className="group flex flex-col bg-white border shadow-sm rounded-xl hover:shadow-md transition dark:bg-slate-900 dark:border-gray-800"
+                className="cursor-pointer group relative flex flex-col bg-white border shadow-sm rounded-xl hover:shadow-md transition dark:bg-slate-900 dark:border-gray-800"
                 onClick={() => {
                   router.push("/dashboard");
                 }}
@@ -64,7 +64,7 @@ const Bookmark = () => {
                 </div>
               </div>
               <div
-                className="group flex flex-col bg-white border shadow-sm rounded-xl hover:shadow-md transition dark:bg-slate-900 dark:border-gray-800"
+                className="cursor-pointer group relative flex flex-col bg-white border shadow-sm rounded-xl hover:shadow-md transition dark:bg-slate-900 dark:border-gray-800"
                 onClick={() => {
                   router.push("/scan-qr");
                 }}
@@ -85,11 +85,33 @@ const Bookmark = () => {
                   </div>
                 </div>
               </div>
+              <div
+                className="cursor-pointer group relative flex flex-col bg-white border shadow-sm rounded-xl hover:shadow-md transition dark:bg-slate-900 dark:border-gray-800"
+                onClick={() => {
+                  router.push("/welcome");
+                }}
+              >
+                <div className="p-4 md:p-5">
+                  <div className="flex justify-between items-center">
+                    <div>
+                      <h3 className="group-hover:text-blue-600 font-semibold text-gray-800 dark:group-hover:text-gray-400 dark:text-gray-200">
+                        Chào đại biểu
+                      </h3>
+                      <p className="text-sm text-gray-500">
+                        Hiện 2 đại biểu gần nhất
+                      </p>
+                    </div>
+                    <div className="ps-3">
+                      <HiHandRaised />
+                    </div>
+                  </div>
+                </div>
+              </div>
             </>
           )}
-          {userProfile?.role != "admin" && (
+          {userProfile?.role != "Admin" && (
             <div
-              className="group flex flex-col bg-white border shadow-sm rounded-xl hover:shadow-md transition dark:bg-slate-900 dark:border-gray-800"
+              className="cursor-pointer group relative flex flex-col bg-white border shadow-sm rounded-xl hover:shadow-md transition dark:bg-slate-900 dark:border-gray-800"
               onClick={() => {
                 router.push("/my-qr");
               }}
@@ -111,10 +133,7 @@ const Bookmark = () => {
           )}
           {/* End Card */}
           {/* Card */}
-          <a
-            className="group flex flex-col bg-white border shadow-sm rounded-xl hover:shadow-md transition dark:bg-slate-900 dark:border-gray-800"
-            href="#"
-          >
+          <div className="cursor-pointer group relative flex flex-col bg-white border shadow-sm rounded-xl hover:shadow-md transition dark:bg-slate-900 dark:border-gray-800">
             <div className="p-4 md:p-5">
               <div className="flex justify-between items-center">
                 <div>
@@ -130,14 +149,14 @@ const Bookmark = () => {
                 </div>
               </div>
             </div>
-          </a>
+          </div>
           {/* Card */}
           <div
             onClick={async () => {
               await logout();
               router.push("/");
             }}
-            className="group flex flex-col bg-white border shadow-sm rounded-xl hover:shadow-md transition dark:bg-slate-900 dark:border-gray-800"
+            className="cursor-pointer group relative flex flex-col bg-white border shadow-sm rounded-xl hover:shadow-md transition dark:bg-slate-900 dark:border-gray-800"
           >
             <div className="p-4 md:p-5">
               <div className="flex justify-between items-center">

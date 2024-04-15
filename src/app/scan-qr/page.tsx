@@ -18,40 +18,37 @@ const QRScanner = () => {
   const [qrData, setQrData] = useState<string | null>(null);
 
   const [currentAttendance, setCurrentAttendance] = useState<any>(null);
+  const checkAttendance = async (uid: any) => {
+    try {
+      if (uid) {
+        setIsLoading(true);
+        const user = await getUserProfileByID(uid);
+        if (user) {
+          const docRef = doc(db, "attendances", uid);
+          const docSnap = await getDoc(docRef);
 
-  useEffect(() => {
-    const checkAttendance = async () => {
-      try {
-        if (qrData) {
-          setIsLoading(true);
-          const user = await getUserProfileByID(qrData);
-          if (user) {
-            const docRef = doc(db, "attendances", qrData);
-            const docSnap = await getDoc(docRef);
-
-            if (docSnap.exists()) {
-              setCurrentAttendance({ name: "Đã điểm danh" });
-            } else {
-              let attendee = {
-                uid: qrData,
-                name: user.fullName,
-                timestamp: new Date().toISOString(),
-              };
-              await setDoc(docRef, attendee);
-              setCurrentAttendance(attendee);
-            }
+          if (docSnap.exists()) {
+            setCurrentAttendance({ name: docSnap.data().fullName });
           } else {
-            alert(user.uid);
-            setCurrentAttendance({ name: "Không tìm thấy đại biểu" });
+            let attendee = {
+              uid: uid,
+              name: user.fullName,
+              timestamp: new Date().toISOString(),
+            };
+            await setDoc(docRef, attendee);
+            setCurrentAttendance(attendee);
           }
-          setIsLoading(false);
-          setQrData(null);
+        } else {
+          setCurrentAttendance({ name: "Không tìm thấy đại biểu" });
         }
-      } catch (error) {
-        setQrData(null);
+        setIsLoading(false);
       }
-    };
-    checkAttendance();
+    } catch (error) {
+      setQrData(null);
+    }
+  };
+  useEffect(() => {
+    checkAttendance(qrData);
   }, [qrData]);
 
   const onScanSuccess = async (result: QrScanner.ScanResult) => {
@@ -102,7 +99,7 @@ const QRScanner = () => {
     // Set time out and clear
     const timer = setTimeout(() => {
       setCurrentAttendance(null);
-    }, 1000);
+    }, 3000);
 
     return () => {
       clearTimeout(timer);
