@@ -26,12 +26,16 @@ const PositionTable = ({
   const makeRange = (min: number, max: number): Array<any> =>
     // make array with value min -> max
 
-    Array.from({ length: max - min + 1 }, (_, i) => min + i - 1);
+    Array.from({ length: max - min + 1 }, (_, i) => min + i);
   useEffect(() => {
     let newRange = makeRange(min, max);
     setRange(newRange);
     console.log(newRange);
   }, []);
+
+  useEffect(() => {
+    console.log(attendees);
+  }, [attendees]);
 
   return (
     range && (
@@ -53,7 +57,7 @@ const PositionTable = ({
                       attendees && attendees[x] ? "bg-dhcyan" : "bg-teal-400"
                     } text-white transition-all duration-9000 shadow-sm rounded-xl text-center font-bold border-[1px] border-gray-200`}
                   >
-                    {x + 1}
+                    {x}
                   </td>
                 ))}
                 {row.length < 4 &&

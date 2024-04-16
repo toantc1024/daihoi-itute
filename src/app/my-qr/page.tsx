@@ -19,6 +19,10 @@ const MyQR = () => {
       const unsubscribe = onSnapshot(q, (doc) => {
         if (doc.exists()) {
           setIsAttended(true);
+          let audioEle: HTMLAudioElement | any =
+            document.getElementById("success");
+          audioEle.pause();
+          audioEle.play();
         } else {
           setIsAttended(false);
         }
@@ -28,6 +32,7 @@ const MyQR = () => {
 
   return (
     <div className="h-screen flex-col flex items-center pt-14 justify-start gap-4">
+      <audio src="./audio.mp3" id="success"></audio>
       <div>
         <h3 className="font-bold">Đại biểu điểm danh bằng QR</h3>
       </div>

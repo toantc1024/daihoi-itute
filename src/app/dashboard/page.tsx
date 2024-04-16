@@ -24,14 +24,14 @@ const Dashboard = () => {
     })();
     const q = query(collection(db, "attendances"));
     const unsubscribe = onSnapshot(q, (querySnapshot) => {
-      let attendeeList: any = [];
+      let attendeeList: any = {};
       querySnapshot.forEach((doc) => {
-        attendeeList.push(doc.data());
+        let data: any = doc.data();
+        attendeeList[data.representativeID] = data;
       });
       setAttendees(attendeeList);
     });
   }, []);
-
   const addZero = (num: number) => {
     return num < 10 ? `0${num}` : num;
   };
@@ -78,7 +78,7 @@ const Dashboard = () => {
         <div className="group flex flex-col h-full bg-white border border-gray-200 shadow-sm rounded-xl dark:bg-slate-900 dark:border-gray-700 dark:shadow-slate-700/[.7]">
           <div className=" h-full flex flex-col  gap-4 items-center justify-center">
             <div className="font-bold bg-gradient-to-b from-red-500 to-blue-500 bg-clip-text text-transparent text-8xl ">
-              {attendees ? addZero(attendees.length) : 0}
+              {attendees ? addZero(Object.entries(attendees).length) : 0}
             </div>{" "}
             <div className="text-gray-600 text-4xl  text-whte font-bold">
               Đại biểu
@@ -102,7 +102,10 @@ const Dashboard = () => {
             options={{
               labels: ["Đã đến", "Chưa đến"],
             }}
-            series={[attendees.length, 80 - attendees.length]}
+            series={[
+              Object.entries(attendees).length,
+              80 - Object.entries(attendees).length,
+            ]}
             type="donut"
             width={450}
             height={320}

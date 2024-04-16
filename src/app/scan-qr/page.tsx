@@ -32,6 +32,7 @@ const QRScanner = () => {
           } else {
             let attendee = {
               uid: uid,
+              representativeID: user.representativeID,
               name: user.fullName,
               timestamp: new Date().toISOString(),
             };
@@ -127,6 +128,7 @@ const QRScanner = () => {
             <Loader />
           </div>
         )}
+
         <video
           className=" shadow-md rounded-2xl relative"
           ref={videoEl}
@@ -141,15 +143,11 @@ const QRScanner = () => {
           />
         </div>
       </div>
-      <button
-        onClick={() => {
-          let result = prompt("Nhập MSSV");
-        }}
-        type="button"
-        className="button"
-      >
-        Nhập MSSV
-      </button>
+      <div className="p-8">
+        <button className="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none">
+          Nhập MSSV
+        </button>
+      </div>
     </div>
   );
 };

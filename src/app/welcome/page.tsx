@@ -14,20 +14,21 @@ const Welcome = () => {
     const q = query(collection(db, "attendances"));
     const unsubscribe = onSnapshot(q, (snapshot) => {
       let values: any = [];
-      snapshot.docChanges().forEach((change) => {
-        if (change.type === "added") {
-          values.push(change.doc.data());
-        }
-        // if (change.type === "modified") {
-        //   console.log("Modified city: ", change.doc.data());
-        // }
-        // if (change.type === "removed") {
-        //   console.log("Removed city: ", change.doc.data());
-        // }
+      snapshot.forEach((doc) => {
+        values.push(doc.data());
       });
+
       setAttendances(values);
     });
   }, []);
+
+  // Scroll to bottom
+  useEffect(() => {
+    // Get the element by id
+    const element = document.getElementById("attend-list");
+
+    // Scroll to the bottom
+  }, [attendances]);
 
   return (
     <div className="h-screen flex m-4 p-24 gap-8 border-[1px] rounded-xl flex-col ">
@@ -35,7 +36,10 @@ const Welcome = () => {
         Chào các đại biểu đến với Đại Hội
       </div>
 
-      <div className="grid grid-rows-2 gap-4 h-full">
+      <div
+        id="attend-list"
+        className="flex flex-col justify-start overflow-auto gap-4 h-full"
+      >
         {attendances &&
           getLastNElement(attendances, 2).map((attendance: any) => (
             <>

@@ -9,9 +9,9 @@ const DataTable = ({ data }: any) => {
             <table className="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
               <tbody className="divide-y divide-gray-200 dark:divide-gray-700">
                 {data &&
-                  data.map((item: any, key: number) => (
+                  Object.entries(data).map((item: any, key: number) => (
                     <tr key={key}>
-                      {Object.values(item).map((value: any, key: number) => (
+                      {Object.values(item[1]).map((value: any, key: number) => (
                         <td key={key} className="px-6 py-4 whitespace-nowrap">
                           <div className="text-sm text-gray-900 dark:text-gray-200">
                             {value}
