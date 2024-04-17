@@ -32,8 +32,8 @@ const Welcome = () => {
 
   return (
     <div className="h-screen flex m-4 p-24 gap-8 border-[1px] rounded-xl flex-col ">
-      <div className="text-dhblue w-full flex items-center justify-center text-4xl font-bold py-8">
-        Chào các đại biểu đến với Đại Hội
+      <div className="text-dhblue w-full flex items-center justify-center text-4xl font-bold py-8 ">
+        Chào mừng đại biểu
       </div>
 
       <div
@@ -41,15 +41,31 @@ const Welcome = () => {
         className="flex flex-col justify-start overflow-auto gap-4 h-full"
       >
         {attendances &&
-          getLastNElement(attendances, 2).map((attendance: any) => (
+          attendances.map((attendance: any, key: any) => (
             <>
-              <div className="rounded-xl   flex items-center justify-center h-full flex-col gap-4">
-                <h1 className="text-4xl font-bold">Đại biểu</h1>
-                <p className="text-6xl font-bold bg-gradient-to-tr  from-indigo-500 via-purple-500 to-pink-500 inline-block text-transparent bg-clip-text ">
-                  {attendance.name}
-                </p>
-              </div>
-              <hr />
+              {key == 0 ? (
+                <>
+                  <div className="h-full items-center flex gap-4 justify-between py-2 flex-grow-0">
+                    <span className="text-dhred font-bold text-2xl ">
+                      Đại biểu.
+                    </span>
+                    <span className="py-2 text-6xl bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500  inline-block text-transparent bg-clip-text  font-bold">
+                      {attendance.name}
+                    </span>
+                  </div>
+                </>
+              ) : (
+                <>
+                  <div className="flex gap-4 justify-between items-end py-2">
+                    <span className="py-2 font-bold text-2xl text-gray-800">
+                      Đại biểu.
+                    </span>
+                    <span className=" py-2 text-4xl font-bold">
+                      {attendance.name}
+                    </span>
+                  </div>
+                </>
+              )}
             </>
           ))}
       </div>

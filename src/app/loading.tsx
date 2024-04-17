@@ -12,8 +12,8 @@ const Loading = () => {
           >
             <span className="sr-only">Loading...</span>
           </div>
-          <div className="flex  gap-4 items-center justify-center font-bold">
-            Gần tới rồi nè <div className="animate-bounce">👀</div>
+          <div className="flex  text-sm gap-4 items-center justify-center font-bold">
+            Bạn chờ tí nha <div className="animate-bounce">👀</div>
           </div>
         </div>
       </div>
