@@ -13,8 +13,6 @@ export default function Login() {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const router = useRouter();
-  const currentUser = AuthStore((state) => state.currentUser);
-
   const [studentId, setStudentId] = useState<string>("");
   const [password, setPassword] = useState<string>("");
 
@@ -50,11 +48,15 @@ export default function Login() {
                     <div className="relative">
                       <input
                         onChange={(e: any) => {
-                          setStudentId(e.target.value);
+                          let newStudentID = e.target.value;
+                          // lowercase
+                          newStudentID = newStudentID.toLowerCase();
+                          setStudentId(newStudentID);
                         }}
                         placeholder="MSSV"
                         id="studentId"
                         name="studentId"
+                        value={studentId}
                         className=" border  py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600"
                       />
                       <div className="hidden absolute inset-y-0 end-0 pointer-events-none pe-3">

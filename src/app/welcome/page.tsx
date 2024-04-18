@@ -46,7 +46,7 @@ const Welcome = () => {
               {key == 0 ? (
                 <>
                   <div className="h-full items-center flex gap-4 justify-between py-2 flex-grow-0">
-                    <span className="text-dhred font-bold text-2xl ">
+                    <span className="text-gray-900 font-bold text-2xl ">
                       Đại biểu.
                     </span>
                     <span className="py-2 text-6xl bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500  inline-block text-transparent bg-clip-text  font-bold">

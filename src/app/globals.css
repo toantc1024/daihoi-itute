@@ -6,3 +6,16 @@
 *::-webkit-scrollbar {
   display: none;
 }
+
+body {
+  background-color: white;
+  color: black;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: -0.03em;
+}
+
+[data-hidden] {
+  opacity: 0;
+}

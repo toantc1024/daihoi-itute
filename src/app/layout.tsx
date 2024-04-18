@@ -1,12 +1,20 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import localFont from "@next/font/local";
+
 import "./globals.css";
 import PrelineScript from "../components/PrelineScript";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import React from "react";
 import DAIHOI from "@/assets/background/daihoixi.jpg";
-const inter = Inter({ subsets: ["latin"] });
+const fontFamily = localFont({
+  src: [
+    { path: "../assets/fonts/SVN-Gotham XLight.otf", weight: "100" },
+    { path: "../assets/fonts/SVN-Gotham Bold.otf", weight: "400" },
+    { path: "../assets/fonts/SVN-Gotham Bold.otf", weight: "700" },
+    { path: "../assets/fonts/SVN-Gotham Ultra.otf", weight: "900" },
+  ],
+});
 
 export const metadata: Metadata = {
   title: "FITUTE - Ứng dụng Đại Hội trực tuyến",
@@ -35,7 +43,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={fontFamily.className}>
         <Navbar />
         {children}
         <Footer />

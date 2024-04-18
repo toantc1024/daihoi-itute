@@ -1,9 +1,12 @@
 "use client";
+import BookmarkOption from "@/components/BookmarkOption";
 import AuthStore from "@/store/authStore";
 import { useRouter } from "next/navigation";
 import React, { useEffect } from "react";
-import { HiDocument, HiLogout, HiUser } from "react-icons/hi";
-import { HiHandRaised, HiQrCode } from "react-icons/hi2";
+import { GrDashboard } from "react-icons/gr";
+import { HiDocument, HiLogout, HiMenu, HiUser } from "react-icons/hi";
+import { HiHandRaised, HiOutlineSquares2X2, HiQrCode } from "react-icons/hi2";
+import { RxDashboard } from "react-icons/rx";
 
 const Bookmark = () => {
   const logout = AuthStore((state) => state.logout);
@@ -21,156 +24,63 @@ const Bookmark = () => {
     <div className="h-screen relative max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
       {userProfile && (
         <div className="grid sm:grid-cols-2  gap-3 sm:gap-6">
-          <div
-            className="cursor-pointer group relative flex flex-col bg-white border shadow-sm rounded-xl hover:shadow-md transition dark:bg-slate-900 dark:border-gray-800"
-            onClick={() => {
+          <BookmarkOption
+            eventHandler={() => {
               router.push("/profile");
             }}
-          >
-            <div className="p-4 md:p-5">
-              <div className="flex justify-between items-center">
-                <div>
-                  <h3 className="group-hover:text-blue-600 font-semibold text-gray-800 dark:group-hover:text-gray-400 dark:text-gray-200">
-                    {userProfile.fullName}
-                  </h3>
-                  <p className="text-sm text-gray-500 ">Thông tin cá nhân</p>
-                </div>
-                <div className="ps-3 ] ">
-                  <HiUser className="" />
-                </div>
-              </div>
-            </div>
-          </div>
+            title={"Thông tin cá nhân"}
+            text={userProfile.fullName}
+            icon={<HiUser />}
+          />
+
           {userProfile?.role === "Admin" && (
             <>
-              <div
-                className="cursor-pointer group relative flex flex-col bg-white border shadow-sm rounded-xl hover:shadow-md transition dark:bg-slate-900 dark:border-gray-800"
-                onClick={() => {
+              <BookmarkOption
+                eventHandler={() => {
                   router.push("/dashboard");
                 }}
-              >
-                <div className="p-4 md:p-5">
-                  <div className="flex justify-between items-center">
-                    <div>
-                      <h3 className="group-hover:text-blue-600 font-semibold text-gray-800 dark:group-hover:text-gray-400 dark:text-gray-200">
-                        Điều khiển
-                      </h3>
-                      <p className="text-sm text-gray-500">Quản lý điểm danh</p>
-                    </div>
-                    <div className="ps-3">
-                      <HiQrCode />
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                className="cursor-pointer group relative flex flex-col bg-white border shadow-sm rounded-xl hover:shadow-md transition dark:bg-slate-900 dark:border-gray-800"
-                onClick={() => {
+                title={"Điều khiển"}
+                text={"Quản lý điểm danh"}
+                icon={<HiOutlineSquares2X2 />}
+              />
+              <BookmarkOption
+                text={"Điểm danh đại biểu"}
+                title={"Scan QR"}
+                icon={<HiQrCode />}
+                eventHandler={() => {
                   router.push("/scan-qr");
                 }}
-              >
-                <div className="p-4 md:p-5">
-                  <div className="flex justify-between items-center">
-                    <div>
-                      <h3 className="group-hover:text-blue-600 font-semibold text-gray-800 dark:group-hover:text-gray-400 dark:text-gray-200">
-                        Scan QR
-                      </h3>
-                      <p className="text-sm text-gray-500">
-                        Điểm danh đại biểu
-                      </p>
-                    </div>
-                    <div className="ps-3">
-                      <HiQrCode />
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                className="cursor-pointer group relative flex flex-col bg-white border shadow-sm rounded-xl hover:shadow-md transition dark:bg-slate-900 dark:border-gray-800"
-                onClick={() => {
+              />
+              <BookmarkOption
+                text={"Các đại biểu mới đến"}
+                title={"Chào mừng đại biểu"}
+                icon={<HiHandRaised />}
+                eventHandler={() => {
                   router.push("/welcome");
                 }}
-              >
-                <div className="p-4 md:p-5">
-                  <div className="flex justify-between items-center">
-                    <div>
-                      <h3 className="group-hover:text-blue-600 font-semibold text-gray-800 dark:group-hover:text-gray-400 dark:text-gray-200">
-                        Chào đại biểu
-                      </h3>
-                      <p className="text-sm text-gray-500">
-                        Hiện 2 đại biểu gần nhất
-                      </p>
-                    </div>
-                    <div className="ps-3">
-                      <HiHandRaised />
-                    </div>
-                  </div>
-                </div>
-              </div>
+              />
             </>
           )}
           {userProfile?.role != "Admin" && (
-            <div
-              className="cursor-pointer group relative flex flex-col bg-white border shadow-sm rounded-xl hover:shadow-md transition dark:bg-slate-900 dark:border-gray-800"
-              onClick={() => {
+            <BookmarkOption
+              title={"QR điểm danh"}
+              text={"Đưa cho lễ tân FIT"}
+              icon={<HiQrCode />}
+              eventHandler={() => {
                 router.push("/my-qr");
               }}
-            >
-              <div className="p-4 md:p-5">
-                <div className="flex justify-between items-center">
-                  <div>
-                    <h3 className="group-hover:text-blue-600 font-semibold text-gray-800 dark:group-hover:text-gray-400 dark:text-gray-200">
-                      QR điểm danh
-                    </h3>
-                    <p className="text-sm text-gray-500">Đưa cho lễ tân FIT</p>
-                  </div>
-                  <div className="ps-3">
-                    <HiQrCode />
-                  </div>
-                </div>
-              </div>
-            </div>
+            />
           )}
-          {/* End Card */}
-          {/* Card */}
-          <div className="cursor-pointer group relative flex flex-col bg-white border shadow-sm rounded-xl hover:shadow-md transition dark:bg-slate-900 dark:border-gray-800">
-            <div className="p-4 md:p-5">
-              <div className="flex justify-between items-center">
-                <div>
-                  <h3 className="group-hover:text-blue-600 font-semibold text-gray-800 dark:group-hover:text-gray-400 dark:text-gray-200">
-                    Văn kiện đại hội
-                  </h3>
-                  <p className="text-sm text-gray-500">
-                    Danh sách các văn kiện
-                  </p>
-                </div>
-                <div className="ps-3">
-                  <HiDocument />
-                </div>
-              </div>
-            </div>
-          </div>
-          {/* Card */}
-          <div
-            onClick={async () => {
+
+          <BookmarkOption
+            title={"Đăng xuất"}
+            text={"Thoát tài khoản"}
+            icon={<HiLogout />}
+            eventHandler={async () => {
               await logout();
               router.push("/");
             }}
-            className="cursor-pointer group relative flex flex-col bg-white border shadow-sm rounded-xl hover:shadow-md transition dark:bg-slate-900 dark:border-gray-800"
-          >
-            <div className="p-4 md:p-5">
-              <div className="flex justify-between items-center">
-                <div>
-                  <h3 className="group-hover:text-blue-600 font-semibold text-gray-800 dark:group-hover:text-gray-400 dark:text-gray-200">
-                    Đăng xuất
-                  </h3>
-                </div>
-                <div className="ps-3">
-                  <HiLogout />
-                </div>
-              </div>
-            </div>
-          </div>
+          />
         </div>
       )}
     </div>

@@ -2,23 +2,26 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./QR.css";
 import QrFrame from "./frame.svg";
-import QrScanner from "qr-scanner";
-import { doc, getDoc, setDoc } from "firebase/firestore";
+import QRScanner from "qr-scanner";
+import { collection, doc, getDoc, getDocs, setDoc } from "firebase/firestore";
 import { db, getUserProfileByID } from "@/hook/firebase";
-import { Loader } from "@/components/Loader";
+import AuthStore from "@/store/authStore";
+import Unauthorized from "@/components/Unauthorized";
 
-const QRScanner = () => {
+const ScanQR = () => {
   const videoEl = useRef<HTMLVideoElement>(null);
   const qrBoxEl = useRef<HTMLDivElement>(null);
-  const scanner = useRef<QrScanner>();
+  const scanner = useRef<QRScanner>();
   const [qrOn, setQrOn] = useState<boolean>(true);
 
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
   const [qrData, setQrData] = useState<string | null>(null);
 
+  const currentUserProfile = AuthStore((state) => state.currentUserProfile);
   const [currentAttendance, setCurrentAttendance] = useState<any>(null);
   const checkAttendance = async (uid: any) => {
+    setShowModal(false);
     try {
       if (uid) {
         setIsLoading(true);
@@ -52,7 +55,7 @@ const QRScanner = () => {
     checkAttendance(qrData);
   }, [qrData]);
 
-  const onScanSuccess = async (result: QrScanner.ScanResult) => {
+  const onScanSuccess = async (result: QRScanner.ScanResult) => {
     if (qrData === result.data) return;
     setQrData(result.data);
     // 🖨 Print the "result" to browser console.
@@ -66,7 +69,7 @@ const QRScanner = () => {
   useEffect(() => {
     if (videoEl?.current && !scanner.current) {
       // 👉 Instantiate the QR Scanner
-      scanner.current = new QrScanner(videoEl?.current, onScanSuccess, {
+      scanner.current = new QRScanner(videoEl?.current, onScanSuccess, {
         onDecodeError: onScanFail,
         // 📷 This is the camera facing mode. In mobile devices, "environment" means back camera and "user" means front camera.
         preferredCamera: "environment",
@@ -94,7 +97,27 @@ const QRScanner = () => {
         scanner?.current?.stop();
       }
     };
-  }, []);
+  }, [currentUserProfile]);
+
+  const [studentIdMap, setStudentIdMap] = useState<any>({});
+
+  useEffect(() => {
+    // get all users from firestore
+    const fetchUsers = async () => {
+      const querySnapshot = await getDocs(collection(db, "users"));
+      let map: any = {};
+      querySnapshot.forEach((doc) => {
+        let data = doc.data();
+        let studentID: string = data.studentID;
+        map[studentID] = doc.id;
+        // doc.data() is never undefined for query doc snapshots
+      });
+    };
+    fetchUsers();
+  }, [currentUserProfile]);
+
+  const [showModal, setShowModal] = useState(false);
+  const [studentId, setStudentId] = useState<string | null>(null);
 
   useEffect(() => {
     // Set time out and clear
@@ -107,7 +130,7 @@ const QRScanner = () => {
     };
   }, [currentAttendance]);
 
-  return (
+  return currentUserProfile && currentUserProfile.role === "Admin" ? (
     <div>
       <div className="qr-reader relative">
         {currentAttendance && (
@@ -125,7 +148,7 @@ const QRScanner = () => {
         {/* QR */}
         {isLoading && (
           <div className="z-[999] absolute w-full h-full">
-            <Loader />
+            {/* <Loader /> */}
           </div>
         )}
 
@@ -143,13 +166,57 @@ const QRScanner = () => {
           />
         </div>
       </div>
+      <div
+        className={`${
+          !showModal ? "hidden" : ""
+        } fixed top-0 bottom-0  left-0 right-0  p-2 bg-white flex `}
+      >
+        <div className=" flex items-center justify-center flex-col shadow-xl gap-4 z-[999] w-full">
+          <div className="max-w-sm space-y-3">
+            <input
+              type="text"
+              onChange={(e) => setStudentId(e.target.value)}
+              value={studentId || ""}
+              className="py-3 px-4 block w-full border-[1px] border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600"
+              placeholder="MSSV"
+            />
+          </div>
+
+          <div className="flex gap-4">
+            <button
+              onClick={() => {
+                checkAttendance(studentId);
+                setStudentId("");
+              }}
+              className="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none"
+            >
+              Điểm danh{" "}
+            </button>
+            <button
+              onClick={() => {
+                setShowModal(false);
+              }}
+              className="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-dhred text-white hover:bg-dhred disabled:opacity-50 disabled:pointer-events-none"
+            >
+              Đóng
+            </button>
+          </div>
+        </div>
+      </div>
       <div className="p-8">
-        <button className="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none">
+        <button
+          onClick={() => {
+            setShowModal(true);
+          }}
+          className="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none"
+        >
           Nhập MSSV
         </button>
       </div>
     </div>
+  ) : (
+    <Unauthorized />
   );
 };
 
-export default QRScanner;
+export default ScanQR;

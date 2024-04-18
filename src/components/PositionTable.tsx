@@ -39,7 +39,7 @@ const PositionTable = ({
 
   return (
     range && (
-      <table className="w-full border-separate border-spacing-2 border rounded-xl shadow-sm border-gray-100 ">
+      <table className="w-full border-separate  border-spacing-2 border rounded-xl shadow-sm border-gray-100 ">
         {
           // Split the array into 4 elements each
           range &&
@@ -54,8 +54,8 @@ const PositionTable = ({
                   <td
                     key={index}
                     className={`p-1 ${
-                      attendees && attendees[x] ? "bg-dhcyan" : "bg-teal-400"
-                    } text-white transition-all duration-9000 shadow-sm rounded-xl text-center font-bold border-[1px] border-gray-200`}
+                      attendees && attendees[x] ? "bg-dhblue" : "bg-red-500"
+                    } text-white transition-all duration-9000  rounded-xl text-center font-bold border-[1px] border-gray-200`}
                   >
                     {x}
                   </td>

@@ -6,20 +6,20 @@ const RoomMap = ({ attendees }: { attendees: any }) => {
   return (
     <div className="flex bg-gradient-to-tr   justify-center flex-col h-full w-full relative">
       <div className="flex p-4">
-        <div className="p-4  bg-gradient-to-b  from-red-500 to-red-600 text-white w-full text-center rounded-xl font-bold">
+        <div className="p-4  bg-dhcyan text-white w-full text-center rounded-xl font-bold">
           SÂN KHẤU
         </div>
       </div>
       <div className="py-4 h-full flex gap-2  justify-between px-4">
-        <div className="bg-dhblue text-white  py-2 flex items-center justify-center px-4 rounded-xl font-bold">
+        <div className="bg-dhcyan text-white  py-2 flex items-center justify-center px-4 rounded-xl font-bold">
           KHÁCH MỜI
         </div>
-        <div className="bg-dhblue text-white  py-2 flex items-center justify-center px-4 rounded-xl font-bold">
+        <div className="bg-dhcyan text-white  py-2 flex items-center justify-center px-4 rounded-xl font-bold">
           KHÁCH MỜI
         </div>
       </div>
       <div className=" h-auto py-4 flex justify-center items-center flex-col ">
-        <div className=" text-center p-2 rounded-xl font-bold bg-dhblue text-white">
+        <div className=" text-center p-2 rounded-xl font-bold bg-dhcyan text-white">
           ĐẠI BIỂU KHÁCH MỜI
         </div>
       </div>
