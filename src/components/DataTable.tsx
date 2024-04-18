@@ -38,7 +38,7 @@ const DataTable = ({ data }: any) => {
               <tbody className="divide-y divide-gray-200 dark:divide-gray-700">
                 {data &&
                   Object.entries(data).map((item: any, parentKey: number) => (
-                    <tr>
+                    <tr key={parentKey}>
                       {sortEntriesByKey(Object.entries(item[1])).map(
                         (x: any, childrenKey: number) => {
                           if (x[0] !== "uid") {
