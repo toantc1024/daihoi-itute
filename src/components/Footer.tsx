@@ -18,8 +18,9 @@ const Footer = () => {
           </div>
           {/* End Col */}
           <div className="mt-3">
-            <p className="text-dhcyan dark:text-neutral-500">
-              Developed with love<span className="text-dhred">❤</span> by toantc
+            <p className="text-dhblue dark:text-neutral-500">
+              Developed with love <span className="text-dhred">❤</span> by
+              toantc
             </p>
           </div>
           {/* Social Brands */}
