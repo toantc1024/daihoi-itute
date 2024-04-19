@@ -7,17 +7,15 @@ const Sponsors = () => {
       <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
         {/* Title */}
         <div className="max-w-2xl mx-auto text-center mb-10 lg:mb-14">
-          <h2 className="text-2xl font-bold md:text-4xl md:leading-tight dark:text-white">
+          <h2 className="text-2xl font-bold md:text-4xl md:leading-tight ">
             Đội ngũ phát triển
           </h2>
-          <p className="mt-1 text-gray-600 dark:text-neutral-400">
-            Who make it?
-          </p>
+          <p className="mt-1 text-gray-600 ">Who make it?</p>
         </div>
         {/* End Title */}
         {/* Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div className="flex flex-col rounded-xl p-4 md:p-6 bg-white border border-gray-200 dark:bg-neutral-900 dark:border-neutral-700">
+          <div className="flex flex-col rounded-xl p-4 md:p-6 bg-white border border-gray-200  ">
             <div className="flex items-center gap-x-4">
               <img
                 className="rounded-full size-20"
@@ -25,21 +23,19 @@ const Sponsors = () => {
                 alt="Image Description"
               />
               <div className="grow">
-                <h3 className="font-medium text-gray-800 dark:text-neutral-200">
-                  Trần Công Toản
-                </h3>
-                <p className="text-xs uppercase text-gray-500 dark:text-neutral-500">
+                <h3 className="font-medium text-gray-800 ">Trần Công Toản</h3>
+                <p className="text-xs uppercase text-gray-500 ">
                   Fullstack Developer
                 </p>
               </div>
             </div>
-            <p className="mt-3 text-gray-500 dark:text-neutral-500">
+            <p className="mt-3 text-gray-500 ">
               Xây dựng app điểm danh trực tuyến.
             </p>
             {/* Social Brands */}
             <div className="mt-3 space-x-1">
               <a
-                className="inline-flex justify-center items-center size-8 text-sm font-semibold rounded-lg border border-gray-200 text-gray-500 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:border-neutral-700 dark:hover:bg-neutral-700"
+                className="inline-flex justify-center items-center size-8 text-sm font-semibold rounded-lg border border-gray-200 text-gray-500 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none   "
                 href="#"
               >
                 <svg
@@ -54,7 +50,7 @@ const Sponsors = () => {
                 </svg>
               </a>
               <a
-                className="inline-flex justify-center items-center size-8 text-sm font-semibold rounded-lg border border-gray-200 text-gray-500 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:border-neutral-700 dark:hover:bg-neutral-700"
+                className="inline-flex justify-center items-center size-8 text-sm font-semibold rounded-lg border border-gray-200 text-gray-500 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none   "
                 href="#"
               >
                 <svg
@@ -69,7 +65,7 @@ const Sponsors = () => {
                 </svg>
               </a>
               <a
-                className="inline-flex justify-center items-center size-8 text-sm font-semibold rounded-lg border border-gray-200 text-gray-500 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:border-neutral-700 dark:hover:bg-neutral-700"
+                className="inline-flex justify-center items-center size-8 text-sm font-semibold rounded-lg border border-gray-200 text-gray-500 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none   "
                 href="#"
               >
                 <svg
@@ -87,7 +83,7 @@ const Sponsors = () => {
             {/* End Social Brands */}
           </div>
           {/* End Col */}
-          <div className="flex flex-col rounded-xl p-4 md:p-6 bg-white border border-gray-200 dark:bg-neutral-900 dark:border-neutral-700">
+          <div className="flex flex-col rounded-xl p-4 md:p-6 bg-white border border-gray-200  ">
             <div className="flex items-center gap-x-4">
               <img
                 className="rounded-full size-20"
@@ -95,22 +91,20 @@ const Sponsors = () => {
                 alt="Image Description"
               />
               <div className="grow">
-                <h3 className="font-medium text-gray-800 dark:text-neutral-200">
-                  Amil Evara
-                </h3>
-                <p className="text-xs uppercase text-gray-500 dark:text-neutral-500">
+                <h3 className="font-medium text-gray-800 ">Amil Evara</h3>
+                <p className="text-xs uppercase text-gray-500 ">
                   UI/UX Designer
                 </p>
               </div>
             </div>
-            <p className="mt-3 text-gray-500 dark:text-neutral-500">
+            <p className="mt-3 text-gray-500 ">
               I am an ambitious workaholic, but apart from that, pretty simple
               person.
             </p>
             {/* Social Brands */}
             <div className="mt-3 space-x-1">
               <a
-                className="inline-flex justify-center items-center size-8 text-sm font-semibold rounded-lg border border-gray-200 text-gray-500 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:border-neutral-700 dark:hover:bg-neutral-700"
+                className="inline-flex justify-center items-center size-8 text-sm font-semibold rounded-lg border border-gray-200 text-gray-500 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none   "
                 href="#"
               >
                 <svg
@@ -125,7 +119,7 @@ const Sponsors = () => {
                 </svg>
               </a>
               <a
-                className="inline-flex justify-center items-center size-8 text-sm font-semibold rounded-lg border border-gray-200 text-gray-500 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:border-neutral-700 dark:hover:bg-neutral-700"
+                className="inline-flex justify-center items-center size-8 text-sm font-semibold rounded-lg border border-gray-200 text-gray-500 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none   "
                 href="#"
               >
                 <svg
@@ -140,7 +134,7 @@ const Sponsors = () => {
                 </svg>
               </a>
               <a
-                className="inline-flex justify-center items-center size-8 text-sm font-semibold rounded-lg border border-gray-200 text-gray-500 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:border-neutral-700 dark:hover:bg-neutral-700"
+                className="inline-flex justify-center items-center size-8 text-sm font-semibold rounded-lg border border-gray-200 text-gray-500 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none   "
                 href="#"
               >
                 <svg
@@ -158,7 +152,7 @@ const Sponsors = () => {
             {/* End Social Brands */}
           </div>
           {/* End Col */}
-          <div className="flex flex-col rounded-xl p-4 md:p-6 bg-white border border-gray-200 dark:bg-neutral-900 dark:border-neutral-700">
+          <div className="flex flex-col rounded-xl p-4 md:p-6 bg-white border border-gray-200  ">
             <div className="flex items-center gap-x-4">
               <img
                 className="rounded-full size-20"
@@ -166,22 +160,20 @@ const Sponsors = () => {
                 alt="Image Description"
               />
               <div className="grow">
-                <h3 className="font-medium text-gray-800 dark:text-neutral-200">
-                  Ebele Egbuna
-                </h3>
-                <p className="text-xs uppercase text-gray-500 dark:text-neutral-500">
+                <h3 className="font-medium text-gray-800 ">Ebele Egbuna</h3>
+                <p className="text-xs uppercase text-gray-500 ">
                   Support Consultant
                 </p>
               </div>
             </div>
-            <p className="mt-3 text-gray-500 dark:text-neutral-500">
+            <p className="mt-3 text-gray-500 ">
               I am an ambitious workaholic, but apart from that, pretty simple
               person.
             </p>
             {/* Social Brands */}
             <div className="mt-3 space-x-1">
               <a
-                className="inline-flex justify-center items-center size-8 text-sm font-semibold rounded-lg border border-gray-200 text-gray-500 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:border-neutral-700 dark:hover:bg-neutral-700"
+                className="inline-flex justify-center items-center size-8 text-sm font-semibold rounded-lg border border-gray-200 text-gray-500 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none   "
                 href="#"
               >
                 <svg
@@ -196,7 +188,7 @@ const Sponsors = () => {
                 </svg>
               </a>
               <a
-                className="inline-flex justify-center items-center size-8 text-sm font-semibold rounded-lg border border-gray-200 text-gray-500 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:border-neutral-700 dark:hover:bg-neutral-700"
+                className="inline-flex justify-center items-center size-8 text-sm font-semibold rounded-lg border border-gray-200 text-gray-500 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none   "
                 href="#"
               >
                 <svg
@@ -211,7 +203,7 @@ const Sponsors = () => {
                 </svg>
               </a>
               <a
-                className="inline-flex justify-center items-center size-8 text-sm font-semibold rounded-lg border border-gray-200 text-gray-500 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:border-neutral-700 dark:hover:bg-neutral-700"
+                className="inline-flex justify-center items-center size-8 text-sm font-semibold rounded-lg border border-gray-200 text-gray-500 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none   "
                 href="#"
               >
                 <svg
@@ -229,7 +221,7 @@ const Sponsors = () => {
             {/* End Social Brands */}
           </div>
           {/* End Col */}
-          <div className="flex flex-col rounded-xl p-4 md:p-6 bg-white border border-gray-200 dark:bg-neutral-900 dark:border-neutral-700">
+          <div className="flex flex-col rounded-xl p-4 md:p-6 bg-white border border-gray-200  ">
             <div className="flex items-center gap-x-4">
               <img
                 className="rounded-full size-20"
@@ -237,22 +229,20 @@ const Sponsors = () => {
                 alt="Image Description"
               />
               <div className="grow">
-                <h3 className="font-medium text-gray-800 dark:text-neutral-200">
-                  Maria Powers
-                </h3>
-                <p className="text-xs uppercase text-gray-500 dark:text-neutral-500">
+                <h3 className="font-medium text-gray-800 ">Maria Powers</h3>
+                <p className="text-xs uppercase text-gray-500 ">
                   Director of sales
                 </p>
               </div>
             </div>
-            <p className="mt-3 text-gray-500 dark:text-neutral-500">
+            <p className="mt-3 text-gray-500 ">
               I am an ambitious workaholic, but apart from that, pretty simple
               person.
             </p>
             {/* Social Brands */}
             <div className="mt-3 space-x-1">
               <a
-                className="inline-flex justify-center items-center size-8 text-sm font-semibold rounded-lg border border-gray-200 text-gray-500 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:border-neutral-700 dark:hover:bg-neutral-700"
+                className="inline-flex justify-center items-center size-8 text-sm font-semibold rounded-lg border border-gray-200 text-gray-500 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none   "
                 href="#"
               >
                 <svg
@@ -267,7 +257,7 @@ const Sponsors = () => {
                 </svg>
               </a>
               <a
-                className="inline-flex justify-center items-center size-8 text-sm font-semibold rounded-lg border border-gray-200 text-gray-500 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:border-neutral-700 dark:hover:bg-neutral-700"
+                className="inline-flex justify-center items-center size-8 text-sm font-semibold rounded-lg border border-gray-200 text-gray-500 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none   "
                 href="#"
               >
                 <svg
@@ -282,7 +272,7 @@ const Sponsors = () => {
                 </svg>
               </a>
               <a
-                className="inline-flex justify-center items-center size-8 text-sm font-semibold rounded-lg border border-gray-200 text-gray-500 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:border-neutral-700 dark:hover:bg-neutral-700"
+                className="inline-flex justify-center items-center size-8 text-sm font-semibold rounded-lg border border-gray-200 text-gray-500 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none   "
                 href="#"
               >
                 <svg
@@ -300,7 +290,7 @@ const Sponsors = () => {
             {/* End Social Brands */}
           </div>
           {/* End Col */}
-          <div className="flex flex-col rounded-xl p-4 md:p-6 bg-white border border-gray-200 dark:bg-neutral-900 dark:border-neutral-700">
+          <div className="flex flex-col rounded-xl p-4 md:p-6 bg-white border border-gray-200  ">
             <div className="flex items-center gap-x-4">
               <img
                 className="rounded-full size-20"
@@ -308,22 +298,20 @@ const Sponsors = () => {
                 alt="Image Description"
               />
               <div className="grow">
-                <h3 className="font-medium text-gray-800 dark:text-neutral-200">
-                  Delia Pawelke
-                </h3>
-                <p className="text-xs uppercase text-gray-500 dark:text-neutral-500">
+                <h3 className="font-medium text-gray-800 ">Delia Pawelke</h3>
+                <p className="text-xs uppercase text-gray-500 ">
                   Front-end Developer
                 </p>
               </div>
             </div>
-            <p className="mt-3 text-gray-500 dark:text-neutral-500">
+            <p className="mt-3 text-gray-500 ">
               I am an ambitious workaholic, but apart from that, pretty simple
               person.
             </p>
             {/* Social Brands */}
             <div className="mt-3 space-x-1">
               <a
-                className="inline-flex justify-center items-center size-8 text-sm font-semibold rounded-lg border border-gray-200 text-gray-500 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:border-neutral-700 dark:hover:bg-neutral-700"
+                className="inline-flex justify-center items-center size-8 text-sm font-semibold rounded-lg border border-gray-200 text-gray-500 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none   "
                 href="#"
               >
                 <svg
@@ -338,7 +326,7 @@ const Sponsors = () => {
                 </svg>
               </a>
               <a
-                className="inline-flex justify-center items-center size-8 text-sm font-semibold rounded-lg border border-gray-200 text-gray-500 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:border-neutral-700 dark:hover:bg-neutral-700"
+                className="inline-flex justify-center items-center size-8 text-sm font-semibold rounded-lg border border-gray-200 text-gray-500 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none   "
                 href="#"
               >
                 <svg
@@ -353,7 +341,7 @@ const Sponsors = () => {
                 </svg>
               </a>
               <a
-                className="inline-flex justify-center items-center size-8 text-sm font-semibold rounded-lg border border-gray-200 text-gray-500 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:border-neutral-700 dark:hover:bg-neutral-700"
+                className="inline-flex justify-center items-center size-8 text-sm font-semibold rounded-lg border border-gray-200 text-gray-500 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none   "
                 href="#"
               >
                 <svg
@@ -371,7 +359,7 @@ const Sponsors = () => {
             {/* End Social Brands */}
           </div>
           {/* End Col */}
-          <div className="flex flex-col rounded-xl p-4 md:p-6 bg-white border border-gray-200 dark:bg-neutral-900 dark:border-neutral-700">
+          <div className="flex flex-col rounded-xl p-4 md:p-6 bg-white border border-gray-200  ">
             <div className="flex items-center gap-x-4">
               <img
                 className="rounded-full size-20"
@@ -379,22 +367,20 @@ const Sponsors = () => {
                 alt="Image Description"
               />
               <div className="grow">
-                <h3 className="font-medium text-gray-800 dark:text-neutral-200">
-                  Tom Lowry
-                </h3>
-                <p className="text-xs uppercase text-gray-500 dark:text-neutral-500">
+                <h3 className="font-medium text-gray-800 ">Tom Lowry</h3>
+                <p className="text-xs uppercase text-gray-500 ">
                   UI/UX Designer
                 </p>
               </div>
             </div>
-            <p className="mt-3 text-gray-500 dark:text-neutral-500">
+            <p className="mt-3 text-gray-500 ">
               I am an ambitious workaholic, but apart from that, pretty simple
               person.
             </p>
             {/* Social Brands */}
             <div className="mt-3 space-x-1">
               <a
-                className="inline-flex justify-center items-center size-8 text-sm font-semibold rounded-lg border border-gray-200 text-gray-500 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:border-neutral-700 dark:hover:bg-neutral-700"
+                className="inline-flex justify-center items-center size-8 text-sm font-semibold rounded-lg border border-gray-200 text-gray-500 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none   "
                 href="#"
               >
                 <svg
@@ -409,7 +395,7 @@ const Sponsors = () => {
                 </svg>
               </a>
               <a
-                className="inline-flex justify-center items-center size-8 text-sm font-semibold rounded-lg border border-gray-200 text-gray-500 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:border-neutral-700 dark:hover:bg-neutral-700"
+                className="inline-flex justify-center items-center size-8 text-sm font-semibold rounded-lg border border-gray-200 text-gray-500 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none   "
                 href="#"
               >
                 <svg
@@ -424,7 +410,7 @@ const Sponsors = () => {
                 </svg>
               </a>
               <a
-                className="inline-flex justify-center items-center size-8 text-sm font-semibold rounded-lg border border-gray-200 text-gray-500 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:border-neutral-700 dark:hover:bg-neutral-700"
+                className="inline-flex justify-center items-center size-8 text-sm font-semibold rounded-lg border border-gray-200 text-gray-500 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none   "
                 href="#"
               >
                 <svg
@@ -442,7 +428,7 @@ const Sponsors = () => {
             {/* End Social Brands */}
           </div>
           {/* End Col */}
-          <div className="flex flex-col rounded-xl p-4 md:p-6 bg-white border border-gray-200 dark:bg-neutral-900 dark:border-neutral-700">
+          <div className="flex flex-col rounded-xl p-4 md:p-6 bg-white border border-gray-200  ">
             <div className="flex items-center gap-x-4">
               <img
                 className="rounded-full size-20"
@@ -450,22 +436,20 @@ const Sponsors = () => {
                 alt="Image Description"
               />
               <div className="grow">
-                <h3 className="font-medium text-gray-800 dark:text-neutral-200">
-                  Louise Donadieu
-                </h3>
-                <p className="text-xs uppercase text-gray-500 dark:text-neutral-500">
+                <h3 className="font-medium text-gray-800 ">Louise Donadieu</h3>
+                <p className="text-xs uppercase text-gray-500 ">
                   Support Consultant
                 </p>
               </div>
             </div>
-            <p className="mt-3 text-gray-500 dark:text-neutral-500">
+            <p className="mt-3 text-gray-500 ">
               I am an ambitious workaholic, but apart from that, pretty simple
               person.
             </p>
             {/* Social Brands */}
             <div className="mt-3 space-x-1">
               <a
-                className="inline-flex justify-center items-center size-8 text-sm font-semibold rounded-lg border border-gray-200 text-gray-500 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:border-neutral-700 dark:hover:bg-neutral-700"
+                className="inline-flex justify-center items-center size-8 text-sm font-semibold rounded-lg border border-gray-200 text-gray-500 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none   "
                 href="#"
               >
                 <svg
@@ -480,7 +464,7 @@ const Sponsors = () => {
                 </svg>
               </a>
               <a
-                className="inline-flex justify-center items-center size-8 text-sm font-semibold rounded-lg border border-gray-200 text-gray-500 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:border-neutral-700 dark:hover:bg-neutral-700"
+                className="inline-flex justify-center items-center size-8 text-sm font-semibold rounded-lg border border-gray-200 text-gray-500 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none   "
                 href="#"
               >
                 <svg
@@ -495,7 +479,7 @@ const Sponsors = () => {
                 </svg>
               </a>
               <a
-                className="inline-flex justify-center items-center size-8 text-sm font-semibold rounded-lg border border-gray-200 text-gray-500 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:border-neutral-700 dark:hover:bg-neutral-700"
+                className="inline-flex justify-center items-center size-8 text-sm font-semibold rounded-lg border border-gray-200 text-gray-500 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none   "
                 href="#"
               >
                 <svg
@@ -513,7 +497,7 @@ const Sponsors = () => {
             {/* End Social Brands */}
           </div>
           {/* End Col */}
-          <div className="flex flex-col rounded-xl p-4 md:p-6 bg-white border border-gray-200 dark:bg-neutral-900 dark:border-neutral-700">
+          <div className="flex flex-col rounded-xl p-4 md:p-6 bg-white border border-gray-200  ">
             <div className="flex items-center gap-x-4">
               <img
                 className="rounded-full size-20"
@@ -521,22 +505,20 @@ const Sponsors = () => {
                 alt="Image Description"
               />
               <div className="grow">
-                <h3 className="font-medium text-gray-800 dark:text-neutral-200">
-                  Jeff Fisher
-                </h3>
-                <p className="text-xs uppercase text-gray-500 dark:text-neutral-500">
+                <h3 className="font-medium text-gray-800 ">Jeff Fisher</h3>
+                <p className="text-xs uppercase text-gray-500 ">
                   Project Manager
                 </p>
               </div>
             </div>
-            <p className="mt-3 text-gray-500 dark:text-neutral-500">
+            <p className="mt-3 text-gray-500 ">
               I am an ambitious workaholic, but apart from that, pretty simple
               person.
             </p>
             {/* Social Brands */}
             <div className="mt-3 space-x-1">
               <a
-                className="inline-flex justify-center items-center size-8 text-sm font-semibold rounded-lg border border-gray-200 text-gray-500 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:border-neutral-700 dark:hover:bg-neutral-700"
+                className="inline-flex justify-center items-center size-8 text-sm font-semibold rounded-lg border border-gray-200 text-gray-500 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none   "
                 href="#"
               >
                 <svg
@@ -551,7 +533,7 @@ const Sponsors = () => {
                 </svg>
               </a>
               <a
-                className="inline-flex justify-center items-center size-8 text-sm font-semibold rounded-lg border border-gray-200 text-gray-500 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:border-neutral-700 dark:hover:bg-neutral-700"
+                className="inline-flex justify-center items-center size-8 text-sm font-semibold rounded-lg border border-gray-200 text-gray-500 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none   "
                 href="#"
               >
                 <svg
@@ -566,7 +548,7 @@ const Sponsors = () => {
                 </svg>
               </a>
               <a
-                className="inline-flex justify-center items-center size-8 text-sm font-semibold rounded-lg border border-gray-200 text-gray-500 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:border-neutral-700 dark:hover:bg-neutral-700"
+                className="inline-flex justify-center items-center size-8 text-sm font-semibold rounded-lg border border-gray-200 text-gray-500 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none   "
                 href="#"
               >
                 <svg
@@ -585,14 +567,12 @@ const Sponsors = () => {
           </div>
           {/* End Col */}
           <a
-            className="col-span-full lg:col-span-1 group flex flex-col justify-center text-center rounded-xl p-4 md:p-6 border border-dashed border-gray-200 hover:shadow-sm dark:border-neutral-700"
+            className="col-span-full lg:col-span-1 group flex flex-col justify-center text-center rounded-xl p-4 md:p-6 border border-dashed border-gray-200 hover:shadow-sm "
             href="#"
           >
-            <h3 className="text-lg text-gray-800 dark:text-neutral-200">
-              We are hiring!
-            </h3>
+            <h3 className="text-lg text-gray-800 ">We are hiring!</h3>
             <div>
-              <span className="inline-flex items-center gap-x-2 text-blue-600 group-hover:text-blue-700 dark:text-blue-500 dark:group-hover:text-blue-400">
+              <span className="inline-flex items-center gap-x-2 text-blue-600 ">
                 See all opening positions
                 <svg
                   className="flex-shrink-0 size-4"

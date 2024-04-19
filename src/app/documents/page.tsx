@@ -34,25 +34,25 @@ export default function Documents() {
           <div className="flex flex-col">
             <div className="-m-1.5 overflow-x-auto">
               <div className="p-1.5 min-w-full inline-block align-middle">
-                <div className="bg-white border border-gray-200 rounded-xl shadow-sm  overflow-auto  max-h-[400px]  dark:bg-neutral-900 dark:border-neutral-700">
-                  <table className="w-full max-h-[400px] divide-y divide-gray-200 dark:divide-neutral-700 relative">
-                    <thead className="sticky top-0 bg-gray-50 dark:bg-neutral-900">
+                <div className="bg-white border border-gray-200 rounded-xl shadow-sm  overflow-auto  max-h-[400px]  ">
+                  <table className="w-full max-h-[400px] divide-y divide-gray-200  relative">
+                    <thead className="sticky top-0 bg-gray-50 ">
                       <tr>
                         <th scope="col" className="px-6 py-3 text-start">
                           <div className="flex items-center gap-x-2">
-                            <span className="text-xs font-semibold uppercase tracking-wide text-gray-800 dark:text-neutral-200">
+                            <span className="text-xs font-semibold uppercase tracking-wide text-gray-800 ">
                               Tên văn kiện
                             </span>
                           </div>
                         </th>
                         <th scope="col" className="px-6 py-3 text-start">
                           <div className="flex items-center gap-x-2">
-                            <span className="text-xs font-semibold uppercase tracking-wide text-gray-800 dark:text-neutral-200"></span>
+                            <span className="text-xs font-semibold uppercase tracking-wide text-gray-800 "></span>
                           </div>
                         </th>
                       </tr>
                     </thead>
-                    <tbody className="divide-y overflow-y-auto max-h-[80vh] divide-gray-200 dark:divide-neutral-700">
+                    <tbody className="divide-y overflow-y-auto max-h-[80vh] divide-gray-200 ">
                       {" "}
                       {documents ? (
                         documents.map((x: any) => {
@@ -62,12 +62,12 @@ export default function Documents() {
                                 setCurrentDocument(x.url);
                                 setShowDocument(true);
                               }}
-                              className="bg-white hover:bg-gray-50 dark:bg-neutral-900 dark:hover:bg-neutral-800"
+                              className="bg-white hover:bg-gray-50  "
                             >
                               <td className="size-px whitespace-nowrap">
                                 <button type="button" className="block">
                                   <span className="block px-6 py-2">
-                                    <span className="text-sm text-gray-600 dark:text-neutral-400">
+                                    <span className="text-sm text-gray-600 ">
                                       {x.title}
                                     </span>
                                   </span>
@@ -80,7 +80,7 @@ export default function Documents() {
                                   data-hs-overlay="#hs-ai-invoice-modal"
                                 >
                                   <span className="px-6 py-1.5">
-                                    <span className="py-1 px-2 inline-flex justify-center items-center gap-2 rounded-lg border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-sm dark:bg-neutral-900 dark:hover:bg-neutral-800 dark:border-neutral-700 dark:text-neutral-400 dark:hover:text-white dark:focus:ring-offset-gray-800">
+                                    <span className="py-1 px-2 inline-flex justify-center items-center gap-2 rounded-lg border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-sm   ">
                                       <HiDocument />
                                     </span>
                                   </span>
@@ -96,10 +96,10 @@ export default function Documents() {
                   </table>
                   {/* End Table */}
                   {/* Footer */}
-                  <div className="sticky bottom-0  bg-white px-6 py-4 grid gap-3 md:flex md:justify-between md:items-center border-t border-gray-200 dark:border-neutral-700">
+                  <div className="sticky bottom-0  bg-white px-6 py-4 grid gap-3 md:flex md:justify-between md:items-center border-t border-gray-200">
                     <div>
-                      <p className="text-sm text-gray-600 dark:text-neutral-400">
-                        <span className="font-semibold text-gray-800 dark:text-neutral-200">
+                      <p className="text-sm text-gray-600">
+                        <span className="font-semibold text-gray-800 ">
                           {documents && documents.length}
                         </span>{" "}
                         văn kiện

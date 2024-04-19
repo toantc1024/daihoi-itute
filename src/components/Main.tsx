@@ -25,7 +25,7 @@ const Main = () => {
               </span>
             </div>
 
-            <div className="mt-3 text-sm dark:text-neutral-400">
+            <div className="mt-3 text-sm ">
               <button className="bg-dhblue text-white text-sm font-bold py-2 px-2 rounded-xl ">
                 LẦN THỨ XI, NHIỆM KỲ 2024 - 2027
               </button>

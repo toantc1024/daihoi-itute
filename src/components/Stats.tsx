@@ -21,7 +21,7 @@ const Stats = () => {
                 {/* SVG Element */}
                 <div className="absolute bottom-0 start-0 -z-[1] translate-y-10 -translate-x-14">
                   <svg
-                    className="max-w-40 h-auto text-dhcyan dark:text-neutral-700"
+                    className="max-w-40 h-auto text-dhcyan "
                     width={696}
                     height={653}
                     viewBox="0 0 696 653"
@@ -267,7 +267,7 @@ const Stats = () => {
               {/* Blockquote */}
               <blockquote className="relative">
                 <svg
-                  className="absolute top-0 start-0 transform -translate-x-8 -translate-y-4 size-24 text-gray-100 dark:text-neutral-700"
+                  className="absolute top-0 start-0 transform -translate-x-8 -translate-y-4 size-24 text-gray-100 "
                   width={16}
                   height={16}
                   viewBox="0 0 16 16"
@@ -281,10 +281,10 @@ const Stats = () => {
                   />
                 </svg>
                 <div className="relative z-10">
-                  <p className="text-xs text-center font-semibold text-gray-500 tracking-wide uppercase mb-3 dark:text-neutral-200">
+                  <p className="text-xs text-center font-semibold text-gray-500 tracking-wide uppercase mb-3 ">
                     Lời dạy của Bác
                   </p>
-                  <p className=" text-center text-xl font-medium italic text-gray-800 md:text-2xl md:leading-normal xl:text-3xl xl:leading-normal dark:text-neutral-200">
+                  <p className=" text-center text-xl font-medium italic text-gray-800 md:text-2xl md:leading-normal xl:text-3xl xl:leading-normal ">
                     “Không có việc gì khó <br /> Chỉ sợ lòng không bền <br />{" "}
                     Đào núi và lấp biển <br />
                     Quyết chí ắt làm nên”.
@@ -302,10 +302,10 @@ const Stats = () => {
                       />
                     </div>
                     <div className="ms-4 md:ms-0">
-                      <div className="text-base font-semibold text-gray-800 dark:text-neutral-200">
+                      <div className="text-base font-semibold text-gray-800 ">
                         Chủ tịch <br /> Hồ Chí Minh
                       </div>
-                      <div className="text-xs text-gray-500 dark:text-neutral-400">
+                      <div className="text-xs text-gray-500 ">
                         (Hồ Chí Minh toàn tập, tập 6, trang 95)
                       </div>
                     </div>

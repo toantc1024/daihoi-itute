@@ -9,7 +9,7 @@ const Unauthorized = () => {
       <header className="mb-auto flex justify-center z-50 w-full py-4">
         <nav className="px-4 sm:px-6 lg:px-8" aria-label="Global">
           <a
-            className="flex-none text-xl font-semibold sm:text-3xl dark:text-white"
+            className="flex-none text-xl font-semibold sm:text-3xl "
             href="#"
             aria-label="Brand"
           >
@@ -21,8 +21,8 @@ const Unauthorized = () => {
       {/* ========== MAIN CONTENT ========== */}
       <main id="content" className="h-[80vh] flex items-center justify-center">
         <div className="text-center py-10 px-4 sm:px-6 lg:px-8">
-          <p className="mt-3 text-gray-600 dark:text-neutral-400"></p>
-          <p className="text-gray-600 dark:text-neutral-400">
+          <p className="mt-3 text-gray-600 "></p>
+          <p className="text-gray-600 ">
             Bạn hông thể truy cập trang này được.
           </p>
           <div className="mt-5 flex flex-col justify-center items-center gap-2 sm:flex-row sm:gap-3">
@@ -55,9 +55,7 @@ const Unauthorized = () => {
       {/* ========== FOOTER ========== */}
       <footer className="mt-auto text-center py-5">
         <div className="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-sm text-gray-500 dark:text-neutral-500">
-            © All Rights Reserved. 2022.
-          </p>
+          <p className="text-sm text-gray-500 ">© All Rights Reserved. 2022.</p>
         </div>
       </footer>
       {/* ========== END FOOTER ========== */}

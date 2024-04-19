@@ -23,15 +23,15 @@ export default function Login() {
   return (
     <div className="relative">
       {isLoading && (
-        <div className="absolute h-screen w-full bg-red-600 z-[999]">
+        <div className="absolute h-screen w-full  z-[999]">
           <Loading />
         </div>
       )}
       <main className="flex items-center justify-center h-screen w-full max-w-md mx-auto p-6 relative">
-        <div className="mt-7 bg-white border border-gray-200 rounded-xl shadow-sm dark:bg-gray-800 dark:border-gray-700 relative">
+        <div className="mt-7 bg-white border border-gray-200 rounded-xl shadow-smrelative">
           <div className="p-4 sm:p-7">
             <div className="text-center">
-              <h1 className="block text-2xl font-bold text-gray-800 dark:text-white">
+              <h1 className="block text-2xl font-bold text-gray-800 ">
                 Đăng nhập
               </h1>
             </div>
@@ -43,7 +43,7 @@ export default function Login() {
                   <div>
                     <label
                       htmlFor="email"
-                      className="block text-sm mb-2 dark:text-white"
+                      className="block text-sm mb-2"
                     ></label>
                     <div className="relative">
                       <input
@@ -57,7 +57,7 @@ export default function Login() {
                         id="studentId"
                         name="studentId"
                         value={studentId}
-                        className=" border  py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600"
+                        className=" border  py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none "
                       />
                       <div className="hidden absolute inset-y-0 end-0 pointer-events-none pe-3">
                         <svg
@@ -86,7 +86,7 @@ export default function Login() {
                         type="password"
                         id="password"
                         name="password"
-                        className=" border py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600"
+                        className=" border py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none "
                         aria-describedby="password-error"
                       />
                       <div className="hidden absolute inset-y-0 end-0 pointer-events-none pe-3">
@@ -112,12 +112,12 @@ export default function Login() {
                     <div className="flex items-center ">
                       <input
                         type="checkbox"
-                        className="shrink-0 mt-0.5 border-gray-200 rounded text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-gray-800 dark:border-gray-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800"
+                        className="shrink-0 mt-0.5 border-gray-200 rounded text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
                         id="hs-default-checkbox"
                       />
                       <label
                         htmlFor="hs-default-checkbox"
-                        className="text-sm text-gray-500 ms-3 dark:text-gray-400"
+                        className="text-sm text-gray-500 ms-3 "
                       >
                         Ghi nhớ đăng nhập
                       </label>
@@ -144,7 +144,7 @@ export default function Login() {
                         setIsLoading(false);
                       }
                     }}
-                    className="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                    className="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none "
                   >
                     Đăng nhập
                   </button>

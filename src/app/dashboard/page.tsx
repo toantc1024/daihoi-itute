@@ -117,7 +117,7 @@ const Dashboard = () => {
                   onClick={() => {
                     setShowModal(false);
                   }}
-                  className="border-[1px] p-4 rounded-full inline-flex justify-center items-center gap-x-2 text-sm font-medium  bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-white dark:hover:bg-gray-800"
+                  className="border-[1px] p-4 rounded-full inline-flex justify-center items-center gap-x-2 text-sm font-medium  bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none"
                 >
                   <HiX />
                 </button>
@@ -132,13 +132,13 @@ const Dashboard = () => {
         <div className="row-span-2 col-span-2">
           <>
             {/* Card */}
-            <div className="group flex flex-col h-full bg-white border border-gray-200 shadow-sm rounded-xl dark:bg-slate-900 dark:border-gray-700 dark:shadow-slate-700/[.7]">
+            <div className="group flex flex-col h-full bg-white border border-gray-200 shadow-sm rounded-xl ">
               <RoomMap attendees={attendees} />
             </div>
           </>
         </div>
         <div className=" col-span-1 ...">
-          <div className="group flex flex-col h-full bg-white border border-gray-200 shadow-sm rounded-xl dark:bg-slate-900 dark:border-gray-700 dark:shadow-slate-700/[.7]">
+          <div className="group flex flex-col h-full bg-white border border-gray-200 shadow-sm rounded-xl ">
             <div className=" h-full flex flex-col  gap-4 items-center justify-center">
               <div className="font-bold text-dhblue bg-clip-text text-8xl ">
                 {attendees ? addZero(Object.entries(attendees).length) : 0}
@@ -147,9 +147,9 @@ const Dashboard = () => {
                 Đại biểu
               </div>
             </div>
-            <div className="mt-auto flex border-t border-gray-200 divide-x divide-gray-200 dark:border-gray-700 dark:divide-gray-700">
+            <div className="mt-auto flex border-t border-gray-200 divide-x divide-gray-200 ">
               <button
-                className="cursor-pointer w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-es-xl bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-white dark:hover:bg-gray-800"
+                className="cursor-pointer w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-es-xl bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none "
                 onClick={() => {
                   setShowModal(true);
                 }}
@@ -159,7 +159,7 @@ const Dashboard = () => {
             </div>
           </div>
         </div>
-        <div className="col-span-1 flex flex-col bg-white border shadow-sm rounded-xl dark:bg-slate-900 dark:border-gray-700 dark:shadow-slate-700/[.7] items-center justify-center px-8">
+        <div className="col-span-1 flex flex-col bg-white border shadow-sm rounded-xl  items-center justify-center px-8">
           {attendees && (
             <Chart
               options={{

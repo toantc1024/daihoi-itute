@@ -137,7 +137,7 @@ const ScanQR = () => {
       <div className="qr-reader relative">
         {currentAttendance && (
           <div className="z-[999]  absolute w-full h-full">
-            <div className="h-full flex flex-col bg-[rgba(255,255,255,.2)] border shadow-sm  dark:bg-gray-800 dark:border-gray-700 dark:shadow-slate-700/[.7]">
+            <div className="h-full flex flex-col bg-[rgba(255,255,255,.2)] border shadow-sm  ">
               <div className="flex flex-auto flex-col justify-start items-center p-4 md:p-5 ">
                 <span className="bg-white py-2 px-2 flex rounded-xl  w-full items-center justify-center font-bold text-blue-700">
                   {currentAttendance?.name || "Đang chờ quét QR"}
@@ -179,7 +179,7 @@ const ScanQR = () => {
               type="text"
               onChange={(e) => setStudentId(e.target.value)}
               value={studentId}
-              className="py-3 px-4 block w-full border-[1px] border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600"
+              className="py-3 px-4 block w-full border-[1px] border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none   "
               placeholder="MSSV"
             />
           </div>

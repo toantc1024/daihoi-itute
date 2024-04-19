@@ -11,7 +11,7 @@ const Table = ({ data }: { data: any }) => {
       <div className="flex flex-col">
         <div className="-m-1.5 overflow-x-auto">
           <div className="p-1.5 min-w-full inline-block align-middle">
-            <div className="border rounded-lg divide-y divide-gray-200 dark:border-gray-700 dark:divide-gray-700">
+            <div className="border rounded-lg divide-y divide-gray-200 ">
               <div className="py-3 px-4">
                 <div className="relative max-w-xs">
                   <label className="sr-only">Search</label>
@@ -19,7 +19,7 @@ const Table = ({ data }: { data: any }) => {
                     type="text"
                     name="hs-table-with-pagination-search"
                     id="hs-table-with-pagination-search"
-                    className="py-2 px-3 ps-9 block w-full border-gray-200 shadow-sm rounded-lg text-sm focus:z-10 focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600"
+                    className="py-2 px-3 ps-9 block w-full border-gray-200 shadow-sm rounded-lg text-sm focus:z-10 focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none "
                     placeholder="Search for items"
                   />
                   <div className="absolute inset-y-0 start-0 flex items-center pointer-events-none ps-3">
@@ -42,8 +42,8 @@ const Table = ({ data }: { data: any }) => {
                 </div>
               </div>
               <div className="overflow-hidden">
-                <table className="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
-                  <thead className="bg-gray-50 dark:bg-gray-700">
+                <table className="min-w-full divide-y divide-gray-200 ">
+                  <thead className="bg-gray-50 ">
                     <tr>
                       {data &&
                         data[0] &&
@@ -60,7 +60,7 @@ const Table = ({ data }: { data: any }) => {
                         })}
                     </tr>
                   </thead>
-                  <tbody className="divide-y divide-gray-200 dark:divide-gray-700">
+                  <tbody className="divide-y divide-gray-200 ">
                     {Object.entries(data).map(([key, value]) => {
                       return (
                         <tr key={key}>
@@ -68,7 +68,7 @@ const Table = ({ data }: { data: any }) => {
                             return (
                               <td
                                 key={index}
-                                className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 dark:text-gray-200"
+                                className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 "
                               >
                                 <span>{JSON.stringify(val)}</span>
                               </td>
@@ -84,33 +84,33 @@ const Table = ({ data }: { data: any }) => {
                 <nav className="flex items-center space-x-1">
                   <button
                     type="button"
-                    className="p-2.5 inline-flex items-center gap-x-2 text-sm rounded-full text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:hover:bg-white/10 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                    className="p-2.5 inline-flex items-center gap-x-2 text-sm rounded-full text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none  "
                   >
                     <span aria-hidden="true">«</span>
                     <span className="sr-only">Previous</span>
                   </button>
                   <button
                     type="button"
-                    className="min-w-[40px] flex justify-center items-center text-gray-800 hover:bg-gray-100 py-2.5 text-sm rounded-full disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:hover:bg-white/10"
+                    className="min-w-[40px] flex justify-center items-center text-gray-800 hover:bg-gray-100 py-2.5 text-sm rounded-full disabled:opacity-50 disabled:pointer-events-none  "
                     aria-current="page"
                   >
                     1
                   </button>
                   <button
                     type="button"
-                    className="min-w-[40px] flex justify-center items-center text-gray-800 hover:bg-gray-100 py-2.5 text-sm rounded-full disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:hover:bg-white/10"
+                    className="min-w-[40px] flex justify-center items-center text-gray-800 hover:bg-gray-100 py-2.5 text-sm rounded-full disabled:opacity-50 disabled:pointer-events-none  "
                   >
                     2
                   </button>
                   <button
                     type="button"
-                    className="min-w-[40px] flex justify-center items-center text-gray-800 hover:bg-gray-100 py-2.5 text-sm rounded-full disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:hover:bg-white/10"
+                    className="min-w-[40px] flex justify-center items-center text-gray-800 hover:bg-gray-100 py-2.5 text-sm rounded-full disabled:opacity-50 disabled:pointer-events-none  "
                   >
                     3
                   </button>
                   <button
                     type="button"
-                    className="p-2.5 inline-flex items-center gap-x-2 text-sm rounded-full text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:hover:bg-white/10 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                    className="p-2.5 inline-flex items-center gap-x-2 text-sm rounded-full text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none  "
                   >
                     <span className="sr-only">Next</span>
                     <span aria-hidden="true">»</span>

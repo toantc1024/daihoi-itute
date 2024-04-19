@@ -29,15 +29,15 @@ const DataTable = ({ data }: any) => {
     <div className="flex flex-col">
       <div className="-m-1.5 overflow-x-auto">
         <div className="p-1.5 min-w-full inline-block align-middle">
-          <div className="border rounded-lg shadow overflow-hidden dark:border-gray-700 dark:shadow-gray-900">
-            <table className="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+          <div className="border rounded-lg shadow overflow-hidden ">
+            <table className="min-w-full divide-y divide-gray-200 ">
               <thead>
                 <tr>
                   {["Tên đại biểu", "Mã số", "Thời gian đến"].map(
                     (item: any, key: number) => (
                       <th
                         key={key}
-                        className="px-6 py-3 bg-gray-50 dark:bg-gray-800 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider"
+                        className="px-6 py-3 bg-gray-50  text-left text-xs font-medium text-gray-500  uppercase tracking-wider"
                       >
                         {item}
                       </th>
@@ -45,7 +45,7 @@ const DataTable = ({ data }: any) => {
                   )}
                 </tr>
               </thead>
-              <tbody className="divide-y divide-gray-200 dark:divide-gray-700">
+              <tbody className="divide-y divide-gray-200 ">
                 {data &&
                   Object.entries(data).map((item: any, parentKey: number) => (
                     <tr key={parentKey}>

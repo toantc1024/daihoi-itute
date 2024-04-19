@@ -29,7 +29,7 @@ const Navbar = () => {
   }, []);
   return (
     <>
-      <header className="top-0 sticky flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-white border-b border-gray-200 text-sm py-3 sm:py-0 dark:bg-gray-800 dark:border-gray-700">
+      <header className="top-0 sticky flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-white border-b border-gray-200 text-sm py-3 sm:py-0 ">
         <nav className="relative max-w-[85rem] flex flex-wrap basis-full items-center w-full mx-auto  px-4 sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-8">
           <div
             className="flex items-center justify-between cursor-pointer"
@@ -45,7 +45,7 @@ const Navbar = () => {
                 <button
                   onClick={() => router.push("/login")}
                   type="button"
-                  className="py-2 px-4 flex justify-center items-center text-sm font-semibold rounded-lg border  text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:border-gray-700 dark:hover:bg-gray-700"
+                  className="py-2 px-4 flex justify-center items-center text-sm font-semibold rounded-lg border hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none "
                 >
                   Đăng nhập
                 </button>
@@ -61,7 +61,7 @@ const Navbar = () => {
                     }
                   }}
                   type="button"
-                  className="py-2 px-2 flex justify-center items-center text-sm font-semibold rounded-lg border border-gray-200 text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:border-gray-700 dark:hover:bg-gray-700"
+                  className="py-2 px-2 flex justify-center items-center text-sm font-semibold rounded-lg border border-gray-200 text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none  "
                 >
                   <HiMenu />
                 </button>
