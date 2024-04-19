@@ -55,9 +55,10 @@ export default function Documents() {
                     <tbody className="divide-y overflow-y-auto max-h-[80vh] divide-gray-200 ">
                       {" "}
                       {documents ? (
-                        documents.map((x: any) => {
+                        documents.map((x: any, index: any) => {
                           return (
                             <tr
+                              key={`document-${index}`}
                               onClick={() => {
                                 setCurrentDocument(x.url);
                                 setShowDocument(true);
