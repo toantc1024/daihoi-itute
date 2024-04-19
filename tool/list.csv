@@ -1,15 +1,81 @@
-STT/Số ghế,STK/MSSV,Mật khẩu,Họ và tên,Ngày tháng năm sinh,Dân tộc,Tôn giáo,Đại biểu nữ,Chi Đoàn,Ngày vào Đảng,Thành phần cơ cấu,Chức vụ hiện tại
-0,fit,FIT@123,Đoàn hội khoa Công nghệ thông tin,,,,,,,,Admin
-1,21110364,daihoicntt,Lê Vũ Xuân An,12/08/2003,Kinh,Không,,211101ST1,Cảm tình Đảng,Đại biểu đương nhiên,BÍ THƯ ĐOÀN KHOA
-2,22110124,daihoicntt,Đặng Cửu Dương,,Kinh,Không,,211101ST2,,Đại biểu đương nhiên,PHÓ BÍ THƯ ĐOÀN KHOA
-3,22110353,daihoicntt,Phạm Đăng Khoa,,Kinh,Không,,211101ST3,,Đại biểu đương nhiên,PHÓ BÍ THƯ ĐOÀN KHOA
-4,22110303,daihoicntt,Hoàng Thị Thùy Dương,,Kinh,Không,x,211101ST4,,Đại biểu đương nhiên,UV. BCH ĐOÀN KHOA
-5,22110340,daihoicntt,Nông Quốc Hưng,,Tày,Không,,211101ST5,,Đại biểu đương nhiên,ỦY VIÊN BCH ĐOÀN - HỘI
-6,22110437,daihoicntt,Nguyễn Đức Toàn,,Kinh,Không,,211101ST6,,Đại biểu đương nhiên,ỦY VIÊN BCH ĐOÀN - HỘI
-7,22162030,daihoicntt,Phạm Hữu Nghĩa,,Kinh,Không,,211101ST7,,Đại biểu đương nhiên,ỦY VIÊN BCH ĐOÀN - HỘI
-8,22110389,daihoicntt,Đặng Minh Nhật,,Kinh,Không,,211101ST8,,Đại biểu đương nhiên,ỦY VIÊN BCH ĐOÀN KHOA
-9,21110638,daihoicntt,Phạm Khương Tâm,,Kinh,Không,,211101ST9,,Đại biểu đương nhiên,ỦY VIÊN BCH ĐOÀN KHOA
-10,21110736,daihoicntt,Võ Thị Như Ý,,Kinh,Không,,211101ST10,,Đại biểu đương nhiên,ỦY VIÊN BCH ĐOÀN KHOA
-11,22110283,daihoicntt,Dương Nguyễn Hoài Bảo,,Kinh,Không,,211101ST11,,Đại biểu đương nhiên,ỦY VIÊN BCH ĐOÀN KHOA
-12,22110292,daihoicntt,Nguyễn Ngọc Doanh Doanh,,Kinh,Không,,211101ST12,,Đại biểu đương nhiên,ỦY VIÊN BCH ĐOÀN KHOA
-13,22133046,daihoicntt,Trần Diễm Quỳnh,,Kinh,Không,,211101ST13,,Đại biểu đương nhiên,ỦY VIÊN BCH ĐOÀN KHOA
+Số ghế,Tên,MSSV,Chức vụ,Chi Đoàn,Đại biểu nữ,SĐT,Dân tộc,Tôn giáo,Cơ cấu đại biểu,Đã kiểm tra thông tin,Email Address,MAIL 2,MAIL 3,Merge status,Đã tham gia nhóm zalo
+1,Đỗ Thị Bích Ngọc,20110526,Bí thư,20110CLST3,TRUE,0911560874,Kinh,Không,Đại biệu chính thức,TRUE,20110526@student.hcmute.edu.vn,23110233@student.hcmute.edu.vn,23110287@student.hcmute.edu.vn,OPENED,TRUE
+2,Nguyễn Thi Mai Tiên,20110255,Đoàn viên,20110ST6,FALSE,,Kinh,Không,Đại biệu chính thức,TRUE,20110255@student.hcmute.edu.vn,22110098@student.hcmute.edu.vn,23110332@student.hcmute.edu.vn,OPENED,TRUE
+3,Lê Tuấn Nghĩa,20133072,Bí thư,20110ST1,FALSE,,,,Đại biệu chính thức,FALSE,20133072@student.hcmute.edu.vn,22110103@student.hcmute.edu.vn,22110169@student.hcmute.edu.vn,SENT,TRUE
+4,Đặng Xuân Huyền,23110232,Phó Bí thư,231102,FALSE,0835998274,Kinh,Không,Đại biệu chính thức,TRUE,,,,NO_RECIPIENT,TRUE
+5,Đoàn Thị Thu Trang,23110347,Đoàn viên,231101,TRUE,,,,Đại biệu chính thức,TRUE,,,,NO_RECIPIENT,TRUE
+6,Lê Xuân Tài,23162085,Bí thư,23162,FALSE,0819911153,Kinh,Không,Đại biệu chính thức,TRUE,,,,NO_RECIPIENT,TRUE
+38,Phan Trọng Phú,23133056,Bí thư,23133,FALSE,0329092911,Kinh,Không,Đại biểu chính thức,TRUE,,,,NO_RECIPIENT,TRUE
+8,Lưu Vĩnh Tường,22133064,Đoàn Viên,22133,FALSE,,,,Đại biệu chính thức,FALSE,22133064@student.hcmute.edu.vn,21110290@student.hcmute.edu.vn,22110183@student.hcmute.edu.vn,SENT,TRUE
+9,Ka Phúc,22110398,Đoàn viên,221102,TRUE,,,,Đại biệu chính thức,FALSE,22110398@student.hcmute.edu.vn,21110600@student.hcmute.edu.vn,22110191@student.hcmute.edu.vn,SENT,TRUE
+10,Lê Hồng Phúc,22110399,Bí thư,221102,FALSE,,,,Đại biệu chính thức,TRUE,22110399@student.hcmute.edu.vn,23133061@student.hcmute.edu.vn,22110201@student.hcmute.edu.vn,SENT,TRUE
+11,Nguyễn Duy Ngọc,22110381,Lớp Phó ,221102,FALSE,,,,Đại biệu chính thức,FALSE,22110381@student.hcmute.edu.vn,22110260@student.hcmute.edu.vn,23110359@student.hcmute.edu.vn,SENT,TRUE
+12,Dương Thành Sơn,22133048,Đoàn Viên,22133,FALSE,,,,Đại biệu chính thức,FALSE,22133048@student.hcmute.edu.vn,22110274@student.hcmute.edu.vn,21110611@student.hcmute.edu.vn,SENT,TRUE
+13,Võ Triệu Phúc,22133043,Phó Bí thư,22133,FALSE,,,,Đại biệu chính thức,FALSE,22133043@student.hcmute.edu.vn,22110321@student.hcmute.edu.vn,21110368@student.hcmute.edu.vn,OPENED,FALSE
+14,Nguyễn Hoài Tân ,22110413,Lớp trưởng,221103,FALSE,,,,Đại biệu chính thức,FALSE,22110413@student.hcmute.edu.vn,22110314@student.hcmute.edu.vn,21110478@student.hcmute.edu.vn,SENT,TRUE
+15,Ong Vĩnh Phát,22110394,Lớp phó,221103,FALSE,0787895450,Hoa,Không,,FALSE,,,,NO_RECIPIENT,TRUE
+16,Đặng Cửu Dương,22110124,PHÓ BÍ THƯ ĐOÀN KHOA,22110CL1,FALSE,0764884299,Kinh,Không,Đại biểu đương nhiên,TRUE,,,,NO_RECIPIENT,TRUE
+17,Văn Thị Mười Ngọc,21110561,Đoàn viên,21110AI,TRUE,0377603031,Kinh,Phật,Đại biểu chỉ định,TRUE,,,,NO_RECIPIENT,TRUE
+18,Trần Diễm Quỳnh,22133046,ỦY VIÊN BCH ĐOÀN KHOA,22133,TRUE,,,,Đại biểu đương nhiên,FALSE,,,,NO_RECIPIENT,TRUE
+19,Nguyễn Tấn Yên,23110369,Bí thư,231101,FALSE,,,,Đại biệu chính thức,FALSE,,,,NO_RECIPIENT,TRUE
+20,Võ Thị Như Ý,21110736,ỦY VIÊN BCH ĐOÀN KHOA,21110ST2,TRUE,,,,Đại biểu đương nhiên,FALSE,,,,NO_RECIPIENT,TRUE
+21,Phạm Khương Tâm,21110638,ỦY VIÊN BCH ĐOÀN KHOA,21110ST1,FALSE,,,,Đại biểu đương nhiên,FALSE,,,,NO_RECIPIENT,TRUE
+22,Đặng Minh Nhật,22110389,ỦY VIÊN BCH ĐOÀN KHOA,221101,FALSE,,,,Đại biểu đương nhiên,FALSE,,,,NO_RECIPIENT,TRUE
+23,Trương Thị Thùy Trang,21110691,Đoàn viên,21110ST2,TRUE,,,,Đại biệu chính thức,FALSE,21110691@student.hcmute.edu.vn,21110364@student.hcmute.edu.vn,22110006@student.hcmute.edu.vn,OPENED,TRUE
+24,Lê Hồ Chí Bảo,23110179,Đoàn viên,231102,FALSE,,,,Đại biệu chính thức,FALSE,,,,NO_RECIPIENT,TRUE
+25,Nguyễn Thanh Bình Minh,23110266,Bí thư,231103,TRUE,0942275654,Kinh,Không,Đại biệu chính thức,TRUE,,,,NO_RECIPIENT,TRUE
+26,Phan Tống Hoàng Bang,23110077,Phó Bí thư,23110CLC,FALSE,0328327303,Kinh,Công Giáo,Đại biệu chính thức,TRUE,,,,NO_RECIPIENT,TRUE
+27,Lâm Khánh Duy,23110084,Lớp Phó ,23110CLC,FALSE,,,,Đại biệu chính thức,FALSE,,,,NO_RECIPIENT,TRUE
+28,Vũ Minh Đức,23110094,Đoàn viên,23110CLC,FALSE,0921970612,Kinh,Công giáo,Đại biệu chính thức,TRUE,,,,NO_RECIPIENT,TRUE
+29,Phạm Ngọc Hữu,23110233,Đoàn viên,231103,FALSE,0939507217,Kinh,Không,Đại biệu chính thức,TRUE,,,,NO_RECIPIENT,TRUE
+30,Nguyễn Ngọc Hải Anh,22110098,Lớp Phó,22110CL6,TRUE,,,,Đại biệu chính thức,FALSE,,,,NO_RECIPIENT,TRUE
+31,Trần Phan Tiến Anh,22110103,Phó Bí thư,22110CL6,FALSE,,,,Đại biệu chính thức,FALSE,,,,NO_RECIPIENT,TRUE
+32,Võ Thị Kim Anh,22110105,Bí thư,22110CL2,TRUE,,,,Đại biệu chính thức,FALSE,22110105@student.hcmute.edu.vn,22110151@student.hcmute.edu.vn,,NO_RECIPIENT,TRUE
+33,Bùi Bảo Châu,22110114,Phó Bí Thư ,22110CL5,TRUE,,,,Đại biệu chính thức,FALSE,,,,NO_RECIPIENT,FALSE
+34,Nguyễn Trí Dũng,22162009,Đoàn viên,22162,FALSE,0346349861,Kinh,Không,Đại biệu chính thức,TRUE,22162009@student.hcmute.edu.vn,22110118@student.hcmute.edu.vn,@student.hcmute.edu.vn,OPENED,TRUE
+35,Trương Nguyễn Anh Thư,22162047,Bí thư,22162,TRUE,0853002471,Kinh,Không,Đại biệu chính thức,TRUE,22162047@student.hcmute.edu.vn,22110172@student.hcmute.edu.vn,@student.hcmute.edu.vn,OPENED,TRUE
+36,Nguyễn Duy Sơn,21110290,Bí thư,21110CLST2,FALSE,0373586387,Kinh,Không,Đại biệu chính thức,TRUE,21110290@student.hcmute.edu.vn,22110183@student.hcmute.edu.vn,@student.hcmute.edu.vn,OPENED,TRUE
+37,Nguyễn Thi Phú,21110600,Bí thư,21110AI,FALSE,,,,Đại biệu chính thức,FALSE,21110600@student.hcmute.edu.vn,22110191@student.hcmute.edu.vn,@student.hcmute.edu.vn,OPENED,FALSE
+7,Phan Trọng Quí,23133061,Phó Bí thư,23133,FALSE,,,,Đại biểu chính thức,FALSE,,,,NO_RECIPIENT,FALSE
+39,Nguyễn Hà Hồng Tuấn,22110260,Phó Bí thư,22110CL3,FALSE,0705488458,Kinh,Không,Đại biệu chính thức,TRUE,22110260@student.hcmute.edu.vn,nguyenhahongtuan@gmail.com,,NO_RECIPIENT,TRUE
+40,Trần Ngọc Yến Vy,22110274,Bí thư,22110CL5,TRUE,,,,Đại biệu chính thức,TRUE,,,,NO_RECIPIENT,TRUE
+41,Đào Thanh Hiếu,22110321,Đoàn viên,221101,FALSE,,,,Đại biệu chính thức,FALSE,22110321@student.hcmute.edu.vn,21110368@student.hcmute.edu.vn,@student.hcmute.edu.vn,OPENED,FALSE
+42,Nguyễn Ngọc Kín Hào ,22110314,Thủ quỹ,221101,FALSE,,,,Đại biệu chính thức,FALSE,22110314@student.hcmute.edu.vn,21110478@student.hcmute.edu.vn,@student.hcmute.edu.vn,SENT,TRUE
+43,Đồng Gia Sang,22110219,Đoàn viên,22110CL4,FALSE,,,,Đại biểu chỉ định,TRUE,,,,NO_RECIPIENT,TRUE
+44,Nguyễn Trần Quốc Thi,23110331,Đoàn viên,231102,FALSE,0937199872,Kinh,Không,Đại biểu chỉ định,TRUE,,,,NO_RECIPIENT,TRUE
+45,Nguyễn Quốc Khoa,23110116,Bí thư,23110CLC,FALSE,0379265076,Kinh,Không,Đại biệu chính thức,FALSE,,,,NO_RECIPIENT,TRUE
+46,Võ An Thái,23110325,Đoàn viên,231102,FALSE,0375697816,Kinh,Không,Đại biệu chính thức,TRUE,,,,NO_RECIPIENT,TRUE
+47,Nguyễn Ngọc Doanh Doanh,22110292,ỦY VIÊN BCH ĐOÀN KHOA,221101,TRUE,,,,Đại biểu đương nhiên,FALSE,,,,NO_RECIPIENT,TRUE
+48,Dương Nguyễn Hoài Bảo,22110283,ỦY VIÊN BCH ĐOÀN KHOA,221101,FALSE,,,,Đại biểu đương nhiên,FALSE,,,,NO_RECIPIENT,TRUE
+49,Phạm Hữu Nghĩa,22162030,ỦY VIÊN BCH ĐOÀN - HỘI,22162,FALSE,0362908850,Kinh,Không,Đại biểu đương nhiên,TRUE,,,,NO_RECIPIENT,TRUE
+50,Huỳnh Ngọc Tài,23110305,Bí thư,231102,FALSE,0397795383,Kinh,Không,Đại biệu chính thức,TRUE,huynhngoctai205@gmail.com ,23110305@student.hcmute.edu.vn,,NO_RECIPIENT,TRUE
+51,Lê Vũ Xuân An,21110364,BÍ THƯ ĐOÀN KHOA,21110ST1,FALSE,0832415045,Kinh,Không,Đại biểu đương nhiên,TRUE,,,,NO_RECIPIENT,TRUE
+52,Nông Quốc Hưng,22110340,ỦY VIÊN BCH ĐOÀN - HỘI,221101,FALSE,,,,Đại biểu đương nhiên,FALSE,,,,NO_RECIPIENT,TRUE
+53,Phạm Đăng Khoa,22110353,PHÓ BÍ THƯ ĐOÀN KHOA,221101,FALSE,,,,Đại biểu đương nhiên,FALSE,,,,NO_RECIPIENT,TRUE
+54,Nguyễn Thị Phương Anh,21133004,Bí thư,21133,TRUE,0972741322,Kinh,Không,Đại biệu chính thức,TRUE,21133004@student.hcmute.edu.vn,@student.hcmute.edu.vn,@student.hcmute.edu.vn,OPENED,TRUE
+55,Nguyễn Thanh Khang,23110237,Phó Bí thư,231101,FALSE,,,,Đại biệu chính thức,FALSE,,,,NO_RECIPIENT,TRUE
+56,Nguyễn Hoàng Anh Kiệt,23110247,Lớp Phó ,231101,FALSE,,,,Đại biệu chính thức,TRUE,,,,NO_RECIPIENT,TRUE
+57,Nguyễn Hoàng Phúc,23110287,Phó Bí thư,231103,FALSE,0911826622,Kinh,Không ,Đại biệu chính thức,TRUE,,,,NO_RECIPIENT,TRUE
+58,Cao Ngọc Thiên,23110332,Lớp Phó ,231103,FALSE,0378240914,Kinh,Không,Đại biệu chính thức,TRUE,,,,NO_RECIPIENT,TRUE
+59,Lê Quốc Kiệt,22110169,Đoàn viên,22110CL3,FALSE,0356146325,Kinh,Phật giáo,Đại biệu chính thức,TRUE,22110169@student.hcmute.edu.vn,kietdobi3300@gmail.com,,NO_RECIPIENT,TRUE
+60,Lê Công Hùng,22110151,Lớp trưởng,22110CL2,FALSE,0945396133,Kinh,Không,Đại biệu chính thức,TRUE,22110151@student.hcmute.edu.vn,@student.hcmute.edu.vn,,NO_RECIPIENT,TRUE
+61,Đỗ Thị Hoàng Duyên ,22110121,Bí thư,22110CL3,TRUE,,,,Đại biệu chính thức,TRUE,,,,NO_RECIPIENT,TRUE
+62,Huỳnh Thanh Duy ,22110118,Lớp phó ,22110CL1,FALSE,,,,Đại biệu chính thức,FALSE,22110118@student.hcmute.edu.vn,@student.hcmute.edu.vn,,NO_RECIPIENT,TRUE
+63,Phan Thị Mỹ Linh,22110172,Lớp trưởng,22110CL2,TRUE,,,,Đại biệu chính thức,FALSE,22110172@student.hcmute.edu.vn,@student.hcmute.edu.vn,,NO_RECIPIENT,TRUE
+64,Ka Phúc,22110183,Đoàn viên,22110CL4,FALSE,,,,Đại biệu chính thức,FALSE,,,,NO_RECIPIENT,FALSE
+65,Bùi Thị Ánh Ngọc,22110191,Bí thư,22110CL4,TRUE,,,,Đại biệu chính thức,TRUE,,,,NO_RECIPIENT,TRUE
+66,Lê Nguyễn Thiên Phúc ,22110201,Lớp phó,22110CL7,FALSE,,,,Đại biệu chính thức,FALSE,,,,NO_RECIPIENT,TRUE
+67,Võ Văn Tú,23110359,Đoàn viên,231101,FALSE,,,,Đại biểu dự khuyết,FALSE,,,,NO_RECIPIENT,TRUE
+68,Trịnh Thu Phương,21110611,Bí thư,21110ST1,TRUE,,,,Đại biệu chính thức,FALSE,21110611@student.hcmute.edu.vn,@student.hcmute.edu.vn,@student.hcmute.edu.vn,SENT,FALSE
+69,Nguyễn Thị Lan Anh,21110368,Bí thư,21110IS1,TRUE,0834940597,Kinh,Không ,Đại biệu chính thức,TRUE,21110368@student.hcmute.edu.vn,@student.hcmute.edu.vn,@student.hcmute.edu.vn,OPENED,TRUE
+70,Đỗ Chí Hùng,21110478,Bí thư,21110IS2,FALSE,0963519890,Kinh,Không,Đại biệu chính thức,TRUE,21110478@student.hcmute.edu.vn,@student.hcmute.edu.vn,@student.hcmute.edu.vn,OPENED,TRUE
+71,Dương Nguyễn Ngọc Thương,23162100,Lớp Phó ,23162,TRUE,0393129175,Kinh,Không,Đại biệu chính thức,TRUE,,,,NO_RECIPIENT,TRUE
+72,Nguyễn Thị Kim Oanh,23133053,Lớp Phó ,23133,TRUE,,,,Đại biểu chính thức,FALSE,,,,NO_RECIPIENT,TRUE
+73,Trần Công Toản,22110248,Đoàn viên,22110CL4,FALSE,,,,Đại biểu chỉ định,FALSE,,,,NO_RECIPIENT,TRUE
+74,Mai Thị Huỳnh Như,22162032,Phó Bí thư,22162,TRUE,0362164920,Kinh,Không,Đại biệu chính thức,TRUE,22162032@student.hcmute.edu.vn,@student.hcmute.edu.vn,@student.hcmute.edu.vn,CLICKED,TRUE
+75,Phạm Quang Vinh,23162114,Đoàn viên,23162,FALSE,0328163581,Kinh,Không,Đại biệu chính thức,TRUE,,,,NO_RECIPIENT,TRUE
+76,Nguyễn Hồng Bảo Long,23162053,Phó Bí thư,23162,FALSE,,,,Đại biệu chính thức,FALSE,,,,NO_RECIPIENT,TRUE
+77,Hoàng Thị Thùy Dương,22110303,UV. BCH ĐOÀN KHOA,221101,TRUE,,,,Đại biểu đương nhiên,FALSE,,,,NO_RECIPIENT,TRUE
+78,Phạm Thị Tuyết Minh,23110268,Đoàn viên,231102,TRUE,0382646012,Kinh,Không,Đại biệu chính thức,TRUE,,,,NO_RECIPIENT,TRUE
+79,Vi Quốc Thuận,22110006,Bí thư,221101,FALSE,,,,Đại biệu chính thức,FALSE,22110006@student.hcmute.edu.vn,@student.hcmute.edu.vn,@student.hcmute.edu.vn,SENT,TRUE
+80,Nguyễn Đức Toàn,22110437,ỦY VIÊN BCH ĐOÀN - HỘI,221101,FALSE,,,,Đại biểu đương nhiên,FALSE,,,,NO_RECIPIENT,TRUE

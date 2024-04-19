@@ -44,16 +44,13 @@ const Dashboard = () => {
   useEffect(() => {
     const asyncTask = async () => {
       if (!attendees) return;
-      let NUMBER_OF_ATTENDEES = 4;
+      let NUMBER_OF_ATTENDEES = 80;
       if (Object.entries(attendees).length < NUMBER_OF_ATTENDEES) {
         return;
       }
       let newWords = Object.entries(attendees).reduce(
         (acc: any, [key, value]: [string, any]) => {
-          for (let i = 0; i < value.name.length; i++) {
-            acc.push(value.name);
-          }
-
+          acc.push(value.name);
           return acc;
         },
         []
@@ -100,12 +97,8 @@ const Dashboard = () => {
     <div className="relative">
       <audio ref={audioRef} src="/intro.mp3" />
       {showLoader && (
-        <div
-          className={`h-screen ${
-            !showLoader ? "hidden" : ""
-          } p-24 absolute z-[999]`}
-        >
-          {showLoader ? <Loader timeline={timeline} words={words} /> : <Hero />}
+        <div className={` ${!showLoader ? "hidden" : ""} absolute z-[999]`}>
+          {showLoader ? <Loader timeline={timeline} words={words} /> : null}
         </div>
       )}
       <div className="p-8 grid grid-cols-3  grid-rows-2 grid-flow-col gap-4 h-screen">

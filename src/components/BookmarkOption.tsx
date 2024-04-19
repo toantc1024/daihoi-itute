@@ -22,7 +22,7 @@ const BookmarkOption = ({
             <h3 className="group-hover:text-dhcyan font-semibold text-gray-800 dark:group-hover:text-gray-400 dark:text-gray-200">
               {title}
             </h3>
-            <p className="text-sm text-gray-400 transition-all duration-150 ease-in-out  ">
+            <p className="text-sm text-gray-400 transition-all duration-150 ease-in-out font-light ">
               {text}
             </p>
           </div>

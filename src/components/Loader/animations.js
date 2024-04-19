@@ -42,7 +42,7 @@ export const progressAnimation = (progressRef, progressNumberRef) => {
     .to(
       progressNumberRef.current,
       {
-        textContent: "80",
+        textContent: "100",
         duration: 5,
         roundProps: "textContent",
       },

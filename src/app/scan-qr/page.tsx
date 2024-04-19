@@ -7,6 +7,7 @@ import { collection, doc, getDoc, getDocs, setDoc } from "firebase/firestore";
 import { db, getUserProfileByID } from "@/hook/firebase";
 import AuthStore from "@/store/authStore";
 import Unauthorized from "@/components/Unauthorized";
+import { Wait } from "@/components/Wait";
 
 const ScanQR = () => {
   const videoEl = useRef<HTMLVideoElement>(null);
@@ -112,12 +113,13 @@ const ScanQR = () => {
         map[studentID] = doc.id;
         // doc.data() is never undefined for query doc snapshots
       });
+      setStudentIdMap(map);
     };
     fetchUsers();
   }, [currentUserProfile]);
 
   const [showModal, setShowModal] = useState(false);
-  const [studentId, setStudentId] = useState<string | null>(null);
+  const [studentId, setStudentId] = useState<string>("");
 
   useEffect(() => {
     // Set time out and clear
@@ -148,7 +150,7 @@ const ScanQR = () => {
         {/* QR */}
         {isLoading && (
           <div className="z-[999] absolute w-full h-full">
-            {/* <Loader /> */}
+            <Wait />
           </div>
         )}
 
@@ -176,7 +178,7 @@ const ScanQR = () => {
             <input
               type="text"
               onChange={(e) => setStudentId(e.target.value)}
-              value={studentId || ""}
+              value={studentId}
               className="py-3 px-4 block w-full border-[1px] border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600"
               placeholder="MSSV"
             />
@@ -184,8 +186,11 @@ const ScanQR = () => {
 
           <div className="flex gap-4">
             <button
-              onClick={() => {
-                checkAttendance(studentId);
+              onClick={async () => {
+                //  get user id from student id
+                let uid = studentIdMap[studentId];
+
+                checkAttendance(uid);
                 setStudentId("");
               }}
               className="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none"

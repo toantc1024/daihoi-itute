@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from "react";
+import { words } from "./data";
 
 import styles from "./Loader.module.scss";
 import { introAnimation, collapseWords, progressAnimation } from "./animations";
-import AuthStore from "@/store/authStore";
 
 const Loader = ({ timeline, words }) => {
   const loaderRef = useRef(null);
@@ -20,7 +20,7 @@ const Loader = ({ timeline, words }) => {
 
   return (
     <div className={styles.loader__wrapper}>
-      <div className={styles.loader__progressWrapper} id="loader_progress">
+      <div className={styles.loader__progressWrapper}>
         <div className={styles.loader__progress} ref={progressRef}></div>
         <span className={styles.loader__progressNumber} ref={progressNumberRef}>
           0
@@ -30,14 +30,13 @@ const Loader = ({ timeline, words }) => {
         <div className={styles.loader__words}>
           <div className={styles.loader__overlay}></div>
           <div ref={wordGroupsRef} className={styles.loader__wordsGroup}>
-            {words &&
-              words.map((word, index) => {
-                return (
-                  <span key={index} className={styles.loader__word}>
-                    {word}
-                  </span>
-                );
-              })}
+            {words.map((word, index) => {
+              return (
+                <span key={index} className={styles.loader__word}>
+                  {word}
+                </span>
+              );
+            })}
           </div>
         </div>
       </div>

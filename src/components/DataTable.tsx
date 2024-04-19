@@ -10,7 +10,17 @@ const sortEntriesByKey = (data: any) => {
   });
 };
 
-const convertTmeStampStringToDate = (timestamp: any) => {
+export const getTimestamp = (dateTimeString: string) => {
+  // Create a Date object from the string
+  const date = new Date(dateTimeString);
+
+  // Get the timestamp in milliseconds
+  const timestamp = date.getTime();
+
+  return timestamp;
+};
+
+export const convertTmeStampStringToDate = (timestamp: any) => {
   return new Date(timestamp).toLocaleString();
 };
 

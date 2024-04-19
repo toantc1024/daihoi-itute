@@ -73,6 +73,15 @@ const Bookmark = () => {
           )}
 
           <BookmarkOption
+            title={"Văn kiện đại hội"}
+            text={"Xem văn kiện online"}
+            icon={<HiDocument />}
+            eventHandler={() => {
+              router.push("/documents");
+            }}
+          />
+
+          <BookmarkOption
             title={"Đăng xuất"}
             text={"Thoát tài khoản"}
             icon={<HiLogout />}

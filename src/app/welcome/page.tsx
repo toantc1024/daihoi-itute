@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { collection, query, where, onSnapshot } from "firebase/firestore";
 import { db } from "@/hook/firebase";
+import { getTimestamp } from "@/components/DataTable";
 
 const getLastNElement = (arr: any[], n: number) => {
   return arr.slice(Math.max(arr.length - n, 0));
@@ -25,8 +26,7 @@ const Welcome = () => {
   // Scroll to bottom
   useEffect(() => {
     // Get the element by id
-    const element = document.getElementById("attend-list");
-
+    console.log(attendances);
     // Scroll to the bottom
   }, [attendances]);
 
@@ -41,33 +41,38 @@ const Welcome = () => {
         className="flex flex-col justify-start overflow-auto gap-4 h-full"
       >
         {attendances &&
-          attendances.map((attendance: any, key: any) => (
-            <>
-              {key == 0 ? (
-                <>
-                  <div className="h-full items-center flex gap-4 justify-between py-2 flex-grow-0">
-                    <span className="text-gray-900 font-bold text-2xl ">
-                      Đại biểu.
-                    </span>
-                    <span className="py-2 text-6xl bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500  inline-block text-transparent bg-clip-text  font-bold">
-                      {attendance.name}
-                    </span>
-                  </div>
-                </>
-              ) : (
-                <>
-                  <div className="flex gap-4 justify-between items-end py-2">
-                    <span className="py-2 font-bold text-2xl text-gray-800">
-                      Đại biểu.
-                    </span>
-                    <span className=" py-2 text-4xl font-bold">
-                      {attendance.name}
-                    </span>
-                  </div>
-                </>
-              )}
-            </>
-          ))}
+          attendances
+            .sort(
+              (a: any, b: any) =>
+                -getTimestamp(a["timestamp"]) + getTimestamp(b["timestamp"])
+            )
+            .map((attendance: any, key: any) => (
+              <>
+                {key == 0 ? (
+                  <>
+                    <div className="h-full items-center flex gap-4 justify-between py-2 flex-grow-0">
+                      <span className="text-gray-900 font-bold text-2xl ">
+                        Đại biểu.
+                      </span>
+                      <span className="py-2 text-6xl bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500  inline-block text-transparent bg-clip-text  font-bold">
+                        {attendance.name}
+                      </span>
+                    </div>
+                  </>
+                ) : (
+                  <>
+                    <div className="flex gap-4 justify-between items-end py-2">
+                      <span className="py-2 font-bold text-2xl text-gray-800">
+                        Đại biểu.
+                      </span>
+                      <span className=" py-2 text-4xl font-bold">
+                        {attendance.name}
+                      </span>
+                    </div>
+                  </>
+                )}
+              </>
+            ))}
       </div>
     </div>
   );
