@@ -1,5 +1,5 @@
-import type { Metadata } from "next";
-import localFont from "@next/font/local";
+import type { Metadata, Viewport } from "next";
+import localFont from "next/font/local";
 
 import "./globals.css";
 import PrelineScript from "../components/PrelineScript";
@@ -16,12 +16,36 @@ const fontFamily = localFont({
   ],
 });
 
-export const metadata: Metadata = {
-  title: "FITUTE - Ứng dụng Đại Hội trực tuyến",
-  metadataBase: new URL("https://yfit.vercel.app/"),
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+};
 
-  description:
-    "Đại hội đại biểu đoàn TNCS Hồ Chí Minh - Khoa Công nghệ thông tin - Trường Đại học Sư phạm Kỹ thuật",
+export const metadata: Metadata = {
+  openGraph: {
+    title: "FITUTE - Ứng dụng Đại Hội trực tuyến",
+    description:
+      "Đại hội đại biểu đoàn TNCS Hồ Chí Minh - Khoa Công nghệ thông tin - Trường Đại học Sư phạm Kỹ thuật",
+    url: "https://yfit.vercel.app",
+    siteName: "FITUTE",
+    images: [
+      {
+        url: DAIHOI.src,
+        width: 800,
+        height: 600,
+      },
+      {
+        url: DAIHOI.src,
+        width: 1800,
+        height: 1600,
+        alt: "My custom alt",
+      },
+    ],
+    locale: "vi_VN",
+    type: "website",
+  },
   keywords: [
     "FITUTE",
     "Trường Đại học Sư phạm kỹ thuật",
@@ -31,9 +55,6 @@ export const metadata: Metadata = {
     "Điểm danh trực tuyến FIT",
     "Tuổi trẻ UTE",
   ],
-  openGraph: {
-    images: DAIHOI.src,
-  },
 };
 
 export default function RootLayout({

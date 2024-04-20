@@ -61,7 +61,7 @@ const Navbar = () => {
                     }
                   }}
                   type="button"
-                  className="py-2 px-2 flex justify-center items-center text-sm font-semibold rounded-lg border border-gray-200 text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none  "
+                  className="py-2 px-2  flex justify-center items-center text-xl font-semibold rounded-lg border border-gray-200 text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none  "
                 >
                   <HiMenu />
                 </button>

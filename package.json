@@ -9,7 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@next/font": "^14.2.1",
     "@preline/accordion": "^2.0.2",
     "@preline/overlay": "^2.1.0",
     "apexcharts": "^3.48.0",
