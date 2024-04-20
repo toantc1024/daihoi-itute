@@ -105,7 +105,7 @@ export default function Documents() {
                       </tr>
                     </thead>
                     <tbody className="divide-y overflow-y-auto max-h-[80vh] divide-gray-200 ">
-                      {allowView || !currentUserProfile?.role === "Admin" ? (
+                      {allowView || currentUserProfile?.role === "Admin" ? (
                         documents ? (
                           documents.map((x: any, index: any) => {
                             return (
