@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { collection, query, where, onSnapshot } from "firebase/firestore";
 import { db } from "@/hook/firebase";
 import { getTimestamp } from "@/components/DataTable";
+import AttendeeList from "@/components/AttendeeList";
 
 const getLastNElement = (arr: any[], n: number) => {
   return arr.slice(Math.max(arr.length - n, 0));
@@ -32,47 +33,34 @@ const Welcome = () => {
 
   return (
     <div className="h-screen flex m-4 p-24 gap-8 border-[1px] rounded-xl flex-col ">
-      <div className="text-dhblue w-full flex items-center justify-center text-4xl font-bold py-8 ">
-        Chào mừng đại biểu
-      </div>
+      <div className="max-w-2xl text-center mx-auto">
+        <div className=" block text-sm font-bold sm:text-4xl md:text-2xl  nowrap text-dhblue">
+          <span className="bg-gradient-to-b font-extrabold from-dhblue to-dhcyan bg-clip-text text-transparent">
+            ĐẠI HỘI ĐẠI BIỂU ĐOÀN TNCS HỒ CHÍ MINH
+          </span>
+        </div>
 
+        <div className="block text-sm font-extrabold sm:text-4xl md:text-2xl  bg-gradient-to-b from-dhred to-orange-400 bg-clip-text text-transparent">
+          <span className="">KHOA CÔNG NGHỆ THÔNG TIN</span>
+        </div>
+
+        <div className="block text-sm font-normal uppercase sm:text-4xl md:text-2xl  text-dhblue">
+          <span className="bg-gradient-to-b font-extrabold from-dhblue to-dhcyan bg-clip-text text-transparent">
+            Trường Đại Học Sư Phạm Kỹ Thuật
+          </span>
+        </div>
+
+        <div className="mt-3 text-sm ">
+          <button className="bg-dhblue text-white text-sm font-bold py-2 px-2 rounded-xl ">
+            LẦN THỨ XI, NHIỆM KỲ 2024 - 2027
+          </button>
+        </div>
+      </div>
       <div
         id="attend-list"
         className="flex flex-col justify-start overflow-auto gap-4 h-full"
       >
-        {attendances &&
-          attendances
-            .sort(
-              (a: any, b: any) =>
-                -getTimestamp(a["timestamp"]) + getTimestamp(b["timestamp"])
-            )
-            .map((attendance: any, key: any) => (
-              <>
-                {key == 0 ? (
-                  <>
-                    <div className="h-full items-center flex gap-4 justify-between py-2 flex-grow-0">
-                      <span className="text-gray-900 font-bold text-2xl ">
-                        Đại biểu.
-                      </span>
-                      <span className="py-2 text-6xl bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500  inline-block text-transparent bg-clip-text  font-bold">
-                        {attendance.name}
-                      </span>
-                    </div>
-                  </>
-                ) : (
-                  <>
-                    <div className="flex gap-4 justify-between items-end py-2">
-                      <span className="py-2 font-bold text-2xl text-gray-800">
-                        Đại biểu.
-                      </span>
-                      <span className=" py-2 text-4xl font-bold">
-                        {attendance.name}
-                      </span>
-                    </div>
-                  </>
-                )}
-              </>
-            ))}
+        <AttendeeList list={attendances} />
       </div>
     </div>
   );

@@ -100,7 +100,7 @@ const Dashboard = () => {
   const notify = (text: any) =>
     toast.success(text, {
       position: "bottom-right",
-      autoClose: 3000,
+      autoClose: 4000,
       hideProgressBar: false,
       closeOnClick: true,
       pauseOnHover: true,
@@ -116,7 +116,7 @@ const Dashboard = () => {
   const [showModal, setShowModal] = useState<boolean>(false);
 
   return (
-    <div className="relative">
+    <div className="relative overflow-auto py-2">
       <ToastContainer />
       <audio ref={audioRef} src="/intro.mp3" />
       {showLoader && (
@@ -124,7 +124,7 @@ const Dashboard = () => {
           {showLoader ? <Loader timeline={timeline} words={words} /> : null}
         </div>
       )}
-      <div className="p-8 grid grid-cols-3  grid-rows-2 grid-flow-col gap-4 h-screen">
+      <div className="p-8 md:grid flex flex-col py-4 md:grid-cols-2 md:grid-rows-2 grid-flow-col gap-4 h-screen ">
         <div
           className={`${
             showModal ? "" : "hidden"
@@ -153,21 +153,21 @@ const Dashboard = () => {
             </div>
           </div>
         </div>
-        <div className="row-span-2 col-span-2">
+        <div className="md:row-span-2 md:col-span-2">
           <>
             {/* Card */}
-            <div className="group flex flex-col h-full bg-white border border-gray-200 shadow-sm rounded-xl ">
+            <div className="group flex flex-col h-full bg-white border border-gray-200 shadow-sm rounded-xl  ">
               <RoomMap attendees={attendees} />
             </div>
           </>
         </div>
-        <div className=" col-span-1 ...">
+        <div className="col-span-1">
           <div className="group flex flex-col h-full bg-white border border-gray-200 shadow-sm rounded-xl ">
             <div className=" h-full flex flex-col  gap-4 items-center justify-center">
               <div className="font-bold text-dhblue bg-clip-text text-8xl ">
                 {attendees ? addZero(Object.entries(attendees).length) : 0}
               </div>{" "}
-              <div className="text-gray-600 text-4xl  text-whte font-bold">
+              <div className="text-gray-600 py-2 text-4xl  text-whte font-bold">
                 Đại biểu
               </div>
             </div>

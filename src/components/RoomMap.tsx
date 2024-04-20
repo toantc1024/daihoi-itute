@@ -4,7 +4,7 @@ import PositionTable from "./PositionTable";
 
 const RoomMap = ({ attendees }: { attendees: any }) => {
   return (
-    <div className="flex bg-gradient-to-tr   justify-center flex-col h-full w-full relative">
+    <div className="flex bg-gradient-to-tr   justify-center flex-col h-full w-full relative  overflow-x-auto">
       <div className="flex p-4">
         <div className="p-4  bg-dhcyan text-white w-full text-center rounded-xl font-bold">
           SÂN KHẤU
@@ -23,8 +23,8 @@ const RoomMap = ({ attendees }: { attendees: any }) => {
           ĐẠI BIỂU KHÁCH MỜI
         </div>
       </div>
-      <div className="p-2  py-4 h-full flex gap-2 ">
-        <div className="py-2 w-full h-full">
+      <div className="p-2  py-4 h-full flex gap-2">
+        <div className="py-2 w-full h-full ">
           <PositionTable
             attendees={attendees}
             min={58}

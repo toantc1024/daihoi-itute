@@ -13,6 +13,7 @@
     "@preline/overlay": "^2.1.0",
     "apexcharts": "^3.48.0",
     "firebase": "^10.10.0",
+    "framer-motion": "^11.1.7",
     "gsap": "^3.12.5",
     "next": "14.1.4",
     "preline": "^2.0.3",

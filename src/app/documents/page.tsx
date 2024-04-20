@@ -35,6 +35,8 @@ export default function Documents() {
     fetchDocuments();
   }, []);
 
+  const [showAddDocument, setShowAddDocument] = useState<boolean>(false);
+
   const currentUserProfile = AuthStore((state) => state.currentUserProfile);
 
   return (
@@ -81,6 +83,15 @@ export default function Documents() {
                   className="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none"
                 >
                   Áp dụng
+                </button>
+                <button
+                  type="button"
+                  onClick={async () => {
+                    setShowAddDocument(true);
+                  }}
+                  className="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-orange-400 text-white hover:bg-orange-500 disabled:opacity-50 disabled:pointer-events-none"
+                >
+                  Thêm văn kiện
                 </button>
               </div>
             )}
@@ -191,6 +202,41 @@ export default function Documents() {
               height="90%"
               allow="autoplay"
             ></iframe>
+          </div>
+        </div>
+
+        <div
+          className={`${
+            !showAddDocument ? "hidden" : ""
+          } absolute bg-gray-200 w-full h-full`}
+        >
+          <div className="w-full h-full z-[88]">
+            <div className="p-1">
+              <button
+                onClick={() => {
+                  setShowAddDocument(false);
+                }}
+                className="border-[1px] border-gray-200 w-8 h-8 rounded-full bg-white flex items-center justify-center text-2xl text-gray-500 p-2 shadow-sm"
+              >
+                <HiArrowLeft />
+              </button>
+            </div>
+            <div className="flex gap-2 items-center justify-center">
+              <input
+                type="text"
+                className="rounded-xl py-2 px-2"
+                placeholder="Link"
+              />{" "}
+              <button
+                type="button"
+                onClick={async () => {
+                  setShowAddDocument(true);
+                }}
+                className="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-orange-400 text-white hover:bg-orange-500 disabled:opacity-50 disabled:pointer-events-none"
+              >
+                Thêm
+              </button>
+            </div>
           </div>
         </div>
       </>
