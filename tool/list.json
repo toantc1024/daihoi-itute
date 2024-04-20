@@ -1,5 +1,6 @@
 {
     "0": {
+        "sex": "Bisexual",
         "representativeID": "0",
         "role": "Admin",
         "fullName": "Đoàn hội Khoa Công nghệ Thông tin",
@@ -17,17 +18,17 @@
     "2": {
         "representativeID": "2",
         "role": "Đoàn viên",
-        "fullName": "Nguyễn Thi Mai Tiên",
+        "fullName": "Nguyễn Thị Mai Tiên",
         "studentID": "20110255",
         "communistUnionID": "20110ST6",
         "sex": "Nam"
     },
     "3": {
         "representativeID": "3",
-        "role": "Bí thư",
+        "role": "Đoàn viên",
         "fullName": "Lê Tuấn Nghĩa",
         "studentID": "20133072",
-        "communistUnionID": "20110ST1",
+        "communistUnionID": "201331A",
         "sex": "Nam"
     },
     "4": {
@@ -243,7 +244,7 @@
         "role": "Lớp Phó",
         "fullName": "Nguyễn Ngọc Hải Anh",
         "studentID": "22110098",
-        "communistUnionID": "22110CL6",
+        "communistUnionID": "22110CL4",
         "sex": "Nam"
     },
     "31": {
@@ -251,7 +252,7 @@
         "role": "Phó Bí thư",
         "fullName": "Trần Phan Tiến Anh",
         "studentID": "22110103",
-        "communistUnionID": "22110CL6",
+        "communistUnionID": "22110CL5",
         "sex": "Nam"
     },
     "32": {
@@ -267,7 +268,7 @@
         "role": "Phó Bí Thư ",
         "fullName": "Bùi Bảo Châu",
         "studentID": "22110114",
-        "communistUnionID": "22110CL5",
+        "communistUnionID": "22110CL4",
         "sex": "Nam"
     },
     "34": {
@@ -513,9 +514,9 @@
     "64": {
         "representativeID": "64",
         "role": "Đoàn viên",
-        "fullName": "Ka Phúc",
+        "fullName": "Trần Nhật Minh",
         "studentID": "22110183",
-        "communistUnionID": "22110CL4",
+        "communistUnionID": "22110CL2",
         "sex": "Nam"
     },
     "65": {
@@ -531,7 +532,7 @@
         "role": "Lớp phó",
         "fullName": "Lê Nguyễn Thiên Phúc ",
         "studentID": "22110201",
-        "communistUnionID": "22110CL7",
+        "communistUnionID": "22110CL5",
         "sex": "Nam"
     },
     "67": {
@@ -608,7 +609,7 @@
     },
     "76": {
         "representativeID": "76",
-        "role": "Phó Bí thư",
+        "role": "Đoàn viên",
         "fullName": "Nguyễn Hồng Bảo Long",
         "studentID": "23162053",
         "communistUnionID": "23162",

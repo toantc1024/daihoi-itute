@@ -4,7 +4,7 @@ import AuthStore from "@/store/authStore";
 import { useRouter } from "next/navigation";
 import React, { useEffect } from "react";
 import { GrDashboard } from "react-icons/gr";
-import { HiDocument, HiLogout, HiMenu, HiUser } from "react-icons/hi";
+import { HiDocument, HiLogout, HiMenu, HiPlay, HiUser } from "react-icons/hi";
 import { HiHandRaised, HiOutlineSquares2X2, HiQrCode } from "react-icons/hi2";
 import { RxDashboard } from "react-icons/rx";
 
@@ -80,7 +80,14 @@ const Bookmark = () => {
               router.push("/documents");
             }}
           />
-
+          <BookmarkOption
+            title={"Trò chơi"}
+            text={"Who loves game? Everyone."}
+            icon={<HiPlay />}
+            eventHandler={() => {
+              router.push("/game");
+            }}
+          />
           <BookmarkOption
             title={"Đăng xuất"}
             text={"Thoát tài khoản"}

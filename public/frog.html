@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Ếch ộp</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"
+    />
+    <link rel="stylesheet" href="/style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+  </head>
+  <body>
+    <!-- partial:index.partial.html -->
+    <div class="environment">
+      <div class="sky"></div>
+      <div class="stars"></div>
+      <div class="sun"></div>
+      <div class="moon"></div>
+      <div class="mountains">
+        <div class="mountain">
+          <div class="trees">
+            <div class="tree"></div>
+            <div class="tree tree--2"></div>
+            <div class="tree tree--3"></div>
+            <div class="tree tree--4"></div>
+          </div>
+        </div>
+        <div class="mountain mountain--2"></div>
+      </div>
+      <div class="water"></div>
+      <div class="lily lilly-1"></div>
+    </div>
+
+    <div class="player">
+      <div class="legs">
+        <div class="leg leg--left"></div>
+        <div class="leg leg--right"></div>
+      </div>
+
+      <div class="body">
+        <div class="crown"></div>
+        <div class="belly"></div>
+        <div class="arms">
+          <div class="arm arm--left">
+            <div class="hand">
+              <div class="toe"></div>
+              <div class="toe"></div>
+              <div class="toe"></div>
+            </div>
+          </div>
+          <div class="arm arm--right">
+            <div class="hand">
+              <div class="toe"></div>
+              <div class="toe"></div>
+              <div class="toe"></div>
+            </div>
+          </div>
+        </div>
+        <div class="mouth">
+          <div class="top-lip"></div>
+          <div class="bottom-lip"></div>
+          <div class="tongue">
+            <div class="tongue-inner">
+              <div class="fly is-dead"></div>
+            </div>
+          </div>
+        </div>
+        <div class="eyes">
+          <div class="eye eye--left">
+            <div class="pupil"></div>
+          </div>
+          <div class="eye eye--right">
+            <div class="pupil"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <!-- <span class="close">&times;</span> -->
+        <form action="" id="modal_login" style="position: relative">
+          <div style="flex-direction: column">
+            <label for="user_name"> Bạn tên gì vậy: </label>
+            <input
+              type="text"
+              name="username"
+              id="username_inp"
+              placeholder="Tên của bạn"
+            />
+          </div>
+          <div>
+            <span style="font-style: italic; color: gray"
+              >TOP Những người chơi bắt được nhiều bọ nhất sẽ nhận quà từ
+              BTC</span
+            >
+          </div>
+          <div>
+            <span
+              id="login-error"
+              class="is-hidden"
+              style="
+                background-color: royalblue;
+                border-radius: 5px;
+                padding: 5px;
+                color: white;
+                position: absolute;
+                top: 0;
+                left: 0;
+              "
+            ></span>
+          </div>
+          <div>
+            <button class="btn play_btn" onclick="save_username()">Play</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="screen menu">
+      <h1>Ếch <span>ăn bọ</span></h1>
+
+      <a href="#" class="btn play" onClick="play()">
+        <span class="text">CHƠI</span>
+        <br />
+      </a>
+
+      <a href="#" class="btn play" onClick="showScoreBoard()">
+        <span class="text">BẢNG ĐIỂM</span>
+        <br />
+        <p>
+          <span id="current_user"></span>:
+          <span class="js-best-user"></span> con bọ
+        </p>
+      </a>
+      <a href="#" class="btn" onClick="settings()">CÀI ĐẶT</a>
+      <a href="#" class="btn" onClick="logout()">ĐĂNG XUẤT</a>
+    </div>
+
+    <div class="screen game">
+      <div class="hud">
+        <div class="time">
+          <span class="label">THỜi GIAN</span>
+          <span class="value js-time">30</span>
+        </div>
+
+        <div class="score">
+          <span class="label">SỐ BỌ</span>
+          <span class="value js-score">0</span>
+        </div>
+      </div>
+
+      <div class="flies">
+        <div class="path">
+          <div class="target">
+            <div class="fly"></div>
+          </div>
+        </div>
+        <div class="path">
+          <div class="target">
+            <div class="fly"></div>
+          </div>
+        </div>
+        <div class="path">
+          <div class="target">
+            <div class="fly"></div>
+          </div>
+        </div>
+        <div class="path">
+          <div class="target">
+            <div class="fly"></div>
+          </div>
+        </div>
+        <div class="path">
+          <div class="target">
+            <div class="fly"></div>
+          </div>
+        </div>
+        <div class="path">
+          <div class="target">
+            <div class="fly"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="screen win">
+      <h1>Xong game</h1>
+      <div class="card">
+        <h3 class="highscore js-highscore is-hidden">Xác lập kỷ lục!</h3>
+
+        <div class="score">
+          <span class="label">Points</span>
+          <span class="value js-score">30</span>
+        </div>
+
+        <div class="best">
+          <span class="label">Cao nhất</span>
+          <span class="value js-best">0</span>
+        </div>
+      </div>
+      <a href="#" class="btn" onClick="play()">Chơi lần nữa</a>
+      <a href="#" class="btn btn--clear" onClick="menu()">Trang chủ</a>
+    </div>
+
+    <div class="screen settings">
+      <h1>Cài đặt</h1>
+
+      <div class="card">
+        <label class="checkbox">
+          <input
+            type="radio"
+            name="theme"
+            value="light"
+            checked
+            onclick="toggleTheme(this.value)"
+          />
+          <span>Ban ngày</span>
+        </label>
+        <label class="checkbox">
+          <input
+            type="radio"
+            name="theme"
+            value="dark"
+            onclick="toggleTheme(this.value)"
+          />
+          <span>Ban đêm</span>
+        </label>
+      </div>
+
+      <a href="#" class="btn js-toggle-music" onClick="toggleMusic()"
+        >Chơi nhạc</a
+      >
+
+      <a href="#" class="btn" onClick="menu()">Trở lại</a>
+    </div>
+    <button class="trigger">Click the modal!</button>
+
+    <div class="screen scoreboard">
+      <h1>Bảng điểm</h1>
+      <div class="card">
+        <div
+          class="scoreboard-list js-scoreboard"
+          style="overflow: auto; width: 100%"
+        ></div>
+      </div>
+
+      <a href="#" class="btn btn--clear" onClick="menu()">Trang chủ</a>
+    </div>
+
+    <audio
+      id="music"
+      src="https://www.dl-sounds.com/wp-content/uploads/edd/2015/09/Ducky-Duck-preview.mp3"
+    ></audio>
+    <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore-compat.js"></script>
+    <!-- partial -->
+
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-analytics.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      import {
+        setDoc,
+        doc,
+        getFirestore,
+        collection,
+        getDocs,
+        onSnapshot,
+        query,
+        getDoc,
+      } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore.js"; // https://firebase.google.com/docs/web/setup#available-libraries
+
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyDvqz8q6SMJUAjw55jmAvxx1m40p2N0T1o",
+        authDomain: "daihoi-cntt.firebaseapp.com",
+        projectId: "daihoi-cntt",
+        storageBucket: "daihoi-cntt.appspot.com",
+        messagingSenderId: "689457846182",
+        appId: "1:689457846182:web:ff70baee2986fbef806167",
+        measurementId: "G-8EXH9WHQM7",
+      };
+
+      const logout = () => {
+        localStorage.removeItem("user_name");
+        openLoginModal();
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+
+      // Snap shot function
+      window.logout = logout;
+      const db = getFirestore();
+
+      const q = query(collection(db, "scoreboard"));
+      let current_scores = [];
+      const unsubscribe = onSnapshot(q, (querySnapshot) => {
+        current_scores = [];
+        querySnapshot.forEach((doc) => {
+          current_scores.push(doc.data());
+        });
+
+        renderScoreBoard(current_scores);
+
+        // Get score by username
+        const current_user = localStorage.getItem("user_name");
+        const user_score = current_scores.find(
+          (score) => score.name == current_user
+        );
+        if (user_score) {
+          // .js-best
+          document.querySelector(".js-best-user").textContent =
+            user_score.score;
+        }
+      });
+
+      // Set score function
+      export const setScore = async (username, score) => {
+        const db = getFirestore();
+        // Add a new document in collection "cities"
+        await setDoc(doc(db, "scoreboard", username), {
+          name: username,
+          score: score,
+        });
+      };
+
+      window.setScore = setScore;
+      window.play = play;
+      window.menu = menu;
+      window.settings = settings;
+      // window.scoreboard = scoreboard;
+      window.toggleMusic = toggleMusic;
+      window.toggleTheme = toggleTheme;
+      window.init = init;
+
+      window.save_username = async () => {
+        // Check if username in document
+        const db = getFirestore();
+        const username = document.getElementById("username_inp").value;
+
+        const docRef = doc(db, "scoreboard", username);
+        const docSnap = await getDoc(docRef);
+        if (docSnap.exists()) {
+          alert("Username đã tồn tại");
+          return;
+        }
+        setScore(username, 0);
+        document.getElementById("current_user").textContent = username;
+        localStorage.setItem("user_name", username);
+        closeLoginModal();
+      };
+
+      // Please excuse the mess, I need to do some tidying
+      // Import the functions you need from the SDKs you need
+
+      var activeScreen = document.querySelector(".screen.is-active");
+      var menuScreen = document.querySelector(".screen.menu");
+      var gameScreen = document.querySelector(".screen.game");
+      var winScreen = document.querySelector(".screen.win");
+      var settingsScreen = document.querySelector(".screen.settings");
+      var scoreboardScreen = document.querySelector(".screen.scoreboard");
+      var scoreBoard = document.querySelector(".js-scoreboard");
+
+      var player = document.querySelector(".player");
+      var tongue = document.querySelector(".tongue");
+      var eyes = document.querySelectorAll(".eye");
+      var pupils = document.querySelectorAll(".pupil");
+      var deadFly = document.querySelector(".tongue .fly");
+
+      var paths = document.querySelectorAll(".path");
+      var targets = document.querySelectorAll(".target");
+
+      var scoreEls = document.querySelectorAll(".js-score");
+      var bestEls = document.querySelectorAll(".js-best");
+      var timerEl = document.querySelector(".js-time");
+      var highscoreEl = document.querySelector(".js-highscore");
+      var timerIntervalId;
+
+      // Audio
+      var musicPlaying = false;
+      var musicButton = document.querySelector(".js-toggle-music");
+      var music = document.querySelector("#music");
+      var loginForm = document.getElementById("modal_login");
+      var state = {};
+      var hidden = [];
+      var theme;
+      var scores = [];
+      var shooting = false;
+      var playing = false;
+      var transitioning = false;
+      var lastPath = false;
+      var modal = document.getElementById("myModal");
+      // var span = document.getElementsByClassName("close")[0];
+
+      const openLoginModal = () => {
+        modal.style.display = "block";
+      };
+
+      // DOMContentLoaded event listener
+      document.addEventListener("DOMContentLoaded", function () {
+        if (!localStorage.getItem("user_name")) {
+          openLoginModal();
+        } else {
+          document.getElementById("current_user").textContent =
+            localStorage.getItem("user_name");
+        }
+      });
+
+      const getCurrentUserScore = async (username) => {
+        const data = await getDoc(doc(db, "scoreboard", username));
+        const score = data.data();
+        return score.score;
+      };
+
+      const closeLoginModal = () => {
+        modal.style.display = "none";
+      };
+
+      var host = "https://itute-backend.vercel.app";
+      class CloudStorage {
+        constructor() {
+          this.host = host;
+        }
+
+        getItem(key) {
+          fetch(`${this.host}/api/getItem?key=${key}`, {
+            method: "GET",
+            headers: {
+              "Content-Type": "application/json",
+              "Access-Control-Allow-Origin": "*",
+            },
+          })
+            .then((response) => {
+              // if (!response.ok) {
+              // throw new Error(`HTTP error! status: ${response.status}`);
+              // }
+              return response.json();
+            })
+            .then((data) => {
+              console.log("Success:", data);
+              return data;
+            })
+            .catch((error) => {});
+        }
+
+        setItem(key, value) {
+          fetch(`${this.host}/api/setItem`, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              "Access-Control-Allow-Origin": "*",
+            },
+            body: JSON.stringify({ key: key, value: value }),
+          })
+            .then((response) => {
+              // if (!response.ok) {
+              // throw new Error(`HTTP error! status: ${response.status}`);
+              // }
+              return response.json();
+            })
+            .then((data) => {
+              console.log("Success:", data);
+              return data;
+            })
+            .catch((error) => {});
+        }
+      }
+
+      var localStorage = window.localStorage;
+      var cloudStorage = new CloudStorage();
+
+      var clickOrTap =
+        window.document.documentElement.ontouchstart !== null
+          ? "click"
+          : "touchstart";
+
+      const loginModalShowError = (message) => {
+        const errorEl = document.getElementById("login-error");
+        errorEl.textContent = message;
+        // Set time out for 1000 to hide error
+        errorEl.classList.remove("is-hidden");
+        setTimeout(() => {
+          errorEl.classList.add("is-hidden");
+        }, 2000);
+      };
+
+      loginForm.onsubmit = function (e) {
+        e.preventDefault();
+        // extract username and userzalo from e form event
+        // extract username and userzalo from the form event
+        let username = e.target.elements["username"].value;
+        let userzalo = e.target.elements["userzalo"].value;
+
+        if (username && userzalo) {
+          fetch(`${host}/api/login`, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ username: username, userzalo: userzalo }),
+          })
+            .then((response) => {
+              // if (!response.ok) {
+              // throw new Error(`HTTP error! status: ${response.status}`);
+              // }
+              return response.json();
+            })
+            .then((data) => {
+              console.log("Success:", data);
+              localStorage.setItem("user_name", data.username);
+              localStorage.setItem("user_zalo", data.userzalo);
+              document.getElementById("user_name").textContent = data.username;
+              closeLoginModal();
+            })
+            .catch((error) => {});
+        }
+      };
+
+      init();
+
+      function init() {
+        prepPaths();
+        loadStorage();
+        renderBest();
+        toggleScreen(menuScreen);
+      }
+      function prepPaths() {
+        for (var i = 0; i < paths.length; i++) {
+          paths[i].setAttribute("data-id", i);
+        }
+      }
+
+      function authentication() {
+        let user_id = localStorage.getItem("user_name");
+        if (!user_id || user_id == "undefined" || user_id == "null") {
+          openLoginModal();
+        } else {
+          document.getElementById("user_name").textContent = user_id;
+        }
+      }
+
+      function loadStorage() {
+        theme = localStorage.getItem("theme");
+
+        if (!theme) {
+          theme = "light";
+        }
+
+        scores = localStorage.getItem("scores");
+
+        if (!scores) {
+          scores = [];
+        } else {
+          scores = JSON.parse(scores);
+        }
+
+        toggleTheme(theme);
+      }
+
+      async function renderScoreBoard(scores) {
+        var html = "";
+        // Sort scores
+        scores.sort(function (a, b) {
+          return b.score - a.score;
+        });
+
+        let inTop = false;
+        let size = scores.length > 10 ? 10 : scores.length;
+
+        for (var i = 0; i < size; i++) {
+          if (scores[i].name === localStorage.getItem("user_name"))
+            inTop = true;
+          html += `<div class='score-item' style='${
+            scores[i].name === localStorage.getItem("user_name")
+              ? "color:red;"
+              : ""
+          }'>`;
+          html += "<div>";
+          html += `<span class='score-label'>`;
+          html += `#${i + 1} `;
+          html += "</span>";
+          html += `${scores[i].name}`;
+          html += "</div>";
+          html += "<span class='score-label'>";
+          html += `Số bọ: ${scores[i].score}`;
+          html += "</span>";
+          html += "</div>";
+        }
+
+        if (!inTop) {
+          html += `<div class='score-item' style='color:orange;'>`;
+          html += "<div>";
+          html += `<span class='score-label'>`;
+          html += `#${size + 1} `;
+          html += "</span>";
+          html += `${localStorage.getItem("user_name")}`;
+          html += "</div>";
+          html += "<span class='score-label'>";
+          html += `Số bọ: ${await getCurrentUserScore(
+            localStorage.getItem("user_name")
+          )}`;
+          html += "</span>";
+          html += "</div>";
+        }
+        scoreBoard.innerHTML = html;
+      }
+
+      function setState() {
+        state = {
+          time: 10,
+          score: 0,
+        };
+      }
+
+      function toggleMusic() {
+        musicPlaying = !musicPlaying;
+        if (musicPlaying) {
+          music.play();
+          musicButton.textContent = "Dừng nhạc";
+        } else {
+          music.pause();
+          music.currentTime = 0;
+          musicButton.textContent = "Chơi nhạc";
+        }
+      }
+
+      function play() {
+        playing = true;
+        setState();
+        renderScore();
+        toggleScreen(gameScreen);
+        peep();
+        peep();
+        peep();
+        peep();
+        startTimer();
+      }
+
+      async function win() {
+        playing = false;
+        var prevBest = scores[0] || 0;
+        let current_user = localStorage.getItem("user_name");
+        let prev_score = await getCurrentUserScore(current_user);
+        scores.push(state.score);
+        console.log(prev_score, state.score);
+        if (prev_score < state.score) {
+          await setScore(current_user, state.score);
+        } else {
+        }
+
+        scores.sort(function (a, b) {
+          return b - a;
+        });
+        if (scores.length > 10) {
+          scores.pop();
+        }
+        saveScores();
+        var best = scores[0] || 0;
+        if (state.score > prevBest) {
+          best = state.score;
+          highscoreEl.classList.remove("is-hidden");
+        } else {
+          highscoreEl.classList.add("is-hidden");
+        }
+        renderBest(best);
+        toggleScreen(winScreen);
+      }
+
+      function renderBest() {
+        for (var i = 0; i < bestEls.length; i++) {
+          bestEls[i].textContent = scores[0];
+        }
+      }
+
+      function saveScores() {
+        localStorage.setItem("scores", JSON.stringify(scores));
+      }
+
+      function menu() {
+        toggleScreen(menuScreen);
+      }
+
+      function settings() {
+        toggleScreen(settingsScreen);
+      }
+
+      function scoreboard() {
+        toggleScreen(scoreboardScreen);
+      }
+
+      window.showScoreBoard = scoreboard;
+      function startTimer() {
+        // Set the time before starting timer
+        timerEl.textContent = state.time;
+
+        timerIntervalId = setInterval(function (e) {
+          state.time -= 1;
+          timerEl.textContent = state.time;
+
+          if (state.time <= 0) {
+            clearInterval(timerIntervalId);
+            win();
+          }
+        }, 1000);
+      }
+
+      function score(value) {
+        state.score += value || 1;
+
+        renderScore();
+      }
+      function renderScore() {
+        for (var i = 0; i < scoreEls.length; i++) {
+          scoreEls[i].textContent = state.score;
+        }
+      }
+
+      function toggleScreen(screen) {
+        if (activeScreen) {
+          activeScreen.classList.remove("is-active");
+        }
+
+        screen.classList.add("is-active");
+        activeScreen = screen;
+      }
+
+      function toggleTheme(value) {
+        document.body.classList.remove(theme);
+        document.body.classList.add(value);
+        theme = value;
+
+        localStorage.setItem("theme", value);
+      }
+
+      // Game Logic
+      // Events
+      window.onmousemove = eyesFollow;
+      window.document.addEventListener(clickOrTap, shoot);
+      for (var i = 0; i < targets.length; i++) {
+        targets[i].addEventListener(clickOrTap, hit);
+      }
+
+      function shoot(e) {
+        eyesFollow(e);
+        // deadFly.classList.remove('is-active');
+
+        player.classList.remove("is-active");
+        tongue.style.height = 0 + "px";
+        tongue.style.transform = "rotate(" + 0 + "deg)";
+
+        var tongueX = tongue.getBoundingClientRect().left + tongue.offsetWidth;
+        var tongueY = tongue.getBoundingClientRect().bottom;
+        var touch = getTouch(e);
+        var clickX = touch.x + tongue.offsetWidth / 2;
+        var clickY = touch.y;
+
+        shooting = true;
+        transitioning = true;
+
+        var angle = getAngle(tongueX, tongueY, clickX, clickY);
+        var height = getHeight(tongueX, tongueY, clickX, clickY);
+
+        if (angle > 0 && angle < 180) {
+          player.classList.add("is-shooting-down");
+        } else {
+          player.classList.remove("is-shooting-down");
+        }
+
+        player.classList.add("is-active");
+        tongue.style.height = height + "px";
+        tongue.style.transform = "rotate(" + (angle + 90) + "deg)";
+      }
+      function hit(e) {
+        var path = this.parentNode;
+        var id = path.getAttribute("data-id");
+
+        if (!e.isTrusted || hidden.includes(id)) {
+          return;
+        }
+        if (state.score % 2 == 0) {
+          deadFly.classList.add("is-active2");
+          deadFly.classList.remove("is-active");
+        } else {
+          deadFly.classList.add("is-active");
+          deadFly.classList.remove("is-active2");
+        }
+        path.classList.remove("is-active");
+        path.classList.add("is-hidden");
+        hidden.push(id);
+
+        // Show dead fly on tongue
+        //deadFly.classList.add('is-active');
+        // console.log('show dead fly');
+
+        setTimeout(function () {
+          var id = hidden.shift();
+          paths[id].classList.remove("is-hidden");
+        }, 1000);
+
+        score();
+      }
+
+      function eyesFollow(e) {
+        var touch = getTouch(e);
+        moveEye({ x: touch.x, y: touch.y }, eyes[0], pupils[0]);
+        moveEye({ x: touch.x, y: touch.y }, eyes[1], pupils[1]);
+      }
+
+      function moveEye(mouse, eye, pupil) {
+        var left = 0;
+        var top = 0;
+        var eyeRadius = eye.offsetWidth / 2;
+        var pupilRadius = pupil.offsetWidth / 2;
+
+        var leftOffset = eye.getBoundingClientRect().left;
+        var topOffset = eye.getBoundingClientRect().top;
+
+        var center = [
+          eye.getBoundingClientRect().left + eyeRadius,
+          eye.getBoundingClientRect().top + eyeRadius,
+        ];
+
+        var dist = getDistance([mouse.x, mouse.y], center);
+
+        if (dist <= eyeRadius) {
+          left = mouse.x - leftOffset - eyeRadius;
+          top = mouse.y - topOffset - eyeRadius;
+        } else {
+          var x = mouse.x - center[0];
+          var y = mouse.y - center[1];
+          var radians = Math.atan2(y, x);
+          left = Math.cos(radians) * (eyeRadius - pupilRadius);
+          top = Math.sin(radians) * (eyeRadius - pupilRadius);
+        }
+
+        // if (top > 0) {
+        //   eye.classList.add('down');
+        //   eye.classList.remove('up');
+        //   console.log('down');
+        // } else {
+        //   eye.classList.add('up');
+        //   eye.classList.remove('down');
+        //   console.log('up');
+        // }
+
+        pupil.style.transform = "translate(" + left + "px, " + top + "px)";
+      }
+
+      function getRandomPath(lanes) {
+        const idx = Math.floor(Math.random() * paths.length);
+        const path = paths[idx];
+        if (path === lastPath || paths[idx].classList.contains("is-hidden")) {
+          // console.log('Ah nah thats the same one bud');
+          return getRandomPath(paths);
+        }
+        lastPath = path;
+        return path;
+      }
+
+      function peep() {
+        const time = getRandomTime(600, 1200);
+        const path = getRandomPath(paths);
+        path.classList.add("is-active");
+        setTimeout(function () {
+          path.classList.remove("is-active");
+          if (playing) {
+            peep();
+          }
+        }, time);
+      }
+
+      // Utility
+      function getRandomTime(min, max) {
+        return Math.round(Math.random() * (max - min) + min);
+      }
+
+      function getDistance(dot1, dot2) {
+        var x1 = dot1[0],
+          y1 = dot1[1],
+          x2 = dot2[0],
+          y2 = dot2[1];
+
+        return Math.sqrt(Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2));
+      }
+
+      function getAngle(cx, cy, ex, ey) {
+        var dy = ey - cy;
+        var dx = ex - cx;
+        var theta = (Math.atan2(dy, dx) * 180) / Math.PI;
+
+        return theta;
+      }
+
+      function getHeight(x1, y1, x2, y2) {
+        var a = x1 - x2;
+        var b = y1 - y2;
+
+        return Math.sqrt(a * a + b * b);
+      }
+
+      function getTouch(e) {
+        if (e.touches) {
+          return {
+            x: e.touches[0].clientX,
+            y: e.touches[0].clientY,
+          };
+        } else {
+          return {
+            x: e.clientX,
+            y: e.clientY,
+          };
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -62,6 +62,7 @@ ADMIN_ROLE = 'Admin'
 def make_json_ateendee(csvFilePath, jsonFilePath):
     data = {
         "0": {
+            "sex": "Bisexual",
             "representativeID": "0",
             "role": ADMIN_ROLE,
             "fullName": "Đoàn hội Khoa Công nghệ Thông tin",
@@ -147,10 +148,38 @@ def create_account():
 def csv_to_json():
     make_json_ateendee('list.csv', 'list.json')
     make_json_documents('doc.csv', 'doc.json')
+        
+def export_to_excel():
+    # Read all doc from firestore 
+    db = firestore.client()
+    # Collection
+    docs = db.collection("users")
 
+    # Loop through docs
+    
+    data = []
+    
+    docs_ref = docs.stream()
+    for doc in docs_ref:
+        data_dict = doc.to_dict()
+        data.append(data_dict)
+    # Convert data to json
+    with open('data.json', 'w', encoding='utf-8') as jsonf:
+        jsonf.write(json.dumps(data, indent=4, ensure_ascii=False))  
+        
+    
 csv_to_json()
-delete_all_users()
-create_account()
-delete_all_documents()
-create_document()
+def import_users():
+    delete_all_users()
+    create_account()
 
+def import_docs():
+    delete_all_documents()
+    create_document()
+    
+def export():
+    export_to_excel()
+    
+import_users()
+import_docs()
+export()
