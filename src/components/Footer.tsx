@@ -18,7 +18,7 @@ const Footer = () => {
           </div>
           {/* End Col */}
           <div className="mt-3">
-            <p className="text-dhblue ">
+            <p className="text-gray-400 ">
               Developed with love <span className="text-dhred">❤</span> by
               toantc
             </p>

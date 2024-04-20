@@ -1,13 +1,10 @@
 "use client";
 import RoomMap from "@/components/RoomMap";
+import "react-toastify/dist/ReactToastify.css";
 import { db } from "@/hook/firebase";
-import {
-  collection,
-  doc,
-  getDocs,
-  onSnapshot,
-  query,
-} from "firebase/firestore";
+import { Bounce, ToastContainer, toast } from "react-toastify";
+import DHXI from "@/assets/background/qr_DH.jpg";
+import { collection, getDocs, onSnapshot, query } from "firebase/firestore";
 import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
 import DataTable from "@/components/DataTable";
 import { HiX } from "react-icons/hi";
@@ -16,6 +13,7 @@ import Loader from "@/components/Loader";
 import AuthStore from "@/store/authStore";
 import gsap from "gsap";
 import Hero from "@/components/Hero";
+import Image from "next/image";
 const Chart = dynamic(() => import("react-apexcharts"), { ssr: false });
 const Dashboard = () => {
   const [attendees, setAttendees] = useState<any>(null);
@@ -83,18 +81,43 @@ const Dashboard = () => {
       let attendeeList: any = {};
       querySnapshot.forEach((doc) => {
         let data: any = doc.data();
+
         attendeeList[data.representativeID] = data;
       });
+      querySnapshot.docChanges().forEach((change) => {
+        if (change.type === "added") {
+          let data = change.doc.data();
+          notify(`Đại biểu ${data.name} vừa đến`);
+        }
+      });
+
       setAttendees(attendeeList);
     });
   }, []);
   const addZero = (num: number) => {
     return num < 10 ? `0${num}` : num;
   };
+  const notify = (text: any) =>
+    toast.success(text, {
+      position: "bottom-right",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      icon: (
+        <Image {...DHXI} width={500} height={500} alt="Picture of the author" />
+      ),
+      theme: "light",
+      transition: Bounce,
+    });
+
   const [showModal, setShowModal] = useState<boolean>(false);
 
   return (
     <div className="relative">
+      <ToastContainer />
       <audio ref={audioRef} src="/intro.mp3" />
       {showLoader && (
         <div className={` ${!showLoader ? "hidden" : ""} absolute z-[999]`}>
@@ -108,10 +131,7 @@ const Dashboard = () => {
           } fixed top-0 left-0 right-0 bottom-0 z-[999] p-8 flex items-center justify-center bg-[rgba(0,0,0,.2)]`}
         >
           <div className="h-full flex flex-col w-full bg-white rounded-xl px-8">
-            <div className="flex justify-between px-2">
-              <h2 className="text-center text-2xl font-bold py-8">
-                Danh sách đại biểu có mặt
-              </h2>
+            <div className="flex justify-end py-2 px-2">
               <div className="flex items-center justify-center">
                 <button
                   onClick={() => {
@@ -123,9 +143,13 @@ const Dashboard = () => {
                 </button>
               </div>
             </div>
-
-            <div className="overflow-auto overflow-x-hidden ">
-              <DataTable data={attendees} />
+            <div>
+              <h2 className="text-center text-2xl font-bold py-8">
+                Danh sách đại biểu có mặt
+              </h2>
+              <div className="overflow-auto overflow-x-hidden ">
+                <DataTable data={attendees} />
+              </div>
             </div>
           </div>
         </div>
