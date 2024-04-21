@@ -171,7 +171,7 @@ export default function Documents() {
                     <div>
                       <p className="text-sm text-gray-600">
                         <span className="font-semibold text-gray-800 ">
-                          {documents && documents.length}
+                          {allowView && documents && documents.length}
                         </span>{" "}
                         văn kiện
                       </p>
