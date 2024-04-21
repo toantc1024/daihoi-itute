@@ -1,6 +1,6 @@
 .loader {
   clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-
+  font-size: 1rem !important;
   height: 100%;
   width: 100%;
 
@@ -46,7 +46,9 @@
   }
 
   &__word {
+    color: #0014c7;
     display: block;
+    padding: 10px;
     font-size: 3.2rem;
   }
 
@@ -62,7 +64,7 @@
   &__progress {
     height: 100%;
     width: 100%;
-    background-color: black;
+    background-color: #0014c7;
     transform: scaleX(0);
     transform-origin: left center;
   }

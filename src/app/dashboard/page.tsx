@@ -42,9 +42,16 @@ const Dashboard = () => {
   useEffect(() => {
     const asyncTask = async () => {
       if (!attendees) return;
+      // play audio
+
       let NUMBER_OF_ATTENDEES = 80;
       if (Object.entries(attendees).length < NUMBER_OF_ATTENDEES) {
         return;
+      }
+      if (audioRef.current) {
+        audioRef.current.play();
+      } else {
+        // Throw error
       }
       let newWords = Object.entries(attendees).reduce(
         (acc: any, [key, value]: [string, any]) => {
@@ -54,12 +61,7 @@ const Dashboard = () => {
         []
       );
       setWords(newWords);
-      // play audio
-      if (audioRef.current) {
-        audioRef.current.play();
-      } else {
-        // Throw error
-      }
+
       setShowLoader(true);
     };
 
@@ -87,7 +89,12 @@ const Dashboard = () => {
       querySnapshot.docChanges().forEach((change) => {
         if (change.type === "added") {
           let data = change.doc.data();
-          notify(`Đại biểu ${data.name} vừa đến`);
+          let timestamp = data.timestamp;
+          // Check if timestamp is recent (< 5 seconds)
+          let date = new Date(timestamp);
+          let currentDate = new Date();
+          let diff = Math.abs(date.getTime() - currentDate.getTime());
+          if (diff < 5000) notify(`Đại biểu ${data.name} vừa đến`);
         }
       });
 
@@ -117,8 +124,8 @@ const Dashboard = () => {
 
   return (
     <div className="relative overflow-auto py-2">
+      <audio ref={audioRef} src="./intro.mp3" />
       <ToastContainer />
-      <audio ref={audioRef} src="/intro.mp3" />
       {showLoader && (
         <div className={` ${!showLoader ? "hidden" : ""} absolute z-[999]`}>
           {showLoader ? <Loader timeline={timeline} words={words} /> : null}
