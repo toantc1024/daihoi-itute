@@ -171,10 +171,10 @@ const Dashboard = () => {
         <div className="col-span-1">
           <div className="group flex flex-col h-full bg-white border border-gray-200 shadow-sm rounded-xl ">
             <div className=" h-full flex flex-col  gap-4 items-center justify-center">
-              <div className="font-bold text-dhblue bg-clip-text text-8xl ">
+              <div className="font-bold bg-gradient-to-b from-dhblue to-dhcyan bg-clip-text text-transparent text-8xl ">
                 {attendees ? addZero(Object.entries(attendees).length) : 0}
               </div>{" "}
-              <div className="text-gray-600 py-2 text-4xl  text-whte font-bold">
+              <div className="  bg-gradient-to-b from-dhred to-orange-400 bg-clip-text text-transparent text-gray-600 py-2 text-4xl  text-whte font-bold">
                 Đại biểu
               </div>
             </div>
