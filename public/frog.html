@@ -307,10 +307,13 @@
       let current_scores = [];
       const unsubscribe = onSnapshot(q, (querySnapshot) => {
         current_scores = [];
+        maxScore = 0;
         querySnapshot.forEach((doc) => {
           current_scores.push(doc.data());
+          if (maxScore < doc.data().score) maxScore = doc.data().score;
         });
 
+        renderBest(maxScore);
         renderScoreBoard(current_scores);
 
         // Get score by username
@@ -400,6 +403,7 @@
       var playing = false;
       var transitioning = false;
       var lastPath = false;
+      let maxScore = 0;
       var modal = document.getElementById("myModal");
       // var span = document.getElementsByClassName("close")[0];
 
@@ -618,7 +622,7 @@
 
       function setState() {
         state = {
-          time: 10,
+          time: 30,
           score: 0,
         };
       }
@@ -673,7 +677,6 @@
         } else {
           highscoreEl.classList.add("is-hidden");
         }
-        renderBest(best);
         toggleScreen(winScreen);
       }
 
