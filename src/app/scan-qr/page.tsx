@@ -101,18 +101,6 @@ const ScanQR = () => {
   }, [currentUserProfile]);
 
   const [studentIdMap, setStudentIdMap] = useState<any>({});
-
-  useEffect(() => {
-    (async () => {
-      for (let key in studentIdMap) {
-        if (key !== "fit") {
-          let uid = studentIdMap[key];
-          checkAttendance(uid);
-        }
-      }
-    })();
-  }, [studentIdMap]);
-
   useEffect(() => {
     // get all users from firestore
     const fetchUsers = async () => {
