@@ -6,7 +6,10 @@ import PrelineScript from "../components/PrelineScript";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import React from "react";
-import DAIHOI from "@/assets/background/daihoixi.jpg";
+import DAIHOI from "@/assets/background/set.png";
+import LocationTracker from "../components/LocationTracker";
+import { LocationProvider } from '@/contexts/LocationContext';
+
 const fontFamily = localFont({
   src: [
     { path: "../assets/fonts/SVN-Gotham XLight.otf", weight: "100" },
@@ -65,9 +68,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={fontFamily.className}>
-        <Navbar />
-        {children}
-        <Footer />
+        <LocationProvider>
+          <Navbar />
+          {children}
+          <Footer />
+          <LocationTracker />
+        </LocationProvider>
       </body>
       <PrelineScript />
     </html>

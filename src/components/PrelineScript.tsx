@@ -10,18 +10,24 @@ declare global {
   }
 }
 
-export default function PrelineScript() {
+const PrelineScript = () => {
   const path = usePathname();
 
   useEffect(() => {
-    import("preline/preline");
-  }, []);
-
-  useEffect(() => {
-    setTimeout(() => {
-      window.HSStaticMethods.autoInit();
-    }, 100);
+    // Kiểm tra xem HSStaticMethods đã tồn tại chưa
+    if (typeof window !== 'undefined') {
+      import('preline/preline').then(() => {
+        setTimeout(() => {
+          // Kiểm tra lại một lần nữa trước khi gọi
+          if (window.HSStaticMethods) {
+            window.HSStaticMethods.autoInit();
+          }
+        }, 100);
+      });
+    }
   }, [path]);
 
   return null;
-}
+};
+
+export default PrelineScript;

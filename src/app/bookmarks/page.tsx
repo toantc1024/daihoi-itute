@@ -47,6 +47,7 @@ const Bookmark = () => {
                 text={"Điểm danh đại biểu"}
                 title={"Scan QR"}
                 icon={<HiQrCode />}
+                requireLocation={true}
                 eventHandler={() => {
                   router.push("/scan-qr");
                 }}
@@ -66,6 +67,7 @@ const Bookmark = () => {
               title={"QR điểm danh"}
               text={"Đưa cho lễ tân FIT"}
               icon={<HiQrCode />}
+              requireLocation={true}
               eventHandler={() => {
                 router.push("/my-qr");
               }}

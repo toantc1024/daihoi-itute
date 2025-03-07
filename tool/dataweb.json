@@ -1,90 +1,82 @@
 {
-    "0": {
-        "sex": "Bisexual",
-        "representativeID": "0",
-        "role": "Admin",
-        "fullName": "Đoàn hội Khoa Công nghệ Thông tin",
-        "studentID": "fit",
-        "communistUnionID": "0"
-    },
     "1": {
         "representativeID": "1",
         "role": "Chi Hội phó",
         "fullName": "Phạm Khương Tâm",
         "studentID": "21110638",
-        "communistUnionID": "21110ST1",
+        "communistUnionID": "21110CLST3",
         "sex": "Nam"
     },
-    "49": {
+    "2": {
         "representativeID": "49",
         "role": "Bí thư",
         "fullName": "Nguyễn Thị Lan Anh",
         "studentID": "21110368",
-        "communistUnionID": "21110IS1",
-        "sex": "Nam"
+        "communistUnionID": "21110CLST3",
+        "sex": "Nữ"
     },
-    "50": {
+    "3": {
         "representativeID": "50",
         "role": "Bí thư",
         "fullName": "Đỗ Chí Hùng",
         "studentID": "21110478",
-        "communistUnionID": "21110IS2",
+        "communistUnionID": "21110CLST3",
         "sex": "Nam"
     },
-    "10": {
+    "4": {
         "representativeID": "10",
         "role": "UV BCH chi Hội",
         "fullName": "Nguyễn Tấn Khang",
         "studentID": "21133105",
-        "communistUnionID": "21133",
+        "communistUnionID": "21133CLST3",
         "sex": "Nam"
     },
-    "75": {
+    "5": {
         "representativeID": "75",
         "role": "Bí thư Đoàn khoa",
         "fullName": "Nông Quốc Hưng",
         "studentID": "22110340",
-        "communistUnionID": "22110ST2",
+        "communistUnionID": "22110CLST3",
         "sex": "Nam"
     },
-    "5": {
+    "6": {
         "representativeID": "5",
         "role": "UV BCH Chi Hội",
         "fullName": "Đặng Minh Nhật",
         "studentID": "22110389",
-        "communistUnionID": "22110ST1",
+        "communistUnionID": "22110CLST3",
         "sex": "Nam"
     },
-    "3": {
+    "7": {
         "representativeID": "3",
         "role": "Hội viên",
         "fullName": "Phạm Đăng Khoa",
         "studentID": "22110353",
-        "communistUnionID": "22110ST2",
+        "communistUnionID": "22110CLST3",
         "sex": "Nam"
     },
-    "31": {
+    "8": {
         "representativeID": "31",
         "role": "Bí thư",
         "fullName": "Nguyễn Ngọc Doanh Doanh",
         "studentID": "22110292",
-        "communistUnionID": "22110ST2",
-        "sex": "Nam"
+        "communistUnionID": "22110CLST3",
+        "sex": "Nữ"
     },
-    "43": {
+    "9": {
         "representativeID": "43",
         "role": "Chi Hội trưởng",
         "fullName": "Dương Nguyễn Hoài Bảo",
         "studentID": "22110283",
-        "communistUnionID": "22110ST1",
+        "communistUnionID": "22110CLST3",
         "sex": "Nam"
     },
-    "4": {
+    "10": {
         "representativeID": "4",
         "role": "Bí thư",
         "fullName": "Đặng Cửu Dương",
         "studentID": "22110124",
-        "communistUnionID": "22110CL_AI",
+        "communistUnionID": "22110CLST3",
         "sex": "Nam"
     },
     "11": {
@@ -92,519 +84,519 @@
         "role": "Bí thư",
         "fullName": "Lê Duy Phương",
         "studentID": "22110205",
-        "communistUnionID": "22110CLIS1",
+        "communistUnionID": "22110CLST3",
         "sex": "Nam"
     },
-    "42": {
+    "12": {
         "representativeID": "42",
         "role": "Bí thư",
         "fullName": "Lê Quốc Kiệt",
         "studentID": "22110169",
-        "communistUnionID": "22110CLST1",
+        "communistUnionID": "22110CLST3",
         "sex": "Nam"
     },
-    "12": {
+    "13": {
         "representativeID": "12",
         "role": "Chi Hội trưởng",
         "fullName": "Nguyễn Ngọc Anh Thư",
         "studentID": "22133059",
-        "communistUnionID": "22133",
-        "sex": "Nam"
+        "communistUnionID": "22133CLST3",
+        "sex": "Nữ"
     },
-    "13": {
+    "14": {
         "representativeID": "13",
         "role": "Hội viên",
         "fullName": "Lê Hồi Nhật",
         "studentID": "22162031",
-        "communistUnionID": "22162",
+        "communistUnionID": "22162CLST3",
         "sex": "Nam"
     },
-    "9": {
+    "15": {
         "representativeID": "9",
         "role": "Bí thư",
         "fullName": "Nguyễn Tấn Yên",
         "studentID": "23110369",
-        "communistUnionID": "231101",
+        "communistUnionID": "23110CLST3",
         "sex": "Nam"
     },
-    "14": {
+    "16": {
         "representativeID": "14",
         "role": "Chi Hội trưởng",
         "fullName": "Nguyễn Thanh Khang",
         "studentID": "23110237",
-        "communistUnionID": "",
+        "communistUnionID": "nanCLST3",
         "sex": "Nam"
     },
-    "15": {
+    "17": {
         "representativeID": "15",
         "role": "Chi Hội trưởng",
         "fullName": "Đặng Xuân Huyền",
         "studentID": "23110232",
-        "communistUnionID": "231102",
+        "communistUnionID": "23110CLST3",
         "sex": "Nam"
     },
-    "64": {
+    "18": {
         "representativeID": "64",
         "role": "Đoàn viên",
         "fullName": "Lê Hồ Chí Bảo",
         "studentID": "23110179",
-        "communistUnionID": "",
+        "communistUnionID": "nanCLST3",
         "sex": "Nam"
     },
-    "16": {
+    "19": {
         "representativeID": "16",
         "role": "Lớp phó",
         "fullName": "Đặng Ngọc Nhân",
         "studentID": "23110279",
-        "communistUnionID": "",
+        "communistUnionID": "nanCLST3",
         "sex": "Nam"
     },
-    "41": {
+    "20": {
         "representativeID": "41",
         "role": "Bí thư",
         "fullName": "Nguyễn Thanh Bình Minh",
         "studentID": "23110266",
-        "communistUnionID": "231103",
-        "sex": "Nam"
+        "communistUnionID": "23110CLST3",
+        "sex": "Nữ"
     },
-    "32": {
+    "21": {
         "representativeID": "32",
         "role": "Hội viên",
         "fullName": "Dương Đăng Khoa",
         "studentID": "23110240",
-        "communistUnionID": "",
+        "communistUnionID": "nanCLST3",
         "sex": "Nam"
     },
-    "48": {
+    "22": {
         "representativeID": "48",
         "role": "Chi Hội trưởng",
         "fullName": "Nguyễn Hoàng Phúc",
         "studentID": "23110287",
-        "communistUnionID": "",
+        "communistUnionID": "nanCLST3",
         "sex": "Nam"
     },
-    "17": {
+    "23": {
         "representativeID": "17",
         "role": "Bí thư",
         "fullName": "Phan Trọng Phú",
         "studentID": "23133056",
-        "communistUnionID": "23133",
+        "communistUnionID": "23133CLST3",
         "sex": "Nam"
     },
-    "18": {
+    "24": {
         "representativeID": "18",
         "role": "Chi Hội trưởng",
         "fullName": "Phan Trọng Quí",
         "studentID": "23133061",
-        "communistUnionID": "",
+        "communistUnionID": "nanCLST3",
         "sex": "Nam"
     },
-    "35": {
+    "25": {
         "representativeID": "35",
         "role": "Chi Hội trưởng",
         "fullName": "Nguyễn Hồng Bảo Long",
         "studentID": "23162053",
-        "communistUnionID": "23162",
+        "communistUnionID": "23162CLST3",
         "sex": "Nam"
     },
-    "65": {
+    "26": {
         "representativeID": "65",
         "role": "Chi hội phó",
         "fullName": "Phạm Quang Vinh",
         "studentID": "23162114",
-        "communistUnionID": "",
+        "communistUnionID": "nanCLST3",
         "sex": "Nam"
     },
-    "63": {
+    "27": {
         "representativeID": "63",
         "role": "Hội viên",
         "fullName": "Nguyễn Gia Bảo",
         "studentID": "23162006",
-        "communistUnionID": "",
+        "communistUnionID": "nanCLST3",
         "sex": "Nam"
     },
-    "40": {
+    "28": {
         "representativeID": "40",
         "role": "Bí thư",
         "fullName": "Nguyễn Quốc Khoa",
         "studentID": "23110116",
-        "communistUnionID": "23110CLC",
+        "communistUnionID": "23110CLST3",
         "sex": "Nam"
     },
-    "19": {
+    "29": {
         "representativeID": "19",
         "role": "Chi Hội trưởng",
         "fullName": "Phan Tống Hoàng Bang",
         "studentID": "23110077",
-        "communistUnionID": "",
+        "communistUnionID": "nanCLST3",
         "sex": "Nam"
     },
-    "20": {
+    "30": {
         "representativeID": "20",
         "role": "Bí thư",
         "fullName": "Phạm Tấn Tài",
         "studentID": "24110321",
-        "communistUnionID": "241101",
+        "communistUnionID": "24110CLST3",
         "sex": "Nam"
     },
-    "21": {
+    "31": {
         "representativeID": "21",
         "role": "Phó Bí thư",
         "fullName": "Trương Anh Kiệt",
         "studentID": "24110267",
-        "communistUnionID": "",
+        "communistUnionID": "nanCLST3",
         "sex": "Nam"
     },
-    "22": {
+    "32": {
         "representativeID": "22",
         "role": "Lớp Phó",
         "fullName": "Châu Minh Phát",
         "studentID": "24110194",
-        "communistUnionID": "",
+        "communistUnionID": "nanCLST3",
         "sex": "Nam"
     },
-    "23": {
+    "33": {
         "representativeID": "23",
         "role": "Hội viên",
         "fullName": "Bùi Sĩ Khang",
         "studentID": "24110238",
-        "communistUnionID": "241102",
+        "communistUnionID": "24110CLST3",
         "sex": "Nam"
     },
-    "66": {
+    "34": {
         "representativeID": "66",
         "role": "Bí thư",
         "fullName": "Nguyễn Thành Tiến",
         "studentID": "24110352",
-        "communistUnionID": "",
+        "communistUnionID": "nanCLST3",
         "sex": "Nam"
     },
-    "24": {
+    "35": {
         "representativeID": "24",
         "role": "Phó Bí thư",
         "fullName": "Phạm Trần Đức Lương",
         "studentID": "24110281",
-        "communistUnionID": "",
+        "communistUnionID": "nanCLST3",
         "sex": "Nam"
     },
-    "67": {
+    "36": {
         "representativeID": "67",
         "role": "Lớp Phó",
         "fullName": "Trần Văn Nhựt Hưng",
         "studentID": "24110232",
-        "communistUnionID": "",
+        "communistUnionID": "nanCLST3",
         "sex": "Nam"
     },
-    "25": {
+    "37": {
         "representativeID": "25",
         "role": "Bí thư",
         "fullName": "Lê Trung Đông",
         "studentID": "24110201",
-        "communistUnionID": "241103",
+        "communistUnionID": "24110CLST3",
         "sex": "Nam"
     },
-    "51": {
+    "38": {
         "representativeID": "51",
         "role": "Bí thư",
         "fullName": "Hà Nguyễn Nhật Nguyên",
         "studentID": "24110288",
-        "communistUnionID": "",
+        "communistUnionID": "nanCLST3",
         "sex": "Nam"
     },
-    "52": {
+    "39": {
         "representativeID": "52",
         "role": "Hội viên",
         "fullName": "Nguyễn Ngọc Minh Thư",
         "studentID": "24110347",
-        "communistUnionID": "",
-        "sex": "Nam"
+        "communistUnionID": "nanCLST3",
+        "sex": "Nữ"
     },
-    "53": {
+    "40": {
         "representativeID": "53",
         "role": "Bí thư",
         "fullName": "Trần Quyết Chiến",
         "studentID": "24110171",
-        "communistUnionID": "241104",
+        "communistUnionID": "24110CLST3",
         "sex": "Nam"
     },
-    "54": {
+    "41": {
         "representativeID": "54",
         "role": "Phó Bí thư",
         "fullName": "Bùi Đức Duy",
         "studentID": "24110177",
-        "communistUnionID": "",
+        "communistUnionID": "nanCLST3",
         "sex": "Nam"
     },
-    "55": {
+    "42": {
         "representativeID": "55",
         "role": "Lớp phó",
         "fullName": "Phan Nhật Vy",
         "studentID": "24110392",
-        "communistUnionID": "",
+        "communistUnionID": "nanCLST3",
         "sex": "Nam"
     },
-    "56": {
+    "43": {
         "representativeID": "56",
         "role": "Bí thư",
         "fullName": "Đỗ Trường Giang",
         "studentID": "24133014",
-        "communistUnionID": "241331",
+        "communistUnionID": "24133CLST3",
         "sex": "Nam"
     },
-    "57": {
+    "44": {
         "representativeID": "57",
         "role": "Phó Bí thư",
         "fullName": "Trần Nguyễn Phương Bình",
         "studentID": "24133006",
-        "communistUnionID": "",
-        "sex": "Nam"
+        "communistUnionID": "nanCLST3",
+        "sex": "Nữ"
     },
-    "58": {
+    "45": {
         "representativeID": "58",
         "role": "Lớp Phó",
         "fullName": "Nguyễn Chiến",
         "studentID": "24133007",
-        "communistUnionID": "",
+        "communistUnionID": "nanCLST3",
         "sex": "Nam"
     },
-    "30": {
+    "46": {
         "representativeID": "30",
         "role": "Hội viên",
         "fullName": "Mai Việt Thái",
         "studentID": "24133055",
-        "communistUnionID": "241332",
+        "communistUnionID": "24133CLST3",
         "sex": "Nam"
     },
-    "59": {
+    "47": {
         "representativeID": "59",
         "role": "Phó Bí thư",
         "fullName": "Phạm Quý Vỹ",
         "studentID": "24133077",
-        "communistUnionID": "",
+        "communistUnionID": "nanCLST3",
         "sex": "Nam"
     },
-    "68": {
+    "48": {
         "representativeID": "68",
         "role": "Lớp Phó",
         "fullName": "Phan Tuấn Thanh",
         "studentID": "24133054",
-        "communistUnionID": "",
+        "communistUnionID": "nanCLST3",
         "sex": "Nam"
     },
-    "36": {
+    "49": {
         "representativeID": "36",
         "role": "Hội viên",
         "fullName": "Tchen Phi Tân",
         "studentID": "24133053",
-        "communistUnionID": "",
+        "communistUnionID": "nanCLST3",
         "sex": "Nam"
     },
-    "44": {
+    "50": {
         "representativeID": "44",
         "role": "Hội viên",
         "fullName": "Trần Anh Tuấn",
         "studentID": "24162139",
-        "communistUnionID": "241621",
+        "communistUnionID": "24162CLST3",
         "sex": "Nam"
     },
-    "69": {
+    "51": {
         "representativeID": "69",
         "role": "Phó Bí thư",
         "fullName": "Đinh Phú Sỹ",
         "studentID": "24162109",
-        "communistUnionID": "",
+        "communistUnionID": "nanCLST3",
         "sex": "Nam"
     },
-    "60": {
+    "52": {
         "representativeID": "60",
         "role": "Hội viên",
         "fullName": "Nguyễn Hữu Ngọc Diễm",
         "studentID": "24162015",
-        "communistUnionID": "",
+        "communistUnionID": "nanCLST3",
         "sex": "Nam"
     },
-    "45": {
+    "53": {
         "representativeID": "45",
         "role": "Bí thư",
         "fullName": "Cao Quốc Đạt",
         "studentID": "24162019",
-        "communistUnionID": "",
+        "communistUnionID": "nanCLST3",
         "sex": "Nam"
     },
-    "70": {
+    "54": {
         "representativeID": "70",
         "role": "Bí thư",
         "fullName": "Kiều Anh Quỳnh",
         "studentID": "24162104",
-        "communistUnionID": "241622",
+        "communistUnionID": "24162CLST3",
         "sex": "Nam"
     },
-    "34": {
+    "55": {
         "representativeID": "34",
         "role": "Phó Bí thư",
         "fullName": "Phạm Nữ Nguyệt Minh",
         "studentID": "24162076",
-        "communistUnionID": "",
-        "sex": "Nam"
+        "communistUnionID": "nanCLST3",
+        "sex": "Nữ"
     },
-    "73": {
+    "56": {
         "representativeID": "73",
         "role": "Hội viên",
         "fullName": "Nguyễn Yến Linh",
         "studentID": "24162066",
-        "communistUnionID": "",
-        "sex": "Nam"
+        "communistUnionID": "nanCLST3",
+        "sex": "Nữ"
     },
-    "47": {
+    "57": {
         "representativeID": "47",
         "role": "Bí Thư",
         "fullName": "Lý Nghị",
         "studentID": "24110037",
-        "communistUnionID": "24110CTN",
+        "communistUnionID": "24110CLST3",
         "sex": "Nam"
     },
-    "61": {
+    "58": {
         "representativeID": "61",
         "role": "Phó Bí thư",
         "fullName": "Châu Hữu Nghị",
         "studentID": "24110036",
-        "communistUnionID": "",
+        "communistUnionID": "nanCLST3",
         "sex": "Nam"
     },
-    "46": {
+    "59": {
         "representativeID": "46",
         "role": "Lớp phó",
         "fullName": "Trần Thị Ngọc Quyên",
         "studentID": "24110051",
-        "communistUnionID": "",
-        "sex": "Nam"
+        "communistUnionID": "nanCLST3",
+        "sex": "Nữ"
     },
-    "38": {
+    "60": {
         "representativeID": "38",
         "role": "Hội viên",
         "fullName": "Huỳnh Ngọc Tài",
         "studentID": "23110305",
-        "communistUnionID": "231102",
-        "sex": "Nam"
+        "communistUnionID": "23110CLST3",
+        "sex": "Nữ"
     },
-    "37": {
+    "61": {
         "representativeID": "37",
         "role": "Hội viên",
         "fullName": "Nguyễn Thị Phương Anh",
         "studentID": "21133004",
-        "communistUnionID": "",
-        "sex": "Nam"
+        "communistUnionID": "nanCLST3",
+        "sex": "Nữ"
     },
-    "71": {
+    "62": {
         "representativeID": "71",
         "role": "Bí thư",
         "fullName": "Nguyễn Đức Toàn",
         "studentID": "22110437",
-        "communistUnionID": "",
+        "communistUnionID": "nanCLST3",
         "sex": "Nam"
     },
-    "26": {
+    "63": {
         "representativeID": "26",
         "role": "Phó Bí thư",
         "fullName": "Đặng Trần Anh Quân",
         "studentID": "23110292",
-        "communistUnionID": "231101",
+        "communistUnionID": "23110CLST3",
         "sex": "Nam"
     },
-    "33": {
+    "64": {
         "representativeID": "33",
         "role": "Lớp Phó",
         "fullName": "Dương Nguyễn Ngọc Thương",
         "studentID": "23162100",
-        "communistUnionID": "23162",
-        "sex": "Nam"
+        "communistUnionID": "23162CLST3",
+        "sex": "Nữ"
     },
-    "74": {
+    "65": {
         "representativeID": "74",
         "role": "Hội viên",
         "fullName": "Mai Thị Huỳnh Như",
         "studentID": "22162032",
-        "communistUnionID": "22162",
-        "sex": "Nam"
+        "communistUnionID": "22162CLST3",
+        "sex": "Nữ"
     },
-    "72": {
+    "66": {
         "representativeID": "72",
         "role": "Liên Chi hội trưởng",
         "fullName": "Vi Quốc Thuận",
         "studentID": "22110006",
-        "communistUnionID": "22110ST1",
+        "communistUnionID": "22110CLST3",
         "sex": "Nam"
     },
-    "27": {
+    "67": {
         "representativeID": "27",
         "role": "Liên Chi hội phó",
         "fullName": "Nguyễn Hoàng Anh Kiệt",
         "studentID": "23110247",
-        "communistUnionID": "231101",
-        "sex": "Nam"
+        "communistUnionID": "23110CLST3",
+        "sex": "Nữ"
     },
-    "62": {
+    "68": {
         "representativeID": "62",
         "role": "Liên Chi hội phó",
         "fullName": "Ngô Trung Hiếu",
         "studentID": "22110323",
-        "communistUnionID": "22110IS",
+        "communistUnionID": "22110CLST3",
         "sex": "Nam"
     },
-    "28": {
+    "69": {
         "representativeID": "28",
         "role": "UV BCH LCH khoa",
         "fullName": "Hồ Minh Trí",
         "studentID": "23110349",
-        "communistUnionID": "",
+        "communistUnionID": "nanCLST3",
         "sex": "Nam"
     },
-    "7": {
+    "70": {
         "representativeID": "7",
         "role": "UV BCH LCH khoa",
         "fullName": "Phạm Hữu Nghĩa",
         "studentID": "22162030",
-        "communistUnionID": "",
-        "sex": "Nam"
+        "communistUnionID": "nanCLST3",
+        "sex": "Nữ"
     },
-    "29": {
+    "71": {
         "representativeID": "29",
         "role": "UV BCH LCH khoa",
         "fullName": "Đồng Gia Sang",
         "studentID": "22110219",
-        "communistUnionID": "",
-        "sex": "Nam"
+        "communistUnionID": "nanCLST3",
+        "sex": "Nữ"
     },
-    "8": {
+    "72": {
         "representativeID": "8",
         "role": "UV BCH LCH khoa",
         "fullName": "Trần Công Toản",
         "studentID": "22110248",
-        "communistUnionID": "",
+        "communistUnionID": "nanCLST3",
         "sex": "Nam"
     },
-    "39": {
+    "73": {
         "representativeID": "39",
         "role": "UV BCH LCH khoa",
         "fullName": "Võ An Thái",
         "studentID": "23110325",
-        "communistUnionID": "231102",
+        "communistUnionID": "23110CLST3",
         "sex": "Nam"
     },
-    "6": {
+    "74": {
         "representativeID": "6",
         "role": "UV BCH LCH khoa",
         "fullName": "Văn Thị Mười Ngọc",
         "studentID": "21110561",
-        "communistUnionID": "21110AI",
+        "communistUnionID": "21110CLST3",
         "sex": "Nam"
     },
-    "2": {
+    "75": {
         "representativeID": "2",
         "role": "UV BCH LCH khoa",
         "fullName": "Trương Nguyễn Thùy Trang",
         "studentID": "21110691",
-        "communistUnionID": "",
+        "communistUnionID": "nanCLST3",
         "sex": "Nam"
     }
 }

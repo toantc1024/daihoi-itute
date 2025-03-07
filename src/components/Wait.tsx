@@ -1,17 +1,18 @@
 import React from "react";
 
-export const Wait = () => {
+interface WaitProps {
+  message?: string;
+}
+
+export const Wait = ({ message = "Đang xử lý" }: WaitProps) => {
   return (
-    <div className="h-full flex flex-col bg-[rgba(255,255,255,.2)] border shadow-sm  ">
-      <div className="flex flex-auto flex-col justify-center items-center p-4 md:p-5">
-        <div className="flex justify-center flex-col items-center gap-4 bg-white p-8 rounded-xl">
-          <div className="">Đang kiểm tra</div>
-          <div
-            className="animate-spin inline-block size-6 border-[3px] border-current border-t-transparent text-blue-600 rounded-full"
-            role="status"
-            aria-label="loading"
-          >
-            <span className="sr-only">Loading...</span>
+    <div className="fixed inset-0 bg-black/20 backdrop-blur-sm z-50 flex items-center justify-center">
+      <div className="flex justify-center flex-col items-center gap-4 bg-white p-8 rounded-xl shadow-lg">
+        <div className="text-lg font-medium text-gray-700">{message}</div>
+        <div className="relative">
+          <div className="size-10 animate-spin">
+            <div className="absolute size-full rounded-full border-4 border-gray-200"></div>
+            <div className="absolute size-full rounded-full border-4 border-dhblue border-t-transparent animate-spin"></div>
           </div>
         </div>
       </div>

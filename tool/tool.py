@@ -18,7 +18,6 @@ def delete_all_users():
     
     page = auth.list_users()
 
-    # Convert page to list of uid
     uids = [];
     db = firestore.client()
     users = db.collection('users')
@@ -81,7 +80,7 @@ def make_json_ateendee(csvFilePath, jsonFilePath):
                 "role": row['Chức vụ'],
                 "fullName": row['Tên'],
                 "studentID": row['MSSV'],
-                "communistUnionID": row['Chi Đoàn'],
+                "communistUnionID": row['Chi Hội'],
                 "sex": "Nữ" if row["Đại biểu nữ"] == "x" else "Nam",
             }
             
@@ -180,6 +179,6 @@ def import_docs():
 def export():
     export_to_excel()
     
-# import_users()
-import_docs()
+import_users()
+#import_docs()
 # export()
