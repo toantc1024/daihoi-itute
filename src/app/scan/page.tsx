@@ -1,5 +1,5 @@
 import LocationGuard from '@/components/LocationGuard';
-import ScanQR from '@/components/ScanQR';
+import ScanQR from '@/app/scan-qr/page';
 
 export default function ScanPage() {
   return (
