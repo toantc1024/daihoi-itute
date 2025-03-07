@@ -49,6 +49,7 @@ const Hero = () => {
           width={1728}
           height={650}
           style={{ objectFit: "cover" }}
+          alt="Đại hội VIII"
         />
       </div>
     </section>

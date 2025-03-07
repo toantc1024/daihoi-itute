@@ -30,7 +30,8 @@ export const metadata: Metadata = {
   openGraph: {
     title: "FITUTE - Ứng dụng Đại Hội trực tuyến",
     description:
-      "Đại hội đại biểu đoàn TNCS Hồ Chí Minh - Khoa Công nghệ thông tin - Trường Đại học Sư phạm Kỹ thuật",
+    
+      "Đại hội đại biểu hội sinh viên Việt Nam - Khoa Công nghệ thông tin - Trường Đại học Sư phạm Kỹ thuật",
     url: "https://yfit.vercel.app",
     siteName: "FITUTE",
     images: [

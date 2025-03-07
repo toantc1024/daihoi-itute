@@ -30,7 +30,7 @@ const Navbar = () => {
       }
     });
     return subscriber;
-  }, []);
+  }, [setCurrentUser]);
 
   const handleNavigation = async (path: string) => {
     await withLoading(async () => {

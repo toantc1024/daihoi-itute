@@ -4,7 +4,7 @@ import React, { useEffect } from "react";
 const Table = ({ data }: { data: any }) => {
   useEffect(() => {
     console.log(data);
-  }, []);
+  }, [data]);
 
   return (
     data && (

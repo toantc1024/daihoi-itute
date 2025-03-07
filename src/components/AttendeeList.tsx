@@ -1,11 +1,9 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { getTimestamp } from "./DataTable";
 import { useLoading } from "@/hooks/useLoading";
 import { Wait } from "./Wait";
-
-let seq = 0;
 
 const AttendeeList = ({ list }: any) => {
   const { isLoading, withLoading } = useLoading();
@@ -23,7 +21,7 @@ const AttendeeList = ({ list }: any) => {
       });
     };
     loadList();
-  }, [list]);
+  }, [list, withLoading]);
 
   return (
     <>

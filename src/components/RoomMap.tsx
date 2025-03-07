@@ -14,7 +14,7 @@ const RoomMap = ({ attendees }: { attendees: any }) => {
       });
     };
     loadAttendees();
-  }, [attendees]);
+  }, [attendees, withLoading]);
 
   return (
     <>

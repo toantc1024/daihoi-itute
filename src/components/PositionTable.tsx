@@ -31,7 +31,7 @@ const PositionTable = ({
     let newRange = makeRange(min, max);
     setRange(newRange);
     console.log(newRange);
-  }, []);
+  }, [min, max]);
 
   useEffect(() => {
     console.log(attendees);

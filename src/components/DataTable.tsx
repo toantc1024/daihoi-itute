@@ -36,7 +36,7 @@ const DataTable = ({ data }: any) => {
       });
     };
     loadData();
-  }, [data]);
+  }, [data, withLoading]);
 
   return (
     <>

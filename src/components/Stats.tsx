@@ -295,8 +295,8 @@ const Stats = () => {
                 <blockquote className="relative mt-4">
                   <div className="relative z-10">
                     <p className="text-center text-lg font-medium text-gray-800 md:text-xl md:leading-relaxed">
-                      "Lao động trí óc phải kết hợp với lao động chân tay. <br />
-                      Học lao động phải có quyết tâm; muốn có quyết tâm thì phải có tinh thần, phải có sáu cái yêu:"
+                      &quot;Lao động trí óc phải kết hợp với lao động chân tay. <br />
+                      Học lao động phải có quyết tâm; muốn có quyết tâm thì phải có tinh thần, phải có sáu cái yêu:&quot;
                     </p>
                   </div>
                 </blockquote>
