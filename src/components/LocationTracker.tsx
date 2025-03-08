@@ -14,7 +14,7 @@ interface LocationState {
 const TARGET_LOCATION = {
   lat: 10.851595801448353,
   lng: 106.77205977483486,
-  radius: 200, // Bán kính trong mét
+  radius: 50, // Bán kính trong mét
   name: "Hội trường lớn khu A"
 };
 
@@ -54,7 +54,7 @@ const LocationTracker = () => {
       } else if (result.state === 'prompt') {
         // Hiển thị hộp thoại xác nhận tùy chỉnh
         const userChoice = window.confirm(
-          "Để sử dụng ứng dụng, bạn cần cho phép truy cập vị trí. Bạn có muốn bật GPS không?"
+          "Để sử dụng website này, bạn cần cho phép truy cập vị trí. Bạn có muốn bật GPS không?"
         );
 
         if (userChoice) {

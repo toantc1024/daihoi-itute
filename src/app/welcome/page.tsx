@@ -36,7 +36,8 @@ const Welcome = () => {
       <div className="max-w-2xl text-center mx-auto">
         <div className=" block text-sm font-bold sm:text-4xl md:text-2xl  nowrap text-dhblue">
           <span className="bg-gradient-to-b font-extrabold from-dhblue to-dhcyan bg-clip-text text-transparent">
-            ĐẠI HỘI ĐẠI BIỂU ĐOÀN TNCS HỒ CHÍ MINH
+          ĐẠI HỘI ĐẠI BIỂU HỘI SINH VIÊN VIỆT NAM
+
           </span>
         </div>
 
@@ -52,7 +53,7 @@ const Welcome = () => {
 
         <div className="mt-3 text-sm ">
           <button className="bg-dhblue text-white text-sm font-bold py-2 px-2 rounded-xl ">
-            LẦN THỨ XI, NHIỆM KỲ 2024 - 2027
+          LẦN THỨ VIII, NHIỆM KỲ 2025-2028
           </button>
         </div>
       </div>
