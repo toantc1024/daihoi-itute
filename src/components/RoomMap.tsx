@@ -35,31 +35,23 @@ const RoomMap = ({ attendees }: { attendees: any }) => {
         </div>
         <div className=" h-auto py-4 flex justify-center items-center flex-col ">
           <div className=" text-center p-2 rounded-xl font-bold bg-dhcyan text-white">
-            ĐẠI BIỂU KHÁCH MỜI
+            KHÁCH MỜI
           </div>
         </div>
-        <div className="p-2  py-4 h-full flex gap-2">
-          <div className="py-2 w-full h-full ">
+        <div className="p-2 py-4 h-full flex justify-center gap-4">
+          <div className="py-2 w-1/3 h-full">
             <PositionTable
               attendees={attendees}
-              min={58}
-              max={80}
+              min={40}
+              max={75}
               side={"left"}
             />
           </div>
-          <div className=" py-2 w-full h-full">
-            <PositionTable
-              attendees={attendees}
-              min={27}
-              max={54}
-              side={"left"}
-            />
-          </div>
-          <div className=" py-2 w-full h-full">
+          <div className="py-2 w-1/3 h-full">
             <PositionTable
               attendees={attendees}
               min={1}
-              max={26}
+              max={39}
               side={"right"}
             />
           </div>

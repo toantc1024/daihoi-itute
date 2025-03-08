@@ -44,9 +44,9 @@ const PositionTable = ({
           // Split the array into 4 elements each
           attendees &&
             range &&
-            makeChunk(range, 4).map((row: any, index: number) => (
+            makeChunk(range, 6).map((row: any, index: number) => (
               <tr className="" key={index}>
-                {row.length < 4 &&
+                {row.length < 6 &&
                   side === "left" &&
                   [...new Array(4 - row.length)].map((_, index) => (
                     <td key={`pad-${index}`}></td>
@@ -61,9 +61,9 @@ const PositionTable = ({
                     {x}
                   </td>
                 ))}
-                {row.length < 4 &&
+                {row.length < 6 &&
                   side === "right" &&
-                  [...new Array(4 - row.length)].map((_, index) => (
+                  [...new Array(6 - row.length)].map((_, index) => (
                     <td key={`pad-${index}`}></td>
                   ))}
               </tr>
